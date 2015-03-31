@@ -27,6 +27,8 @@
     text-transform: uppercase;
   }
   h1.headline {
+    font-family: "Corpid C1s Regular", "Corpid C1s", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: 400;
     padding-left: 50px;
     position: relative;
   }
@@ -126,7 +128,8 @@
   header a {
     color: white;
   }
-  .container.hero {
+  .container.hero,
+  section.hero .container {
     border-bottom: none;
   }
   span.highlight {
@@ -188,7 +191,7 @@
 
           <p>Without having written a single line of code, Kitchen Sink provides you with an end-to-end responsive experience. And you guessed it: We're using <span class="highlight">Sass</span> to make customisation as beautiful as possible. Not that you needed to, since all brand colors are pre-defined as accessible variables.</p>
 
-          <p class="message">This page is the kitchen sink of Kitchen Sink (wow, so meta). So if there's an element you look for, just look under the hood.</p>
+          <p class="message">This page is the kitchen sink of Kitchen Sink (wow, so meta). So if there is a specific element you are looking for, just look under the hood.</p>
         </div>
       </div>  
     </div>
@@ -319,6 +322,21 @@
       </div><!-- /buttons - contextual buttons -->
 
     </div><!-- /buttons -->
+
+    <section class="panel hero">
+      <div class="container">
+
+        <div class="row">
+          <div class="twelve columns">
+
+            <h5 class="hero">Classic hero</h5><br>
+            <h5 class="hero">with a classic burger.</h5>
+
+          </div>
+        </div>
+
+      </div>
+    </section><!-- /hero -->
 
   </main>
 
