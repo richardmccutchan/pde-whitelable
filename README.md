@@ -1,5 +1,5 @@
 # Kitchen Sink #
-_The squeaky-clean delivery hero UI kit._
+_The squeaky-clean Delivery Hero UI kit._
 
 ### Usage: ###
 
