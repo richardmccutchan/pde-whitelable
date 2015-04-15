@@ -11,4 +11,4 @@ _The squeaky-clean Delivery Hero UI kit._
 
 _Please do not push changes straight to the master._ Work from a branch instead. Once your new version is considered stable, we can include in the master.
 
-**And yes, if you use Kitchen Sink for your own projects you will naturally not push the changes made to this repo.** This kitchen-sink repo is exclusively a foundation, like any boilerplate. Only changes relevant to the function of the foundation happen in this repo.
+**And yes, if you use Kitchen Sink for your own projects you will _not_ push the changes made to this repo.** This `kitchen-sink` repo is **exclusively** a foundation, like any boilerplate. Only changes relevant to the function of the foundation happen in this repo.
