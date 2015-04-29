@@ -14,6 +14,7 @@ _The squeaky-clean Delivery Hero UI kit._
 * Any files (prefixed with @) inside `/demo/` are only used by the demo page (`index.html`) and can be deleted for production purposes.
 * Yes, the `/js/` folder is currently empty (as we build JS plugins, this folder will be populated)
 * Feel free to shoot me an [email](mailto:sidney.francois@deliveryhero.com) if you feel like anything is missing.
+* Use the standard build of Modernizr if you wish, but it is advised to create a [custom build](http://modernizr.com/download/) that only detects the features you specifically need for your project. Wanna to save every byte you can, after all.
 
 ### Making changes/additions: ###
 
