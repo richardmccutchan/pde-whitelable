@@ -1,6 +1,14 @@
 # Kitchen Sink #
 _The squeaky-clean Delivery Hero UI kit._
 
+### Contents: ###
+
+* Skeleton as a grid foundation ([https://github.com/whatsnewsaes/Skeleton-Sass](Sass build))
+* Delivery Hero UI kit (see demo for visualisation)
+* Delivery Hero fonts (Corpid)
+* [Normalize.css](https://github.com/necolas/normalize.css/)
+* jQuery & [Modernizr](http://modernizr.com/)
+
 ### Usage: ###
 
 1. Any files (prefixed with @) inside `/demo/` are only used by the demo page (`index.html`) and can be deleted for production purposes.
