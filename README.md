@@ -9,11 +9,11 @@ _The squeaky-clean Delivery Hero UI kit._
 * [Normalize.css](https://github.com/necolas/normalize.css/)
 * jQuery & [Modernizr](http://modernizr.com/)
 
-### Usage: ###
+### Notes: ###
 
-1. Any files (prefixed with @) inside `/demo/` are only used by the demo page (`index.html`) and can be deleted for production purposes.
-2. Yes, the `/js/` folder is currently empty (as we build JS plugins, this folder will be populated)
-3. Feel free to shoot me an [email](mailto:sidney.francois@deliveryhero.com) if you feel like anything is missing.
+* Any files (prefixed with @) inside `/demo/` are only used by the demo page (`index.html`) and can be deleted for production purposes.
+* Yes, the `/js/` folder is currently empty (as we build JS plugins, this folder will be populated)
+* Feel free to shoot me an [email](mailto:sidney.francois@deliveryhero.com) if you feel like anything is missing.
 
 ### Making changes/additions: ###
 
