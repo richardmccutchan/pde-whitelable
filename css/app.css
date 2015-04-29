@@ -917,7 +917,7 @@ td:last-child {
 
 .panel.hero {
   width: 100%;
-  background: url(../images/hero-background.jpg) no-repeat;
+  background: url(../demo/hero-background.jpg) no-repeat;
   background-size: cover;
   padding: 25em 0 3em 0; }
   .panel.hero h5.hero {

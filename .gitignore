@@ -3,3 +3,5 @@ node_modules
 .DS_Store
 img
 fonts
+/demo/@hero-background.jpg
+/demo/@hero-background-original.jpg
