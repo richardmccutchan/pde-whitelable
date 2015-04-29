@@ -3,7 +3,7 @@ _The squeaky-clean Delivery Hero UI kit._
 
 ### Contents: ###
 
-* Skeleton as a grid foundation ([https://github.com/whatsnewsaes/Skeleton-Sass](Sass build))
+* Skeleton as a grid foundation ([Sass build](https://github.com/whatsnewsaes/Skeleton-Sass))
 * Delivery Hero UI kit (see demo for visualisation)
 * Delivery Hero fonts (Corpid)
 * [Normalize.css](https://github.com/necolas/normalize.css/)
