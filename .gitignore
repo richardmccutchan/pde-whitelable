@@ -1,4 +1,5 @@
 node_modules
-.sass-cache
+/css/.sass-cache
 .DS_Store
-images
+img
+fonts

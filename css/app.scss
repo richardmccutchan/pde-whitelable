@@ -24,6 +24,8 @@
 //- Spacing
 //- Utilities
 //- Clearing
+//- Helpers
+//- Custom
 //- Media Queries
 
 // Normalize
@@ -890,6 +892,16 @@ hr {
   display: table;
   clear: both;
 }
+
+// Helpers
+//––––––––––––––––––––––––––––––––––––––––––––––––––
+
+img.img-responsive {
+  max-width: 100%;
+}
+
+// Custom
+//––––––––––––––––––––––––––––––––––––––––––––––––––
 
 // Media Queries
 //––––––––––––––––––––––––––––––––––––––––––––––––––
