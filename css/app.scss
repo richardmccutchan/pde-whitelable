@@ -53,15 +53,68 @@ $link-color: #1293d5;
 $font-color: #222;
 
 // Colors Delivery Hero
-$primary-color-red: #d61f26;
-$primary-color-yellow: #ffc713;
-$primary-color-purple: #45233e;
 
-$secondary-color-green: #81c02f;
-$secondary-color-blue: #00a6de;
-$secondary-color-mblue: #343b46;
-$secondary-color-grey: #f5f5f6;
-$secondary-color-orange: #f8981b;
+//Colour Spectrum
+$alizarin100: #d61f26;
+$alizarin75: #df6147;
+$alizarin50: #e89076;
+$alizarin25: #f2c3b1;
+
+$sunglow100: #ffc713;
+$sunglow75: #ffd360;
+$sunglow50: #ffe094;
+$sunglow25: #ffeec7;
+
+$blackBean100: #45233e;
+$blackBean75: #654a5e;
+$blackBean50: #8c7685;
+$blackBean25: #bcafb7;
+
+$skyBlue100: #00a6de;
+$skyBlue75: #00b6e4;
+$skyBlue50: #72c9eb;
+$skyBlue25: #bae1f4;
+
+$midnightBlue100: #343b46;
+$midnightBlue75: #585963;
+$midnightBlue50: #83828a;
+$midnightBlue25: #b7b5ba;
+
+$modestGrey100: #f5f5f6;
+$modestGrey25: #f9fafa;
+
+//Button Colours
+$ctaGreen: #81c02f;
+$ctaGreenSecondary: #468c3c;
+
+$ctaOrange: #f8981b;
+$ctaOrangeSecondary: #fc503c;
+
+$ctaGrey: #d1d2d4;
+$ctaGreySecondary: #9f9fa1;
+
+$ctaYellow: $sunglow100;
+$ctaYellowSecondary: #ffaa00;
+
+$ctaRed: #d61f26;
+$ctaRedSecondary: #9f0000;
+
+$boxColor1: #bbbdc0;
+$boxColor2: #d1d2d4;
+$boxColor3: #ededee;
+
+//Primary Colours
+
+$primary-color-red: $alizarin100;
+$primary-color-yellow: $sunglow100;
+$primary-color-purple: $blackBean100;
+
+$secondary-color-green: $ctaGreen;
+$secondary-color-blue: $skyBlue100;
+$secondary-color-mblue: $midnightBlue100;
+$secondary-color-grey: $modestGrey100;
+$secondary-color-orange: $ctaOrange;
+
 
 // Typography
 
@@ -279,7 +332,7 @@ button {
   display: inline-block;
   height: 3em;
   padding: 0 1.5em;
-  color: $secondary-color;
+  color: $secondary-color-mblue;
   text-align: center;
   font-size: 1.2em; 
   font-family: "Corpid C1s Bold", "Corpid C1s", "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -307,7 +360,7 @@ input {
     display: inline-block;
     height: 3em;
     padding: 0 2em;
-    color: $secondary-color;
+    color: $secondary-color-mblue;
     text-align: center;
     font-size: 1.2em;
     font-family: "Corpid C1s Bold", "Corpid C1s", "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -334,7 +387,7 @@ input {
       -webkit-transition: none;
       transition: none;
       &:hover {
-        color: $secondary-color;
+        color: $secondary-color-mblue;
         background: $secondary-color-grey;
       }
     }
@@ -344,7 +397,7 @@ input {
 .button:hover,
 button:hover {
   color: $dark-grey;
-  background: darken($secondary-color-grey, 5%);
+  background: $ctaGreySecondary;
   outline: 0;
 }
 
@@ -353,7 +406,7 @@ input {
   &[type="reset"]:hover,
   &[type="button"]:hover {
     color: $dark-grey;
-    background: darken($secondary-color-grey, 5%);
+    background: $ctaGreySecondary;
     outline: 0;
   }
 }
@@ -361,7 +414,7 @@ input {
 .button:focus,
 button:focus {
   color: $dark-grey;
-  border-color: lighten($dark-grey, 33.3%);
+  border-color: $ctaGreySecondary;
   outline: 0;
 }
 
@@ -370,7 +423,7 @@ input {
   &[type="reset"]:focus,
   &[type="button"]:focus {
     color: $dark-grey;
-    border-color: lighten($dark-grey, 33.3%);
+    border-color: $ctaGreySecondary;
     outline: 0;
   }
 }
@@ -447,7 +500,7 @@ input {
 
 .button.button-cta,
 button.button-cta {
-  color: black;
+  color: $secondary-color-mblue;
   background-color: $primary-color-yellow;
   border-color: $primary-color-yellow;
 }
@@ -456,7 +509,7 @@ input {
   &[type="submit"].button-cta,
   &[type="reset"].button-cta,
   &[type="button"].button-cta {
-    color: black;
+    color: $secondary-color-mblue;
     background-color: $primary-color-yellow;
     border-color: $primary-color-yellow;
   }
@@ -464,35 +517,35 @@ input {
 
 .button.button-cta:hover,
 button.button-cta:hover {
-  color: black;
-  background-color: darken($primary-color-yellow, 10%);
-  border-color: darken($primary-color-yellow, 10%);
+  color: $secondary-color-mblue;
+  background-color: $ctaYellowSecondary;
+  border-color: $ctaYellowSecondary;
 }
 
 input {
   &[type="submit"].button-cta:hover,
   &[type="reset"].button-cta:hover,
   &[type="button"].button-cta:hover {
-    color: black;
-    background-color: darken($primary-color-yellow, 10%);
-    border-color: darken($primary-color-yellow, 10%);
+    color: $secondary-color-mblue;
+    background-color: $ctaYellowSecondary;
+    border-color: $ctaYellowSecondary;
   }
 }
 
 .button.button-cta:focus,
 button.button-cta:focus {
-  color: black;
-  background-color: darken($primary-color-yellow, 10%);
-  border-color: darken($primary-color-yellow, 10%);
+  color: $secondary-color-mblue;
+  background-color: $ctaYellowSecondary;
+  border-color: $ctaYellowSecondary;
 }
 
 input {
   &[type="submit"].button-cta:focus,
   &[type="reset"].button-cta:focus,
   &[type="button"].button-cta:focus {
-    color: black;
-    background-color: darken($primary-color-yellow, 10%);
-    border-color: darken($primary-color-yellow, 10%);
+    color: $secondary-color-mblue;
+    background-color: $ctaYellowSecondary;
+    border-color: $ctaYellowSecondary;
   }
   &[type="email"],
   &[type="number"],
@@ -533,8 +586,8 @@ input {
 .button.button-confirm:hover,
 button.button-confirm:hover {
   color: white;
-  background-color: darken($secondary-color-green, 10%);
-  border-color: darken($secondary-color-green, 10%);
+  background-color: $ctaGreenSecondary;
+  border-color: $ctaGreenSecondary;
 }
 
 input {
@@ -542,16 +595,16 @@ input {
   &[type="reset"].button-confirm:hover,
   &[type="button"].button-confirm:hover {
     color: white;
-    background-color: darken($secondary-color-green, 10%);
-    border-color: darken($secondary-color-green, 10%);
+    background-color: $ctaGreenSecondary;
+    border-color: $ctaGreenSecondary;
   }
 }
 
 .button.button-confirm:focus,
 button.button-confirm:focus {
   color: white;
-  background-color: darken($secondary-color-green, 10%);
-  border-color: darken($secondary-color-green, 10%);
+  background-color: $ctaGreenSecondary;
+  border-color: $ctaGreenSecondary;
 }
 
 input {
@@ -559,8 +612,8 @@ input {
   &[type="reset"].button-confirm:focus,
   &[type="button"].button-confirm:focus {
     color: white;
-    background-color: darken($secondary-color-green, 10%);
-    border-color: darken($secondary-color-green, 10%);
+    background-color: $ctaGreenSecondary;
+    border-color: $ctaGreenSecondary;
   }
   &[type="email"],
   &[type="number"],
@@ -584,8 +637,8 @@ input {
 .button.button-delete,
 button.button-delete {
   color: white;
-  background-color: $primary-color-red;
-  border-color: $primary-color-red;
+  background-color: $ctaRed;
+  border-color: $ctaRed;
 }
 
 input {
@@ -593,16 +646,16 @@ input {
   &[type="reset"].button-delete,
   &[type="button"].button-delete {
     color: white;
-    background-color: $primary-color-red;
-    border-color: $primary-color-red;
+    background-color: $ctaRed;
+    border-color: $ctaRed;
   }
 }
 
 .button.button-delete:hover,
 button.button-delete:hover {
   color: white;
-  background-color: darken($primary-color-red, 10%);
-  border-color: darken($primary-color-red, 10%);
+  background-color: $ctaRedSecondary;
+  border-color: $ctaRedSecondary;
 }
 
 input {
@@ -610,16 +663,16 @@ input {
   &[type="reset"].button-delete:hover,
   &[type="button"].button-delete:hover {
     color: white;
-    background-color: darken($primary-color-red, 10%);
-    border-color: darken($primary-color-red, 10%);
+    background-color: $ctaRedSecondary;
+    border-color: $ctaRedSecondary;
   }
 }
 
 .button.button-delete:focus,
 button.button-delete:focus {
   color: white;
-  background-color: darken($primary-color-red, 10%);
-  border-color: darken($primary-color-red, 10%);
+  background-color: $ctaRedSecondary;
+  border-color: $ctaRedSecondary;
 }
 
 input {
@@ -627,8 +680,76 @@ input {
   &[type="reset"].button-delete:focus,
   &[type="button"].button-delete:focus {
     color: white;
-    background-color: darken($primary-color-red, 10%);
-    border-color: darken($primary-color-red, 10%);
+    background-color: $ctaRedSecondary;
+    border-color: $ctaRedSecondary;
+  }
+  &[type="email"],
+  &[type="number"],
+  &[type="search"],
+  &[type="text"],
+  &[type="tel"],
+  &[type="url"],
+  &[type="password"] {
+    height: 38px;
+    padding: 6px 10px; // The 6px vertically centers text on FF, ignored by Webkit
+    background-color: #fff;
+    border: 1px solid lighten($border-color, 8.8%);
+    border-radius: $global-radius;
+    box-shadow: none;
+    box-sizing: border-box;
+  }
+}
+
+// Option Button
+
+.button.button-option,
+button.button-option {
+  color: white;
+  background-color: $ctaOrange;
+  border-color: $ctaOrange;
+}
+
+input {
+  &[type="submit"].button-option,
+  &[type="reset"].button-option,
+  &[type="button"].button-option {
+    color: white;
+    background-color: $ctaOrange;
+    border-color: $ctaOrange;
+  }
+}
+
+.button.button-option:hover,
+button.button-option:hover {
+  color: white;
+  background-color: $ctaOrangeSecondary;
+  border-color: $ctaOrangeSecondary;
+}
+
+input {
+  &[type="submit"].button-option:hover,
+  &[type="reset"].button-option:hover,
+  &[type="button"].button-option:hover {
+    color: white;
+    background-color: $ctaOrangeSecondary;
+    border-color: $ctaOrangeSecondary;
+  }
+}
+
+.button.button-option:focus,
+button.button-option:focus {
+  color: white;
+  background-color: $ctaOrangeSecondary;
+  border-color: $ctaOrangeSecondary;
+}
+
+input {
+  &[type="submit"].button-option:focus,
+  &[type="reset"].button-option:focus,
+  &[type="button"].button-option:focus {
+    color: white;
+    background-color: $ctaOrangeSecondary;
+    border-color: $ctaOrangeSecondary;
   }
   &[type="email"],
   &[type="number"],
@@ -804,21 +925,75 @@ td:last-child {
 // Panels
 //––––––––––––––––––––––––––––––––––––––––––––––––––
 
-.panel.hero {
-  width: 100%;
-  background: url(../demo/@hero-background.jpg) no-repeat;
-  background-size: cover;
-  padding: 25em 0 3em 0;
-  & h5.hero {
-    font-size: 3em;
-    display: inline-block;
-    color: white;
-    font-family: "Corpid C1s Heavy", "Corpid C1s", "Helvetica Neue", Arial, sans-serif;
-    font-weight: 800;
-    letter-spacing: .06em;
-    background: $primary-color-red;
-    padding: .2em .5em;
-    margin-bottom: 1rem;
+.panel{
+
+  &.hero {
+    width: 100%;
+    background: url(../demo/@hero-background.jpg) no-repeat;
+    background-size: cover;
+    padding: 3em 0 3em 0;
+    
+    & h5.hero {
+      font-size: 3em;
+      display: inline;
+      color: white;
+      font-family: "Corpid C1s Heavy", "Corpid C1s", "Helvetica Neue", Arial, sans-serif;
+      font-weight: 800;
+      letter-spacing: .06em;
+      background: $primary-color-red;
+      padding: .2em .5em;
+      margin-bottom: 1rem;
+      line-height: 1.7;
+    }
+  }
+
+  &.small{
+    min-height: 50px;
+      
+      &.alizarin100{background-color: $alizarin100;}
+      &.alizarin75{background-color: $alizarin75;}
+      &.alizarin50{background-color: $alizarin50;}
+      &.alizarin25{background-color: $alizarin25;} 
+
+      &.sunglow100{background-color: $sunglow100;}
+      &.sunglow75{background-color: $sunglow75;}
+      &.sunglow50{background-color: $sunglow50;}
+      &.sunglow25{background-color: $sunglow25;} 
+
+      &.blackBean100{background-color: $blackBean100;}
+      &.blackBean75{background-color: $blackBean75;}
+      &.blackBean50{background-color: $blackBean50;}
+      &.blackBean25{background-color: $blackBean25;} 
+
+      &.skyBlue100{background-color: $skyBlue100;}
+      &.skyBlue75{background-color: $skyBlue75;}
+      &.skyBlue50{background-color: $skyBlue50;}
+      &.skyBlue25{background-color: $skyBlue25;} 
+
+      &.midnightBlue100{background-color: $midnightBlue100;}
+      &.midnightBlue75{background-color: $midnightBlue75;}
+      &.midnightBlue50{background-color: $midnightBlue50;}
+      &.midnightBlue25{background-color: $midnightBlue25;} 
+
+      &.modestGrey100{background-color: $modestGrey100;}
+      &.modestGrey25{background-color: $modestGrey25;} 
+
+      &.boxColor1{background-color: $boxColor1;}
+      &.boxColor2{background-color: $boxColor2;}
+      &.boxColor3{background-color: $boxColor3;} 
+
+      &.ctaGreen{background-color: $ctaGreen;}
+      &.ctaGreenSecondary{background-color: $ctaGreenSecondary;}
+
+      &.ctaOrange{background-color: $ctaOrange;}
+      &.ctaOrangeSecondary{background-color: $ctaOrangeSecondary;}
+
+      &.ctaGrey{background-color: $ctaGrey;}
+      &.ctaGreySecondary{background-color: $ctaGreySecondary;}
+
+      &.ctaYellow{background-color: $ctaYellow;}
+      &.ctaYellowSecondary{background-color: $ctaYellowSecondary;}
+
   }
 }
 
