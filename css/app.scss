@@ -950,49 +950,15 @@ td:last-child {
   &.small{
     min-height: 50px;
       
+      //Primary Colour Panels      
       &.alizarin100{background-color: $alizarin100;}
-      &.alizarin75{background-color: $alizarin75;}
-      &.alizarin50{background-color: $alizarin50;}
-      &.alizarin25{background-color: $alizarin25;} 
-
       &.sunglow100{background-color: $sunglow100;}
-      &.sunglow75{background-color: $sunglow75;}
-      &.sunglow50{background-color: $sunglow50;}
-      &.sunglow25{background-color: $sunglow25;} 
-
       &.blackBean100{background-color: $blackBean100;}
-      &.blackBean75{background-color: $blackBean75;}
-      &.blackBean50{background-color: $blackBean50;}
-      &.blackBean25{background-color: $blackBean25;} 
 
+      //Secondary Colour Panels
       &.skyBlue100{background-color: $skyBlue100;}
-      &.skyBlue75{background-color: $skyBlue75;}
-      &.skyBlue50{background-color: $skyBlue50;}
-      &.skyBlue25{background-color: $skyBlue25;} 
-
       &.midnightBlue100{background-color: $midnightBlue100;}
-      &.midnightBlue75{background-color: $midnightBlue75;}
-      &.midnightBlue50{background-color: $midnightBlue50;}
-      &.midnightBlue25{background-color: $midnightBlue25;} 
-
       &.modestGrey100{background-color: $modestGrey100;}
-      &.modestGrey25{background-color: $modestGrey25;} 
-
-      &.boxColor1{background-color: $boxColor1;}
-      &.boxColor2{background-color: $boxColor2;}
-      &.boxColor3{background-color: $boxColor3;} 
-
-      &.ctaGreen{background-color: $ctaGreen;}
-      &.ctaGreenSecondary{background-color: $ctaGreenSecondary;}
-
-      &.ctaOrange{background-color: $ctaOrange;}
-      &.ctaOrangeSecondary{background-color: $ctaOrangeSecondary;}
-
-      &.ctaGrey{background-color: $ctaGrey;}
-      &.ctaGreySecondary{background-color: $ctaGreySecondary;}
-
-      &.ctaYellow{background-color: $ctaYellow;}
-      &.ctaYellowSecondary{background-color: $ctaYellowSecondary;}
 
   }
 }

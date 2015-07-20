@@ -976,70 +976,16 @@ td:last-child {
   min-height: 50px; }
   .panel.small.alizarin100 {
     background-color: #d61f26; }
-  .panel.small.alizarin75 {
-    background-color: #df6147; }
-  .panel.small.alizarin50 {
-    background-color: #e89076; }
-  .panel.small.alizarin25 {
-    background-color: #f2c3b1; }
   .panel.small.sunglow100 {
     background-color: #ffc713; }
-  .panel.small.sunglow75 {
-    background-color: #ffd360; }
-  .panel.small.sunglow50 {
-    background-color: #ffe094; }
-  .panel.small.sunglow25 {
-    background-color: #ffeec7; }
   .panel.small.blackBean100 {
     background-color: #45233e; }
-  .panel.small.blackBean75 {
-    background-color: #654a5e; }
-  .panel.small.blackBean50 {
-    background-color: #8c7685; }
-  .panel.small.blackBean25 {
-    background-color: #bcafb7; }
   .panel.small.skyBlue100 {
     background-color: #00a6de; }
-  .panel.small.skyBlue75 {
-    background-color: #00b6e4; }
-  .panel.small.skyBlue50 {
-    background-color: #72c9eb; }
-  .panel.small.skyBlue25 {
-    background-color: #bae1f4; }
   .panel.small.midnightBlue100 {
     background-color: #343b46; }
-  .panel.small.midnightBlue75 {
-    background-color: #585963; }
-  .panel.small.midnightBlue50 {
-    background-color: #83828a; }
-  .panel.small.midnightBlue25 {
-    background-color: #b7b5ba; }
   .panel.small.modestGrey100 {
     background-color: #f5f5f6; }
-  .panel.small.modestGrey25 {
-    background-color: #f9fafa; }
-  .panel.small.boxColor1 {
-    background-color: #bbbdc0; }
-  .panel.small.boxColor2 {
-    background-color: #d1d2d4; }
-  .panel.small.boxColor3 {
-    background-color: #ededee; }
-  .panel.small.ctaGreen {
-    background-color: #81c02f; }
-  .panel.small.ctaGreenSecondary {
-    background-color: #468c3c; }
-  .panel.small.ctaOrange {
-    background-color: #f8981b; }
-  .panel.small.ctaOrangeSecondary {
-    background-color: #fc503c; }
-  .panel.small.ctaGrey {
-    background-color: #d1d2d4; }
-  .panel.small.ctaGreySecondary {
-    background-color: #9f9fa1; }
-  .panel.small.ctaYellow {
-    background-color: #ffc713; }
-  .panel.small.ctaYellowSecondary {
-    background-color: #ffaa00; }
 
 button,
 .button {
