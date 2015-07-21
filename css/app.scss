@@ -1,12 +1,14 @@
 /*
-* Skeleton V2.0.4
-* Copyright 2014, Dave Gamache
-* www.getskeleton.com
-* Free to use under the MIT license.
-* http://www.opensource.org/licenses/mit-license.php
-* 12/9/2014
-* Sass Version by Seth Coelen https://github.com/whatsnewsaes
-*/
+ * Kitchen Sink - A clean UI kit by Delivery Hero
+ *
+ * Based on Skeleton V2.0.4 by Dave Gamache
+ * getskeleton.com
+ * Sass Version by Seth Coelen
+ * github.com/whatsnewsaes
+ *
+ * Free to use under the MIT license.
+ * opensource.org/licenses/mit-license.php
+ */
 
 // Table of contents
 //––––––––––––––––––––––––––––––––––––––––––––––––––
@@ -925,7 +927,7 @@ td:last-child {
 // Panels
 //––––––––––––––––––––––––––––––––––––––––––––––––––
 
-.panel{
+.panel {
 
   &.hero {
     width: 100%;
@@ -933,7 +935,7 @@ td:last-child {
     background-size: cover;
     padding: 3em 0 3em 0;
     
-    & h5.hero {
+    h5.hero {
       font-size: 3em;
       display: inline;
       color: white;
@@ -947,19 +949,34 @@ td:last-child {
     }
   }
 
-  &.small{
+  &.small {
     min-height: 50px;
       
       //Primary Colour Panels      
-      &.alizarin100{background-color: $alizarin100;}
-      &.sunglow100{background-color: $sunglow100;}
-      &.blackBean100{background-color: $blackBean100;}
+      &.alizarin100 {
+        background-color: $alizarin100;
+      }
+
+      &.sunglow100 {
+        background-color: $sunglow100;
+      }
+
+      &.blackBean100 {
+        background-color: $blackBean100;
+      }
 
       //Secondary Colour Panels
-      &.skyBlue100{background-color: $skyBlue100;}
-      &.midnightBlue100{background-color: $midnightBlue100;}
-      &.modestGrey100{background-color: $modestGrey100;}
+      &.skyBlue100 {
+        background-color: $skyBlue100;
+      }
 
+      &.midnightBlue100{
+        background-color: $midnightBlue100;
+      }
+
+      &.modestGrey100{
+        background-color: $modestGrey100;
+      }
   }
 }
 
