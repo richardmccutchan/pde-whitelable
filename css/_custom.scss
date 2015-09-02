@@ -1,0 +1,132 @@
+//Wrapper Backgrounds
+.wrapper {
+    width: 100%;
+}
+
+.slider {
+    background: url(../assets/pizza/1.jpg) fixed;
+    background-repeat: no-repeat;
+    background-color: #ffffff;
+    background-size: contain;
+    height: 400px;
+    text-align: center;
+}
+
+.slider-bottom {
+    background: url(../assets/pizza/2.jpg) center top;
+    background-repeat: no-repeat;
+    background-color: #ffffff;
+    background-size: cover;
+    height: 350px;
+    text-align: center;
+}
+
+.shadow {
+    background: url(../assets/shadow.png) center top;
+    background-repeat: no-repeat;
+    padding: 3rem 0;
+}
+
+.shadow-last {
+    @extend .shadow;
+    padding: 3rem 0 0 0;
+}
+
+.shadow-mirrored {
+    background: url(../assets/shadow-mirrored.png) center bottom;
+    background-repeat: no-repeat;
+    padding: 0 0 2rem 0;
+}
+
+.overlay {
+    background-color: rgba(0, 0, 0, .5);
+    height: 140px;
+    position: relative;
+    padding: 1rem 0 1rem 0;
+    top: -16rem;
+    text-align: center;
+    & h3 {
+        color: white;
+        font-size: 2.5rem;
+    }
+}
+
+.overlay.stick {
+    background-color: rgba(0, 0, 0, .9);
+    position: fixed;
+    top: 0;
+    z-index: 10000;
+}
+
+main {
+    margin-top: -16rem;
+}
+
+//typography
+.margin {
+    margin: 0;
+}
+
+footer {
+    p,
+    a {
+        font-size: 1.2rem;
+    }
+}
+
+//images / icons
+.pdv {
+    margin: 0 0 2rem 0;
+    padding: .1rem;
+    border: 1px solid $border-color;
+}
+
+.food {
+    padding: 0 0 4rem 0;
+}
+
+.food-icon {
+    float: left;
+    height: 60px;
+    margin: 0 1.5rem 0 0;
+    width: 60px;
+    &:last-of-type {
+        margin: 0;
+    }
+}
+
+.asiatisch {
+    background: url(../assets/food-icons/asiatisch.png) center center;
+    background-repeat: no-repeat;
+}
+
+.baguette {
+    background: url(../assets/food-icons/baguette.png) center center;
+    background-repeat: no-repeat;
+}
+
+.burger {
+    background: url(../assets/food-icons/burger.png) center center;
+    background-repeat: no-repeat;
+}
+
+.food-description {
+    font-family: $open-sans;
+    font-style: italic;
+    font-weight: 400;
+    margin-top: 4.5rem;
+}
+
+//map
+.map-container {
+    border: 1px solid $border-color;
+    height: 384px;
+    margin: 0 0 3rem 0;
+    padding: 2px;
+    width: 384px;
+}
+
+#map {
+    height: 100%;
+    width: 100%;
+}

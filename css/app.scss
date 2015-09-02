@@ -29,118 +29,80 @@
 //- Helpers
 //- Custom
 //- Media Queries
-
 // Normalize
 //––––––––––––––––––––––––––––––––––––––––––––––––––
-
 @import "_normalize";
-
 // Variables
 //––––––––––––––––––––––––––––––––––––––––––––––––––
-
 // Breakpoints
-$bp-larger-than-mobile    : "min-width: 400px";
-$bp-larger-than-phablet   : "min-width: 550px";
-$bp-larger-than-tablet    : "min-width: 750px";
-$bp-larger-than-desktop   : "min-width: 1000px";
-$bp-larger-than-desktophd : "min-width: 1200px";
-
+$bp-larger-than-mobile: "min-width: 400px";
+$bp-larger-than-phablet: "min-width: 550px";
+$bp-larger-than-tablet: "min-width: 750px";
+$bp-larger-than-desktop: "min-width: 1000px";
+$bp-larger-than-desktophd: "min-width: 1200px";
 // Colors Skeleton
 $light-grey: #e1e1e1;
 $dark-grey: #333;
 $primary-color: #33c3f0;
 $secondary-color: lighten($dark-grey, 13.5%);
 $border-color: #bbb;
-$link-color: #1293d5;
-$font-color: #222;
+$link-color: #c61c0c;
+$font-color: #333;
 
 // Colors Delivery Hero
-
 //Colour Spectrum
 $alizarin100: #d61f26;
 $alizarin75: #df6147;
 $alizarin50: #e89076;
 $alizarin25: #f2c3b1;
-
 $sunglow100: #ffc713;
 $sunglow75: #ffd360;
 $sunglow50: #ffe094;
 $sunglow25: #ffeec7;
-
 $blackBean100: #45233e;
 $blackBean75: #654a5e;
 $blackBean50: #8c7685;
 $blackBean25: #bcafb7;
-
 $skyBlue100: #00a6de;
 $skyBlue75: #00b6e4;
 $skyBlue50: #72c9eb;
 $skyBlue25: #bae1f4;
-
 $midnightBlue100: #343b46;
 $midnightBlue75: #585963;
 $midnightBlue50: #83828a;
 $midnightBlue25: #b7b5ba;
-
 $modestGrey100: #f5f5f6;
 $modestGrey25: #f9fafa;
 
 //Button Colours
 $ctaGreen: #81c02f;
 $ctaGreenSecondary: #468c3c;
-
 $ctaOrange: #f8981b;
 $ctaOrangeSecondary: #fc503c;
-
 $ctaGrey: #d1d2d4;
 $ctaGreySecondary: #9f9fa1;
-
 $ctaYellow: $sunglow100;
 $ctaYellowSecondary: #ffaa00;
-
 $ctaRed: #d61f26;
 $ctaRedSecondary: #9f0000;
-
 $boxColor1: #bbbdc0;
 $boxColor2: #d1d2d4;
 $boxColor3: #ededee;
 
 //Primary Colours
-
 $primary-color-red: $alizarin100;
 $primary-color-yellow: $sunglow100;
 $primary-color-purple: $blackBean100;
-
 $secondary-color-green: $ctaGreen;
 $secondary-color-blue: $skyBlue100;
 $secondary-color-mblue: $midnightBlue100;
 $secondary-color-grey: $modestGrey100;
 $secondary-color-orange: $ctaOrange;
 
-
 // Typography
-
-@font-face {
-  font-family: "Corpid C1s Regular";
-  src: url('../fonts/corpidc1s-regular-webfont.eot?') format('eot'), url('../fonts/corpidc1s-regular-webfont.woff') format('woff'), url('../fonts/corpidc1s-regular-webfont.ttf') format('truetype');
-}
-
-@font-face {
-  font-family: "Corpid C1s Bold";
-  src: url('../fonts/corpidc1s-bold-webfont.eot?') format('eot'), url('../fonts/corpidc1s-bold-webfont.woff') format('woff'), url('../fonts/corpidc1s-bold-webfont.ttf') format('truetype');
-}
-
-@font-face {
-  font-family: "Corpid C1s Bold Italic";
-  src: url('../fonts/corpidc1s-bolditalic-webfont.eot?') format('eot'), url('../fonts/corpidc1s-bolditalic-webfont.woff') format('woff'), url('../fonts/corpidc1s-bolditalic-webfont.ttf') format('truetype');
-}
-
-@font-face {
-  font-family: "Corpid C1s Heavy";
-  src: url('../fonts/corpidc1s-heavy-webfont.eot?') format('eot'), url('../fonts/corpidc1s-heavy-webfont.woff') format('woff'), url('../fonts/corpidc1s-heavy-webfont.ttf') format('truetype');
-}
-
-$font-family: "Corpid C1s", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif; // this line only applies if the font import fails
+//Google Font
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,700,700italic,600,600italic);
+$open-sans: 'Open Sans','HelveticaNeue','Helvetica Neue',Helvetica,Arial,sans-serif; // this line only applies if the font import fails
 
 // Grid Variables
 $container-width: 960px;
@@ -151,112 +113,160 @@ $column-width: 100 / $total-columns; // calculates individual column width based
 $column-margin: 4%; // space between columns
 
 // Misc
-$global-radius: 5px;
+$global-radius: 4px;
 
 // Functions
 @function grid-column-width($n) {
-  @return $column-width * $n - ($column-margin) + ($n/3);
+    @return $column-width * $n - ($column-margin) + ($n/3);
 }
 
 @function grid-offset-length($n) {
-  @return percentage(($column-width * $n  + ($n/3)) / 100);
+    @return percentage(($column-width * $n + ($n/3)) / 100);
 }
 
 // Grid
 //––––––––––––––––––––––––––––––––––––––––––––––––––
-
 .container {
-  position: relative;
-  width: 100%;
-  max-width: $container-width;
-  margin: 0 auto;
-  padding: 0 20px;
-  box-sizing: border-box;
+    position: relative;
+    width: 100%;
+    max-width: $container-width;
+    margin: 0 auto;
+    padding: 0 20px;
+    box-sizing: border-box;
 }
 
 .column,
 .columns {
-  width: 100%;
-  float: left;
-  box-sizing: border-box;
+    width: 100%;
+    float: left;
+    box-sizing: border-box;
 }
 
 // For devices larger than 400px
 @media (#{$bp-larger-than-mobile}) {
-  .container {
-    width: $container-width-larger-than-mobile;
-    padding: 0;
-  }
+    .container {
+        width: $container-width-larger-than-mobile;
+        padding: 0;
+    }
 }
 
 // For devices larger than 550px
 @media (#{$bp-larger-than-phablet}) {
-  .container {
-    width: $container-width-larger-than-phablet;
-  }
-  .column,
-  .columns {
-    margin-left: 4%;
-  }
-  .column:first-child,
-  .columns:first-child {
-    margin-left: 0;
-  }
-
-  .one.column,
-  .one.columns          { width: grid-column-width(1);  }
-  .two.columns          { width: grid-column-width(2);  }
-  .three.columns        { width: grid-column-width(3);  }
-  .four.columns         { width: grid-column-width(4);  }
-  .five.columns         { width: grid-column-width(5);  }
-  .six.columns          { width: grid-column-width(6);  }
-  .seven.columns        { width: grid-column-width(7);  }
-  .eight.columns        { width: grid-column-width(8);  }
-  .nine.columns         { width: grid-column-width(9);  }
-  .ten.columns          { width: grid-column-width(10); }
-  .eleven.columns       { width: grid-column-width(11); }
-  .twelve.columns       { width: 100%; margin-left: 0;  }
-
-  .one-third.column     { width: grid-column-width(4);  }
-  .two-thirds.column    { width: grid-column-width(8);  }
-
-  .one-half.column      { width: grid-column-width(6);  }
-
-
-  // Offsets
-  .offset-by-one.column,
-  .offset-by-one.columns       { margin-left: grid-offset-length(1);  }
-  .offset-by-two.column,
-  .offset-by-two.columns       { margin-left: grid-offset-length(2);  }
-  .offset-by-three.column,
-  .offset-by-three.columns     { margin-left: grid-offset-length(3);  }
-  .offset-by-four.column,
-  .offset-by-four.columns      { margin-left: grid-offset-length(4);  }
-  .offset-by-five.column,
-  .offset-by-five.columns      { margin-left: grid-offset-length(5);  }
-  .offset-by-six.column,
-  .offset-by-six.columns       { margin-left: grid-offset-length(6);  }
-  .offset-by-seven.column,
-  .offset-by-seven.columns     { margin-left: grid-offset-length(7);  }
-  .offset-by-eight.column,
-  .offset-by-eight.columns     { margin-left: grid-offset-length(8);  }
-  .offset-by-nine.column,
-  .offset-by-nine.columns      { margin-left: grid-offset-length(9);  }
-  .offset-by-ten.column,
-  .offset-by-ten.columns       { margin-left: grid-offset-length(10); }
-  .offset-by-eleven.column,
-  .offset-by-eleven.columns    { margin-left: grid-offset-length(11); }
-
-
-  .offset-by-one-third.column, 
-  .offset-by-one-third.columns  { margin-left: grid-offset-length(4);  }
-  .offset-by-two-thirds.column, 
-  .offset-by-two-thirds.columns { margin-left: grid-offset-length(8);  }
-
-  .offset-by-one-half.column,   
-  .offset-by-one-half.column   { margin-left: grid-offset-length(6);  }
-
-
+    .container {
+        width: $container-width-larger-than-phablet;
+    }
+    .column,
+    .columns {
+        margin-left: 4%;
+    }
+    .column:first-child,
+    .columns:first-child {
+        margin-left: 0;
+    }
+    .one.column,
+    .one.columns {
+        width: grid-column-width(1);
+    }
+    .two.columns {
+        width: grid-column-width(2);
+    }
+    .three.columns {
+        width: grid-column-width(3);
+    }
+    .four.columns {
+        width: grid-column-width(4);
+    }
+    .five.columns {
+        width: grid-column-width(5);
+    }
+    .six.columns {
+        width: grid-column-width(6);
+    }
+    .seven.columns {
+        width: grid-column-width(7);
+    }
+    .eight.columns {
+        width: grid-column-width(8);
+    }
+    .nine.columns {
+        width: grid-column-width(9);
+    }
+    .ten.columns {
+        width: grid-column-width(10);
+    }
+    .eleven.columns {
+        width: grid-column-width(11);
+    }
+    .twelve.columns {
+        width: 100%;
+        margin-left: 0;
+    }
+    .one-third.column {
+        width: grid-column-width(4);
+    }
+    .two-thirds.column {
+        width: grid-column-width(8);
+    }
+    .one-half.column {
+        width: grid-column-width(6);
+    }
+    // Offsets
+    .offset-by-one.column,
+    .offset-by-one.columns {
+        margin-left: grid-offset-length(1);
+    }
+    .offset-by-two.column,
+    .offset-by-two.columns {
+        margin-left: grid-offset-length(2);
+    }
+    .offset-by-three.column,
+    .offset-by-three.columns {
+        margin-left: grid-offset-length(3);
+    }
+    .offset-by-four.column,
+    .offset-by-four.columns {
+        margin-left: grid-offset-length(4);
+    }
+    .offset-by-five.column,
+    .offset-by-five.columns {
+        margin-left: grid-offset-length(5);
+    }
+    .offset-by-six.column,
+    .offset-by-six.columns {
+        margin-left: grid-offset-length(6);
+    }
+    .offset-by-seven.column,
+    .offset-by-seven.columns {
+        margin-left: grid-offset-length(7);
+    }
+    .offset-by-eight.column,
+    .offset-by-eight.columns {
+        margin-left: grid-offset-length(8);
+    }
+    .offset-by-nine.column,
+    .offset-by-nine.columns {
+        margin-left: grid-offset-length(9);
+    }
+    .offset-by-ten.column,
+    .offset-by-ten.columns {
+        margin-left: grid-offset-length(10);
+    }
+    .offset-by-eleven.column,
+    .offset-by-eleven.columns {
+        margin-left: grid-offset-length(11);
+    }
+    .offset-by-one-third.column,
+    .offset-by-one-third.columns {
+        margin-left: grid-offset-length(4);
+    }
+    .offset-by-two-thirds.column,
+    .offset-by-two-thirds.columns {
+        margin-left: grid-offset-length(8);
+    }
+    .offset-by-one-half.column,
+    .offset-by-one-half.column {
+        margin-left: grid-offset-length(6);
+    }
 }
 
 // Base Styles
@@ -264,111 +274,110 @@ $global-radius: 5px;
 // NOTE
 // html is set to 62.5% so that all the REM measurements throughout Skeleton
 // are based on 10px sizing. So basically 1.5rem = 15px :)
-
 html {
-  font-size: 62.5%;
+    font-size: 62.5%;
 }
 
 body {
-  font-size: 1.5em; // currently ems cause chrome bug misinterpreting rems on body element
-  line-height: 1.6;
-  font-family: "Corpid C1s Regular", "Corpid C1s", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-weight: 400;
-  font-family: $font-family;
-  color: $font-color;
-  -webkit-font-smoothing: antialiased; // make fonts pretty in webkit browsers
+    color: $font-color;
+    font-size: 1.3rem; // currently ems cause chrome bug misinterpreting rems on body element
+    font-weight: 400;
+    font-family: $open-sans;
+    line-height: 1.6;
+    text-align: center;
+    -webkit-font-smoothing: antialiased; // make fonts pretty in webkit browsers
 }
 
 // Typography
 //––––––––––––––––––––––––––––––––––––––––––––––––––
-
-h1, h2, h3, h4, h5, h6 {
-  margin-top: 0;
-  margin-bottom: 2rem;
-  font-family: "Corpid C1s Regular", "Corpid C1s", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-weight: 400;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin-top: 0;
+    margin-bottom: 2rem;
+    font-family: $open-sans;
+    font-style: italic
 }
 
-h1 { font-size: 4.0rem; line-height: 1.2;  letter-spacing: -.1rem;  }
-h2 { font-size: 3.6rem; line-height: 1.25; letter-spacing: -.1rem;  }
-h3 { font-size: 3.0rem; line-height: 1.3;  letter-spacing: -.1rem;  }
-h4 { font-size: 2.4rem; line-height: 1.35; letter-spacing: -.08rem; }
-h5 { font-size: 1.8rem; line-height: 1.5;  letter-spacing: -.05rem; }
-h6 { font-size: 1.5rem; line-height: 1.6;  letter-spacing: 0;       }
+h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    line-height: 1.2;
+    letter-spacing: -.1rem;
+}
+
+h2 {
+    font-size: 2.5rem;
+    font-weight: 400;
+    line-height: 1.25;
+    letter-spacing: -.1rem;
+}
+
+h3 {
+    font-size: 2.0rem;
+    font-weight: 400;
+    line-height: 1.3;
+    letter-spacing: -.1rem;
+}
+
+h4,
+h5,
+h6 {
+    @extend h3;
+}
 
 // Larger than phablet
 @media (#{$bp-larger-than-phablet}) {
-  h1 { font-size: 5.0rem; }
-  h2 { font-size: 4.2rem; }
-  h3 { font-size: 3.6rem; }
-  h4 { font-size: 3.0rem; }
-  h5 { font-size: 2.4rem; }
-  h6 { font-size: 1.5rem; }
+    h1,h2 {
+        font-size: 2.5rem;
+    }
+    
+    h3,h4,h5,h6 {
+        font-size: 2rem;
+    }
 }
 
 p {
-  margin-top: 0;
+    margin-top: 0;
 }
 
 strong {
-  font-family: "Corpid C1s Bold", "Corpid C1s", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-weight: 700;
+    font-family: $open-sans;
+    font-weight: 600;
 }
 
 // Links
 //––––––––––––––––––––––––––––––––––––––––––––––––––
-
 a {
-  color: $link-color;
-  &:hover {
-    color: lighten($link-color, 15%);
-    cursor: pointer;
-  }
+    color: $link-color;
+    font-family: inherit;
+    font-weight: 600;
+    font-style: italic;
+    font-size: 1.5rem;
+    text-decoration: none;
+    &:hover {
+        color: darken($link-color, 15%);
+        cursor: pointer;
+    }
 }
 
 // Buttons
 //––––––––––––––––––––––––––––––––––––––––––––––––––
-
 .button,
 button {
-  display: inline-block;
-  height: 3em;
-  padding: 0 1.5em;
-  color: $secondary-color-mblue;
-  text-align: center;
-  font-size: 1.2em; 
-  font-family: "Corpid C1s Bold", "Corpid C1s", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-weight: 700;
-  line-height: 3.2em;
-  letter-spacing: .1rem;
-  text-transform: uppercase;
-  text-decoration: none;
-  white-space: nowrap;
-  background-color: transparent;
-  border-radius: $global-radius;
-  border: none;
-  cursor: pointer;
-  box-sizing: border-box;
-  background: $secondary-color-grey;
-
-  -webkit-transition: background .3s ease;
-  transition: background .3s ease;
-}
-
-input {
-  &[type="submit"],
-  &[type="reset"],
-  &[type="button"] {
     display: inline-block;
-    height: 3em;
+    height: 2.5em;
     padding: 0 2em;
-    color: $secondary-color-mblue;
+    color: white;
     text-align: center;
-    font-size: 1.2em;
-    font-family: "Corpid C1s Bold", "Corpid C1s", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 1.7rem;
+    font-family: $open-sans;
     font-weight: 700;
-    line-height: 3.2em;
-    letter-spacing: .1rem;
+    line-height: 2.5em;
+    letter-spacing: 0;
     text-transform: uppercase;
     text-decoration: none;
     white-space: nowrap;
@@ -377,389 +386,422 @@ input {
     border: none;
     cursor: pointer;
     box-sizing: border-box;
-    background: $secondary-color-grey;
-
+    background: $ctaRed;
     -webkit-transition: background .3s ease;
     transition: background .3s ease;
+}
 
-    &:disabled {
-      cursor:not-allowed;
-      opacity: .7;
-
-      -webkit-transition: none;
-      transition: none;
-      &:hover {
+input {
+    &[type="submit"],
+    &[type="reset"],
+    &[type="button"] {
+        display: inline-block;
+        height: 3em;
+        padding: 0 2em;
         color: $secondary-color-mblue;
+        text-align: center;
+        font-size: 1.2em;
+        font-family: "Corpid C1s Bold", "Corpid C1s", "Helvetica Neue", Helvetica, Arial, sans-serif;
+        font-weight: 700;
+        line-height: 3.2em;
+        letter-spacing: .1rem;
+        text-transform: uppercase;
+        text-decoration: none;
+        white-space: nowrap;
+        background-color: transparent;
+        border-radius: $global-radius;
+        border: none;
+        cursor: pointer;
+        box-sizing: border-box;
         background: $secondary-color-grey;
-      }
+        -webkit-transition: background .3s ease;
+        transition: background .3s ease;
+        &:disabled {
+            cursor: not-allowed;
+            opacity: .7;
+            -webkit-transition: none;
+            transition: none;
+            &:hover {
+                color: $secondary-color-mblue;
+                background: $secondary-color-grey;
+            }
+        }
     }
-  }
 }
 
 .button:hover,
 button:hover {
-  color: $dark-grey;
-  background: $ctaGreySecondary;
-  outline: 0;
+    color: white;
+    background: $ctaRedSecondary;
+    outline: 0;
 }
 
 input {
-  &[type="submit"]:hover,
-  &[type="reset"]:hover,
-  &[type="button"]:hover {
-    color: $dark-grey;
-    background: $ctaGreySecondary;
-    outline: 0;
-  }
+    &[type="submit"]:hover,
+    &[type="reset"]:hover,
+    &[type="button"]:hover {
+        color: $dark-grey;
+        background: $ctaGreySecondary;
+        outline: 0;
+    }
 }
 
 .button:focus,
 button:focus {
-  color: $dark-grey;
-  border-color: $ctaGreySecondary;
-  outline: 0;
+    color: white;
+    border-color: $ctaRedSecondary;
+    outline: 0;
 }
 
 input {
-  &[type="submit"]:focus,
-  &[type="reset"]:focus,
-  &[type="button"]:focus {
-    color: $dark-grey;
-    border-color: $ctaGreySecondary;
-    outline: 0;
-  }
+    &[type="submit"]:focus,
+    &[type="reset"]:focus,
+    &[type="button"]:focus {
+        color: $dark-grey;
+        border-color: $ctaGreySecondary;
+        outline: 0;
+    }
 }
 
 // Primary
-
 .button.button-primary,
 button.button-primary {
-  color: #fff;
-  background-color: $primary-color;
-  border-color: $primary-color;
-}
-
-input {
-  &[type="submit"].button-primary,
-  &[type="reset"].button-primary,
-  &[type="button"].button-primary {
     color: #fff;
     background-color: $primary-color;
     border-color: $primary-color;
-  }
+}
+
+input {
+    &[type="submit"].button-primary,
+    &[type="reset"].button-primary,
+    &[type="button"].button-primary {
+        color: #fff;
+        background-color: $primary-color;
+        border-color: $primary-color;
+    }
 }
 
 .button.button-primary:hover,
 button.button-primary:hover {
-  color: #fff;
-  background-color: $link-color;
-  border-color: $link-color;
-}
-
-input {
-  &[type="submit"].button-primary:hover,
-  &[type="reset"].button-primary:hover,
-  &[type="button"].button-primary:hover {
     color: #fff;
     background-color: $link-color;
     border-color: $link-color;
-  }
+}
+
+input {
+    &[type="submit"].button-primary:hover,
+    &[type="reset"].button-primary:hover,
+    &[type="button"].button-primary:hover {
+        color: #fff;
+        background-color: $link-color;
+        border-color: $link-color;
+    }
 }
 
 .button.button-primary:focus,
 button.button-primary:focus {
-  color: #fff;
-  background-color: $link-color;
-  border-color: $link-color;
-}
-
-input {
-  &[type="submit"].button-primary:focus,
-  &[type="reset"].button-primary:focus,
-  &[type="button"].button-primary:focus {
     color: #fff;
     background-color: $link-color;
     border-color: $link-color;
-  }
-  &[type="email"],
-  &[type="number"],
-  &[type="search"],
-  &[type="text"],
-  &[type="tel"],
-  &[type="url"],
-  &[type="password"] {
-    height: 38px;
-    padding: 6px 10px; // The 6px vertically centers text on FF, ignored by Webkit
-    background-color: #fff;
-    border: 1px solid lighten($border-color, 8.8%);
-    border-radius: $global-radius;
-    box-shadow: none;
-    box-sizing: border-box;
-  }
-}
-
-// CTA Button
-
-.button.button-cta,
-button.button-cta {
-  color: $secondary-color-mblue;
-  background-color: $primary-color-yellow;
-  border-color: $primary-color-yellow;
 }
 
 input {
-  &[type="submit"].button-cta,
-  &[type="reset"].button-cta,
-  &[type="button"].button-cta {
+    &[type="submit"].button-primary:focus,
+    &[type="reset"].button-primary:focus,
+    &[type="button"].button-primary:focus {
+        color: #fff;
+        background-color: $link-color;
+        border-color: $link-color;
+    }
+    &[type="email"],
+    &[type="number"],
+    &[type="search"],
+    &[type="text"],
+    &[type="tel"],
+    &[type="url"],
+    &[type="password"] {
+        height: 38px;
+        padding: 6px 10px; // The 6px vertically centers text on FF, ignored by Webkit
+        background-color: #fff;
+        border: 1px solid lighten($border-color, 8.8%);
+        border-radius: $global-radius;
+        box-shadow: none;
+        box-sizing: border-box;
+    }
+}
+
+// CTA Button
+.button.button-cta,
+button.button-cta {
     color: $secondary-color-mblue;
     background-color: $primary-color-yellow;
     border-color: $primary-color-yellow;
-  }
+}
+
+input {
+    &[type="submit"].button-cta,
+    &[type="reset"].button-cta,
+    &[type="button"].button-cta {
+        color: $secondary-color-mblue;
+        background-color: $primary-color-yellow;
+        border-color: $primary-color-yellow;
+    }
 }
 
 .button.button-cta:hover,
 button.button-cta:hover {
-  color: $secondary-color-mblue;
-  background-color: $ctaYellowSecondary;
-  border-color: $ctaYellowSecondary;
-}
-
-input {
-  &[type="submit"].button-cta:hover,
-  &[type="reset"].button-cta:hover,
-  &[type="button"].button-cta:hover {
     color: $secondary-color-mblue;
     background-color: $ctaYellowSecondary;
     border-color: $ctaYellowSecondary;
-  }
+}
+
+input {
+    &[type="submit"].button-cta:hover,
+    &[type="reset"].button-cta:hover,
+    &[type="button"].button-cta:hover {
+        color: $secondary-color-mblue;
+        background-color: $ctaYellowSecondary;
+        border-color: $ctaYellowSecondary;
+    }
 }
 
 .button.button-cta:focus,
 button.button-cta:focus {
-  color: $secondary-color-mblue;
-  background-color: $ctaYellowSecondary;
-  border-color: $ctaYellowSecondary;
-}
-
-input {
-  &[type="submit"].button-cta:focus,
-  &[type="reset"].button-cta:focus,
-  &[type="button"].button-cta:focus {
     color: $secondary-color-mblue;
     background-color: $ctaYellowSecondary;
     border-color: $ctaYellowSecondary;
-  }
-  &[type="email"],
-  &[type="number"],
-  &[type="search"],
-  &[type="text"],
-  &[type="tel"],
-  &[type="url"],
-  &[type="password"] {
-    height: 38px;
-    padding: 6px 10px; // The 6px vertically centers text on FF, ignored by Webkit
-    background-color: #fff;
-    border: 1px solid lighten($border-color, 8.8%);
-    border-radius: $global-radius;
-    box-shadow: none;
-    box-sizing: border-box;
-  }
-}
-
-// Confirm Button
-
-.button.button-confirm,
-button.button-confirm {
-  color: white;
-  background-color: $secondary-color-green;
-  border-color: $secondary-color-green;
 }
 
 input {
-  &[type="submit"].button-confirm,
-  &[type="reset"].button-confirm,
-  &[type="button"].button-confirm {
+    &[type="submit"].button-cta:focus,
+    &[type="reset"].button-cta:focus,
+    &[type="button"].button-cta:focus {
+        color: $secondary-color-mblue;
+        background-color: $ctaYellowSecondary;
+        border-color: $ctaYellowSecondary;
+    }
+    &[type="email"],
+    &[type="number"],
+    &[type="search"],
+    &[type="text"],
+    &[type="tel"],
+    &[type="url"],
+    &[type="password"] {
+        height: 38px;
+        padding: 6px 10px; // The 6px vertically centers text on FF, ignored by Webkit
+        background-color: #fff;
+        border: 1px solid lighten($border-color, 8.8%);
+        border-radius: $global-radius;
+        box-shadow: none;
+        box-sizing: border-box;
+    }
+}
+
+// Confirm Button
+.button.button-confirm,
+button.button-confirm {
     color: white;
     background-color: $secondary-color-green;
     border-color: $secondary-color-green;
-  }
+}
+
+input {
+    &[type="submit"].button-confirm,
+    &[type="reset"].button-confirm,
+    &[type="button"].button-confirm {
+        color: white;
+        background-color: $secondary-color-green;
+        border-color: $secondary-color-green;
+    }
 }
 
 .button.button-confirm:hover,
 button.button-confirm:hover {
-  color: white;
-  background-color: $ctaGreenSecondary;
-  border-color: $ctaGreenSecondary;
-}
-
-input {
-  &[type="submit"].button-confirm:hover,
-  &[type="reset"].button-confirm:hover,
-  &[type="button"].button-confirm:hover {
     color: white;
     background-color: $ctaGreenSecondary;
     border-color: $ctaGreenSecondary;
-  }
+}
+
+input {
+    &[type="submit"].button-confirm:hover,
+    &[type="reset"].button-confirm:hover,
+    &[type="button"].button-confirm:hover {
+        color: white;
+        background-color: $ctaGreenSecondary;
+        border-color: $ctaGreenSecondary;
+    }
 }
 
 .button.button-confirm:focus,
 button.button-confirm:focus {
-  color: white;
-  background-color: $ctaGreenSecondary;
-  border-color: $ctaGreenSecondary;
-}
-
-input {
-  &[type="submit"].button-confirm:focus,
-  &[type="reset"].button-confirm:focus,
-  &[type="button"].button-confirm:focus {
     color: white;
     background-color: $ctaGreenSecondary;
     border-color: $ctaGreenSecondary;
-  }
-  &[type="email"],
-  &[type="number"],
-  &[type="search"],
-  &[type="text"],
-  &[type="tel"],
-  &[type="url"],
-  &[type="password"] {
-    height: 38px;
-    padding: 6px 10px; // The 6px vertically centers text on FF, ignored by Webkit
-    background-color: #fff;
-    border: 1px solid lighten($border-color, 8.8%);
-    border-radius: $global-radius;
-    box-shadow: none;
-    box-sizing: border-box;
-  }
-}
-
-// Delete Button
-
-.button.button-delete,
-button.button-delete {
-  color: white;
-  background-color: $ctaRed;
-  border-color: $ctaRed;
 }
 
 input {
-  &[type="submit"].button-delete,
-  &[type="reset"].button-delete,
-  &[type="button"].button-delete {
+    &[type="submit"].button-confirm:focus,
+    &[type="reset"].button-confirm:focus,
+    &[type="button"].button-confirm:focus {
+        color: white;
+        background-color: $ctaGreenSecondary;
+        border-color: $ctaGreenSecondary;
+    }
+    &[type="email"],
+    &[type="number"],
+    &[type="search"],
+    &[type="text"],
+    &[type="tel"],
+    &[type="url"],
+    &[type="password"] {
+        height: 38px;
+        padding: 6px 10px; // The 6px vertically centers text on FF, ignored by Webkit
+        background-color: #fff;
+        border: 1px solid lighten($border-color, 8.8%);
+        border-radius: $global-radius;
+        box-shadow: none;
+        box-sizing: border-box;
+    }
+}
+
+// Delete Button
+.button.button-delete,
+button.button-delete {
     color: white;
     background-color: $ctaRed;
     border-color: $ctaRed;
-  }
+}
+
+input {
+    &[type="submit"].button-delete,
+    &[type="reset"].button-delete,
+    &[type="button"].button-delete {
+        color: white;
+        background-color: $ctaRed;
+        border-color: $ctaRed;
+    }
 }
 
 .button.button-delete:hover,
 button.button-delete:hover {
-  color: white;
-  background-color: $ctaRedSecondary;
-  border-color: $ctaRedSecondary;
-}
-
-input {
-  &[type="submit"].button-delete:hover,
-  &[type="reset"].button-delete:hover,
-  &[type="button"].button-delete:hover {
     color: white;
     background-color: $ctaRedSecondary;
     border-color: $ctaRedSecondary;
-  }
+}
+
+input {
+    &[type="submit"].button-delete:hover,
+    &[type="reset"].button-delete:hover,
+    &[type="button"].button-delete:hover {
+        color: white;
+        background-color: $ctaRedSecondary;
+        border-color: $ctaRedSecondary;
+    }
 }
 
 .button.button-delete:focus,
 button.button-delete:focus {
-  color: white;
-  background-color: $ctaRedSecondary;
-  border-color: $ctaRedSecondary;
-}
-
-input {
-  &[type="submit"].button-delete:focus,
-  &[type="reset"].button-delete:focus,
-  &[type="button"].button-delete:focus {
     color: white;
     background-color: $ctaRedSecondary;
     border-color: $ctaRedSecondary;
-  }
-  &[type="email"],
-  &[type="number"],
-  &[type="search"],
-  &[type="text"],
-  &[type="tel"],
-  &[type="url"],
-  &[type="password"] {
-    height: 38px;
-    padding: 6px 10px; // The 6px vertically centers text on FF, ignored by Webkit
-    background-color: #fff;
-    border: 1px solid lighten($border-color, 8.8%);
-    border-radius: $global-radius;
-    box-shadow: none;
-    box-sizing: border-box;
-  }
-}
-
-// Option Button
-
-.button.button-option,
-button.button-option {
-  color: white;
-  background-color: $ctaOrange;
-  border-color: $ctaOrange;
 }
 
 input {
-  &[type="submit"].button-option,
-  &[type="reset"].button-option,
-  &[type="button"].button-option {
+    &[type="submit"].button-delete:focus,
+    &[type="reset"].button-delete:focus,
+    &[type="button"].button-delete:focus {
+        color: white;
+        background-color: $ctaRedSecondary;
+        border-color: $ctaRedSecondary;
+    }
+    &[type="email"],
+    &[type="number"],
+    &[type="search"],
+    &[type="text"],
+    &[type="tel"],
+    &[type="url"],
+    &[type="password"] {
+        height: 38px;
+        padding: 6px 10px; // The 6px vertically centers text on FF, ignored by Webkit
+        background-color: #fff;
+        border: 1px solid lighten($border-color, 8.8%);
+        border-radius: $global-radius;
+        box-shadow: none;
+        box-sizing: border-box;
+    }
+}
+
+// Option Button
+.button.button-option,
+button.button-option {
     color: white;
     background-color: $ctaOrange;
     border-color: $ctaOrange;
-  }
+}
+
+input {
+    &[type="submit"].button-option,
+    &[type="reset"].button-option,
+    &[type="button"].button-option {
+        color: white;
+        background-color: $ctaOrange;
+        border-color: $ctaOrange;
+    }
 }
 
 .button.button-option:hover,
 button.button-option:hover {
-  color: white;
-  background-color: $ctaOrangeSecondary;
-  border-color: $ctaOrangeSecondary;
-}
-
-input {
-  &[type="submit"].button-option:hover,
-  &[type="reset"].button-option:hover,
-  &[type="button"].button-option:hover {
     color: white;
     background-color: $ctaOrangeSecondary;
     border-color: $ctaOrangeSecondary;
-  }
+}
+
+input {
+    &[type="submit"].button-option:hover,
+    &[type="reset"].button-option:hover,
+    &[type="button"].button-option:hover {
+        color: white;
+        background-color: $ctaOrangeSecondary;
+        border-color: $ctaOrangeSecondary;
+    }
 }
 
 .button.button-option:focus,
 button.button-option:focus {
-  color: white;
-  background-color: $ctaOrangeSecondary;
-  border-color: $ctaOrangeSecondary;
-}
-
-input {
-  &[type="submit"].button-option:focus,
-  &[type="reset"].button-option:focus,
-  &[type="button"].button-option:focus {
     color: white;
     background-color: $ctaOrangeSecondary;
     border-color: $ctaOrangeSecondary;
-  }
-  &[type="email"],
-  &[type="number"],
-  &[type="search"],
-  &[type="text"],
-  &[type="tel"],
-  &[type="url"],
-  &[type="password"] {
+}
+
+input {
+    &[type="submit"].button-option:focus,
+    &[type="reset"].button-option:focus,
+    &[type="button"].button-option:focus {
+        color: white;
+        background-color: $ctaOrangeSecondary;
+        border-color: $ctaOrangeSecondary;
+    }
+    &[type="email"],
+    &[type="number"],
+    &[type="search"],
+    &[type="text"],
+    &[type="tel"],
+    &[type="url"],
+    &[type="password"] {
+        height: 38px;
+        padding: 6px 10px; // The 6px vertically centers text on FF, ignored by Webkit
+        background-color: #fff;
+        border: 1px solid lighten($border-color, 8.8%);
+        border-radius: $global-radius;
+        box-shadow: none;
+        box-sizing: border-box;
+    }
+}
+
+// Forms
+//––––––––––––––––––––––––––––––––––––––––––––––––––
+textarea,
+select {
     height: 38px;
     padding: 6px 10px; // The 6px vertically centers text on FF, ignored by Webkit
     background-color: #fff;
@@ -767,127 +809,112 @@ input {
     border-radius: $global-radius;
     box-shadow: none;
     box-sizing: border-box;
-  }
-}
-
-// Forms
-//––––––––––––––––––––––––––––––––––––––––––––––––––
-
-textarea,
-select {
-  height: 38px;
-  padding: 6px 10px; // The 6px vertically centers text on FF, ignored by Webkit
-  background-color: #fff;
-  border: 1px solid lighten($border-color, 8.8%);
-  border-radius: $global-radius;
-  box-shadow: none;
-  box-sizing: border-box;
 }
 
 // Removes awkward default styles on some inputs for iOS
 input {
-  &[type="email"],
-  &[type="number"],
-  &[type="search"],
-  &[type="text"],
-  &[type="tel"],
-  &[type="url"],
-  &[type="password"] {
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
-  }
+    &[type="email"],
+    &[type="number"],
+    &[type="search"],
+    &[type="text"],
+    &[type="tel"],
+    &[type="url"],
+    &[type="password"] {
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+    }
 }
 
 textarea {
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  min-height: 65px;
-  padding-top: 6px;
-  padding-bottom: 6px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    min-height: 65px;
+    padding-top: 6px;
+    padding-bottom: 6px;
 }
 
 input {
-  &[type="email"]:focus,
-  &[type="number"]:focus,
-  &[type="search"]:focus,
-  &[type="text"]:focus,
-  &[type="tel"]:focus,
-  &[type="url"]:focus,
-  &[type="password"]:focus {
-    border: 1px solid $primary-color;
-    outline: 0;
-  }
+    &[type="email"]:focus,
+    &[type="number"]:focus,
+    &[type="search"]:focus,
+    &[type="text"]:focus,
+    &[type="tel"]:focus,
+    &[type="url"]:focus,
+    &[type="password"]:focus {
+        border: 1px solid $primary-color;
+        outline: 0;
+    }
 }
 
 textarea:focus,
 select:focus {
-  border: 1px solid $primary-color;
-  outline: 0;
+    border: 1px solid $primary-color;
+    outline: 0;
 }
 
 label,
 legend {
-  display: block;
-  margin-bottom: .5rem;
-  font-weight: 600;
+    display: block;
+    margin-bottom: .5rem;
+    font-weight: 600;
 }
 
 fieldset {
-  padding: 0;
-  border-width: 0;
+    padding: 0;
+    border-width: 0;
 }
 
 input {
-  &[type="checkbox"],
-  &[type="radio"] {
-    display: inline;
-  }
+    &[type="checkbox"],
+    &[type="radio"] {
+        display: inline;
+    }
 }
 
 label > .label-body {
-  display: inline-block;
-  margin-left: .5rem;
-  font-weight: normal;
+    display: inline-block;
+    margin-left: .5rem;
+    font-weight: normal;
 }
 
 // Lists
 //––––––––––––––––––––––––––––––––––––––––––––––––––
-
 ul {
-  list-style: circle inside;
+    list-style: circle inside;
 }
 
 ol {
-  list-style: decimal inside;
-  padding-left: 0;
-  margin-top: 0;
+    list-style: decimal inside;
+    padding-left: 0;
+    margin-top: 0;
 }
 
 ul {
-  padding-left: 0;
-  margin-top: 0;
-  ul, ol {
-    margin: 1.5rem 0 1.5rem 3rem;
-    font-size: 90%;
-  }
+    padding-left: 0;
+    margin-top: 0;
+    ul,
+    ol {
+        margin: 1.5rem 0 1.5rem 3rem;
+        font-size: 90%;
+    }
 }
 
 ol {
-  ol, ul {
-    margin: 1.5rem 0 1.5rem 3rem;
-    font-size: 90%;
-  }
+    ol,
+    ul {
+        margin: 1.5rem 0 1.5rem 3rem;
+        font-size: 90%;
+    }
 }
 
 li {
-  margin-bottom: 1rem;
+    margin-bottom: 1rem;
 }
 
 // Code
 //––––––––––––––––––––––––––––––––––––––––––––––––––
-
 // code {
 //   padding: .2rem .5rem;
 //   margin: 0 .2rem;
@@ -897,102 +924,43 @@ li {
 //   border: 1px solid $light-grey;
 //   border-radius: $global-radius;
 // }
-
 // pre > code {
 //   display: block;
 //   padding: 1rem 1.5rem;
 //   white-space: pre;
 // }
-
 // Tables
 //––––––––––––––––––––––––––––––––––––––––––––––––––
-
 th,
 td {
-  padding: 12px 15px;
-  text-align: left;
-  border-bottom: 1px solid $light-grey;
+    padding: 2px 10px;
+    text-align: left;
+//    border-bottom: 1px solid $light-grey;
 }
 
 th:first-child,
 td:first-child {
-  padding-left: 0;
+    padding-left: 0;
 }
 
 th:last-child,
 td:last-child {
-  padding-right: 0;
+    padding-right: 0;
 }
 
-// Panels
-//––––––––––––––––––––––––––––––––––––––––––––––––––
-
-.panel {
-
-  &.hero {
-    width: 100%;
-    background: url(../demo/@hero-background.jpg) no-repeat;
-    background-size: cover;
-    padding: 3em 0 3em 0;
-    
-    h5.hero {
-      font-size: 3em;
-      display: inline;
-      color: white;
-      font-family: "Corpid C1s Heavy", "Corpid C1s", "Helvetica Neue", Arial, sans-serif;
-      font-weight: 800;
-      letter-spacing: .06em;
-      background: $primary-color-red;
-      padding: .2em .5em;
-      margin-bottom: 1rem;
-      line-height: 1.7;
-    }
-  }
-
-  &.small {
-    min-height: 50px;
-      
-      //Primary Colour Panels      
-      &.alizarin100 {
-        background-color: $alizarin100;
-      }
-
-      &.sunglow100 {
-        background-color: $sunglow100;
-      }
-
-      &.blackBean100 {
-        background-color: $blackBean100;
-      }
-
-      //Secondary Colour Panels
-      &.skyBlue100 {
-        background-color: $skyBlue100;
-      }
-
-      &.midnightBlue100{
-        background-color: $midnightBlue100;
-      }
-
-      &.modestGrey100{
-        background-color: $modestGrey100;
-      }
-  }
-}
 
 // Spacing
 //––––––––––––––––––––––––––––––––––––––––––––––––––
-
 button,
 .button {
-  margin-bottom: 1rem;
+    margin-bottom: 1rem;
 }
 
 input,
 textarea,
 select,
 fieldset {
-  margin-bottom: 1.5rem;
+    margin-bottom: 1.5rem;
 }
 
 pre,
@@ -1004,91 +972,81 @@ p,
 ul,
 ol,
 form {
-  margin-bottom: 2.5rem;
+    margin-bottom: 2.5rem;
 }
 
 // Utilities
 //––––––––––––––––––––––––––––––––––––––––––––––––––
-
 .u-full-width {
-  width: 100%;
-  box-sizing: border-box;
+    width: 100%;
+    box-sizing: border-box;
 }
 
 .u-max-full-width {
-  max-width: 100%;
-  box-sizing: border-box;
+    max-width: 100%;
+    box-sizing: border-box;
 }
 
 .u-pull-right {
-  float: right;
+    float: right;
 }
 
 .u-pull-left {
-  float: left;
+    float: left;
 }
 
 // Misc
 //––––––––––––––––––––––––––––––––––––––––––––––––––
-
 hr {
-  margin-top: 3rem;
-  margin-bottom: 3.5rem;
-  border-width: 0;
-  border-top: 1px solid $light-grey;
+    margin-top: 3rem;
+    margin-bottom: 3.5rem;
+    border-width: 0;
+    border-top: 1px solid $light-grey;
 }
 
 // Clearing
 //––––––––––––––––––––––––––––––––––––––––––––––––––
-
 // Self Clearing Goodness
-
 .container:after,
 .row:after,
 .u-cf {
-  content: "";
-  display: table;
-  clear: both;
+    content: "";
+    display: table;
+    clear: both;
 }
 
 // Helpers
 //––––––––––––––––––––––––––––––––––––––––––––––––––
-
 img.img-responsive {
-  max-width: 100%;
+    max-width: 100%;
 }
 
 .vh-center-container {
-
-  // Vertical AND horizontal centering, hack-free
-  // Powered by flexbox
-  // Add this class to the parent container (of the content you want centered)
-
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+    // Vertical AND horizontal centering, hack-free
+    // Powered by flexbox
+    // Add this class to the parent container (of the content you want centered)
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
 }
 
 // Custom
 //––––––––––––––––––––––––––––––––––––––––––––––––––
-
 // Media Queries
 //––––––––––––––––––––––––––––––––––––––––––––––––––
-
 // Note: The best way to structure the use of media queries is to create the queries
 // near the relevant code. For example, if you wanted to change the styles for buttons
 // on small devices, paste the mobile query code up in the buttons section and style it
 // there.
-
 // Larger than mobile
 @media (#{$bp-larger-than-mobile}) {}
 
@@ -1103,3 +1061,6 @@ img.img-responsive {
 
 // Larger than Desktop HD
 @media (#{$bp-larger-than-desktophd}) {}
+
+
+@import "custom";

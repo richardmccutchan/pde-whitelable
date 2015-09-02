@@ -1,350 +1,188 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 
-  <meta charset="utf-8">
-  <title>Delivery Hero | Kitchen Sink</title>
-  <meta name="description" content="">
-  <meta name="author" content="">
+    <meta charset="utf-8">
+    <title>Whitelabel</title>
+    <meta name="description" content="">
+    <meta name="author" content="">
 
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <link rel="stylesheet" href="css/app.css">
-  <link rel="icon" type="image/png" href="http://static.lieferheld.de/media/rebranding/favicon.ico">
+    <link rel="stylesheet" href="css/app.css">
+    <link rel="icon" type="image/png" href="http://pizza.de/favicon.ico">
 
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-alpha1/jquery.min.js"></script>
+    <script type="text/javascript">
+        function sticky_relocate() {
+            var window_top = $(window).scrollTop();
+            var div_top = $('#sticky-anchor').offset().top;
+            if (window_top > div_top) {
+                $('.overlay').addClass('stick');
+            } else {
+                $('.overlay').removeClass('stick');
+            }
+        }
 
-  <!-- Resources NOT required -->
-  <!-- Delete for production -->
-  <link rel="stylesheet" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
-  <link rel="stylesheet" href="demo/@prism.css">
-  <link rel="stylesheet" href="demo/@demo.css">
+        $(function () {
+            $(window).scroll(sticky_relocate);
+            sticky_relocate();
+        });
+    </script>
 
 
 </head>
+
 <body>
 
-  <header>
-
-    <div class="container hero">
-      <div class="row">
-        <div class="twelve columns" style="margin-top: 5%">
-          <h1 class="headline">Kitchen Sink</h1>
-          <p>The squeaky-clean <span class="highlight">Delivery Hero UI kit</span>.</p>
-          <a href="#" class="button">Download</a>
-        </div>
-      </div>
-    </div>
-
-  </header>
-
-  <main>
-
-    <div class="container">
-      <div class="row">
-        <div class="twelve columns" style="margin-top: 50px;">
-
-          <h2 class="kitchen-sink">The Perks</h2>
-
-          <p><strong>Rapid prototyping and development:</strong> Kitchen Sink combines Skeleton's neat and efficient <span class="highlight">gridsystem</span> with the most important <span class="highlight">UI elements</span>, effortless <span class="highlight">font import</span>, a few <span class="highlight">helper classes</span> and <span class="highlight">normalize</span>. If you use this page as a starting template, you'll even see modernizr and jQuery CDNs in place.</p>
-
-          <p><strong>Design Consistency:</strong> We are a design-oriented company. Having a solid foundation assures that websites look good across devices and remain in line with brand identity.</p>
-
-          <p>Without having written a single line of code, Kitchen Sink provides you with an end-to-end responsive experience. And you guessed it: We're using <span class="highlight">Sass</span> to make customisation as beautiful as possible. Not that you needed to, since all brand colors are pre-defined as accessible variables.</p>
-
-          <p class="message">This page is the kitchen sink of Kitchen Sink (wow, so meta). So if there is a specific element you are looking for, just look under the hood.</p>
-        </div>
-      </div>  
-    </div>
-
-    <div class="container">
-<!--       <div class="row">
-        <div class="six columns">
-          <h1 class="kitchen-sink">Intro</h1>
-        </div>
-      </div> -->
-      <div class="row">
-        <div class="six columns">
-          <h1 class="kitchen-sink">Typography</h1>
-        </div>
-      </div>
-      <div class="row">
-        <div class="twelve columns">
-          <h2 class="kitchen-sink">Fonts</h2>
-
-          <p>Getting fonts right on the web is tricky. Thankfully, as part of Kitchen Sink, importing fonts is breezy-easy.</p>
-
-          <p>How easy? I am glad you asked: You literally don't have to do anything. All the fonts we use for web projects come bundled with Kitchen Sink. However, to improve efficiency and loading times <span class="highlight">delete font files you don't need</span> and remove their respective <code>.scss</code> mixin.</p>
-
-          <pre><code class="language-css">
-            /* example: class that requires heavy font */
-            .heavy {
-            font-family: "Corpid C1s Heavy", "Corpid C1s", Helvetica, Arial, sans-serif;
-            /* Helvetica and Arial as web-safe fallbacks */
-            font-weight: 900;
-            /* define font-weight for fallbacks */
-          }</code></pre>
+    <header>
+        <div class="wrapper slider">
 
         </div>
-      </div>
-      <div class="row">
-        <div class="six columns">
-          <h2 class="kitchen-sink">Headings</h2>
-          
-          <!-- Standard Headings -->
-          <h1>h1. Heading</h1>
-          <h2>h2. Heading</h2>
-          <h3>h3. Heading</h3>
-          <h4>h4. Heading</h4>
-          <h5>h5. Heading</h5>
-          <h6>h6. Heading</h6>
-
-        </div>
-        <div class="six columns">
-          <h2 class="kitchen-sink">Base Type Size</h2>
-
-          <br>
-
-          <!-- Base type size -->
-          <p>The base type is 15px over 1.6 line height (24px)</p>
-
-          <h2 class="kitchen-sink">Font Styles</h2>
-
-          <br>
-
-          <!-- Other styled text tags -->
-          <strong>Bolded</strong>
-          <em>Italicized</em>
-          <a>Anchors</a>
-          <u>Underlined</u>
-
-          <pre><code class="language-markup">&lt;strong>Bolded&lt;/strong>
-            &lt;em>Italicized&lt;/em>
-            &lt;a>Anchors&lt;/a>
-            &lt;u>Underlined&lt;/u></code></pre>
-          </div>
-        </div>
-      </div><!-- /typography -->
-
-      <div class="container">
-
-        <div class="row">
-          <div class="twelve columns">
-
-            <h1 class="kitchen-sink">Buttons</h1>
-
-          </div>
-        </div><!-- /buttons - intro -->
-
-        <div class="row">
-          <div class="twelve columns">
-
-            <h2 class="kitchen-sink">Button Types</h2>
-
-            <p>We all know how awesome buttons are. Even the word button is cute. As illustrated below, there are five ways to create a button. While the <code>.button</code> class will also work on <code>&lt;span> or &lt;div></code>, <span class="highlight">elements with inherent interactivity</span> should behave and look like a button.</p>
-
-            <a class="button" href="#">Anchor</a>
-            <button>Button</button>
-            <input type="button" value="button input">
-            <input type="submit" value="submit input">
-            <input type="submit" value="disabled" disabled>
-
-            <pre><code class="language-markup">&lt;a class="button" href="#">Anchor&lt;/a>
-              &lt;button>Button&lt;/button>
-              &lt;input type="button" value="button input">
-              &lt;input type="submit" value="submit input">
-              &lt;input type="submit" value="disabled" disabled></code>
-            </pre>
-
-          </div>
-        </div><!-- /buttons - button types -->
-
-        <div class="row">
-          <div class="twelve columns">
-
-            <h2 class="kitchen-sink">Contextual Buttons</h2>
-
-            <p>Using the appropriate button in the right context is fundamental to facilitating user interaction. Different colors trigger different learned behaviour. For instance, <code>.button-confirm</code> is a typical example of a positive submit button, whereas <code>.button-delete</code> is used in a destructive context, like <em>cancel</em> or <em>delete</em>.</p>
-
-            <p><code>.button-cta</code> is used primarily to invoke user interaction because apparentely this company gave up on an aesthetic vision in favour of well-performing but hideous designs.</p>
-          </div>
-          <div class="row">
-            <div class="six columns">
-              <h2 class="kitchen-sink">CTA Yellow </h2><br>
-              <a class="button button-cta" href="#">CTA</a>
-              <pre><code class="language-markup">&lt;a class="button button-cta" href="#">CTA&lt;/a></code></pre>
-              <p>
-                This colour is used for any customer–related content. It gives more orientation and guidance through processes like check- out process and drawing attention on Buttons like “Log-In”. Furthermore yellow can be used as an additional CTA-colour if needed (approval).
-              </p>
+        <div id="sticky-anchor"></div>
+        <div class="wrapper overlay">
+            <div class="container">
+                <div class="row">
+                    <div class="eight columns offset-by-two">
+                        <h3>Neu Ulmer Schnitzel Express liefert Ihnen frisch zubereitete Pizza, Pasta und Salate direkt nach Hause</h3>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="eight columns offset-by-two">
+                        <a class="button" href="#">jetzt online bestellen</a>
+                    </div>
+                </div>
             </div>
-            <div class="six columns">
-              <h2 class="kitchen-sink">CTA Green</h2><br>
-              <a class="button button-confirm" href="#">Confirm</a>
-              <pre><code class="language-markup">&lt;a class="button button-confirm" href="#">Confirm&lt;/a></code></pre>
-              <p>
-                This colour is used for conversion and CTA–Buttons like “Join now”, “Order now” etc. Since it is proven that green is one of the colours that evokes high trust, we recommend to use this colour as an trust element.
-              </p>
-            </div>
-          </div>
-          <div class="row">
-            <div class="six columns">
-              <h2 class="kitchen-sink">CTA Orange</h2><br>
-              <a class="button button-option" href="#">Option</a>
-              <pre><code class="language-markup">&lt;a class="button button-option" href="#">Option&lt;/a></code></pre>
-              <p>
-                This additional colour can be used for conversion and CTA– Buttons. It is proven that oris one of the colours that evokes high trust, we recommend to use this colour as an trust element.
-              </p>
-            </div>
-            <div class="six columns">
-              <h2 class="kitchen-sink">CTA Red</h2><br>
-              <a class="button button-delete" href="#">Delete</a>
-              <pre><code class="language-markup">&lt;a class="button button-delete" href="#">Delete&lt;/a></code></pre>
-              <p>
-                This colour is used for content that includes warnings, important notifications and informations e.g. “Restaurant closed”.
-              </p>
-            </div>
-          </div>
-          <div class="row">
-            <div class="six columns">
-              <h2 class="kitchen-sink">CTA Grey</h2><br>
-              <a class="button" href="#">Neutral</a>
-              <pre><code class="language-markup">&lt;a class="button button" href="#">Neutral&lt;/a></code></pre>
-              <p>
-                This colour is used for “past–content” buttons and messages like “Step back” or “Last Orders” etc.
-              </p>
-            </div>
-          </div>
-        </div><!-- /buttons - contextual buttons -->
+        </div>
+    </header>
 
-      </div><!-- /buttons -->
-
-      <section class="panel hero">
+    <main>
+        <div class="container shadow">
+            <div class="row">
+                <div class="twelve columns">
+                    <img class="pdv" src="http://pizza.de/0_hash/777e29e0cf87643764a2b225628521db73c080d0/100.png" height="100" width="100">
+                    <br>
+                    <h1 class="margin">Neu Ulmer Schnitzel Express</h1>
+                    <h2>Ihr Lieferservice in Ulm</h2>
+                    <p>Bei uns können Sie Pizza in Ulm online bestellen.
+                        <br> Wir sind Ihr Pizzaservice in Ulm. Pizza, Pasta und Salate direkt nach Hause liefern lassen!</p>
+                </div>
+            </div>
+        </div>
+        <div class="container food">
+            <div class="row">
+                <div class="twelve columns vh-center-container">
+                    <div class="food-icon asiatisch">
+                        <br>
+                        <div class="food-description">Asiatisch</div>
+                    </div>
+                    <div class="food-icon baguette">
+                        <br>
+                        <div class="food-description">Baguette</div>
+                    </div>
+                    <div class="food-icon burger">
+                        <br>
+                        <div class="food-description">Burger</div>
+                    </div>
+                </div>
+            </div>
+        </div>
         <div class="container">
-
-          <div class="row">
-            <div class="twelve columns">
-
-              <h5 class="hero">Classic hero</h5><br>
-              <h5 class="hero">with a classic burger.</h5>
-
+            <div class="row">
+                <div class="eight columns offset-by-two">
+                    <p><a href="#">Jetzt beim Pizzaservice in Ulm online bestellen!</a></p>
+                </div>
             </div>
-          </div>
-
         </div>
-      </section><!-- /hero -->
-
-      <div class="container">
+        <div class="container shadow-last">
             <div class="row">
-              <div class="six columns">
-                <h1 class="kitchen-sink">Colours</h1>
-              </div>
+                <div class="five columns offset-by-one">
+                    <div class="map-container">
+                        <div id="map"></div>
+                    </div>
+                    <h3 align="left">Öffnungszeiten</h3>
+                    <table>
+
+                        <tbody>
+                            <tr>
+                                <td>Montag - Freitag</td>
+                                <td>11:00 - 20:30 Uhr</td>
+
+                            </tr>
+                            <tr>
+                                <td>Samstag</td>
+                                <td>geschlossen</td>
+
+                            </tr>
+                            <tr>
+                                <td>Sonntag</td>
+                                <td>12:00 - 20:30 Uhr</td>
+
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="six columns">
+                    <h3 align="left">Unser Lieferservice beliefert in Ulm die Stadtteile</h3>
+                    <p align="left"><strong>ab 8,00 € - Anfahrtskosten 0,00 €</strong>
+                        <br> 89073 Ulm-Mitte, 89073 Ulm-Oststadt, 89231 Neu-Ulm-Illerbrücke, 89231 Neu-Ulm-Neu-Ulm, 89231 Neu-Ulm-Offenhausen, 89231 Neu-Ulm-Schwaighofen</p>
+                    <p align="left"><strong>ab 8,00 € - Anfahrtskosten 0,00 €</strong>
+                        <br> 89073 Ulm-Mitte, 89073 Ulm-Oststadt, 89231 Neu-Ulm-Illerbrücke, 89231 Neu-Ulm-Neu-Ulm, 89231 Neu-Ulm-Offenhausen, 89231 Neu-Ulm-Schwaighofen</p>
+                    <p align="left"><strong>ab 8,00 € - Anfahrtskosten 0,00 €</strong>
+                        <br> 89073 Ulm-Mitte, 89073 Ulm-Oststadt, 89231 Neu-Ulm-Illerbrücke, 89231 Neu-Ulm-Neu-Ulm, 89231 Neu-Ulm-Offenhausen, 89231 Neu-Ulm-Schwaighofen</p>
+                    <p align="left"><strong>ab 8,00 € - Anfahrtskosten 0,00 €</strong>
+                        <br> 89073 Ulm-Mitte, 89073 Ulm-Oststadt, 89231 Neu-Ulm-Illerbrücke, 89231 Neu-Ulm-Neu-Ulm, 89231 Neu-Ulm-Offenhausen, 89231 Neu-Ulm-Schwaighofen</p>
+                    <p align="left"><strong>ab 8,00 € - Anfahrtskosten 0,00 €</strong>
+                        <br> 89073 Ulm-Mitte, 89073 Ulm-Oststadt, 89231 Neu-Ulm-Illerbrücke, 89231 Neu-Ulm-Neu-Ulm, 89231 Neu-Ulm-Offenhausen, 89231 Neu-Ulm-Schwaighofen</p>
+                </div>
             </div>
-            <div class="row">
-              <div class="twelve columns">
-                <h2 class="kitchen-sink">Primary Colours - Communication</h2>
-                <p>
-                  Use these solid colour backgrounds for communications materials. Don't use any other colours than these.
-                </p>
-
-              </div>
+            <div class="row shadow-mirrored">
+                <div class="eight columns offset-by-two">
+                    <a class="button" href="#">jetzt online bestellen</a>
+                </div>
             </div>
-            <div class="row">
-              <div class="four columns">
-                <h2 class="kitchen-sink">Alizarian</h2>
-                <div class="row">
-                  <div class="twelve columns">
-                    <div class="panel small alizarin100"> 
-                    </div>                    
-                    <pre><code class="language-markup">$primary-color-red : $alizarin100</code></pre>
-                  </div>
-                </div>
-              </div>
-
-              <div class="four columns">
-                <h2 class="kitchen-sink">Sunglow</h2>
-                <div class="row">
-                  <div class="twelve columns">
-                    <div class="panel small sunglow100"> 
-                    </div>                    
-                    <pre><code class="language-markup">$primary-color-yellow : $sunglow100</code></pre>                
-                  </div>
-                </div>
-              </div>
-
-              <div class="four columns">
-                <h2 class="kitchen-sink">Black Bean</h2>
-                <div class="row">
-                  <div class="twelve columns">
-                    <div class="panel small blackBean100"> 
-                    </div>                    
-                    <pre><code class="language-markup">$primary-color-purple: $blackBean100</code></pre>             
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="row">
-              <div class="twelve columns">
-                <h2 class="kitchen-sink">Secondary Colours - Secondary Elements</h2>
-                <p>
-                  Use these colours for secondary style elements like boxes or bars. Don't use any other colours than displayed.<br>
-                  You can use Modest Grey and its tints for backgrounds on webpages or mobile screen designs.
-                </p>
-              </div>
-            </div>
-              
-            <div class="row">
-              <div class="four columns">
-
-                <h2 class="kitchen-sink">Modest Grey</h2>
-                <div class="row">
-                  <div class="twelve columns">
-                    <div class="panel small modestGrey100"> 
-                    </div>                    
-                    <pre><code class="language-markup">$secondary-color-grey: $modestGrey100</code></pre>
-                  </div>
-                </div>
-              </div>
-
-              <div class="four columns">
-                <h2 class="kitchen-sink">Sky Blue</h2>
-                <div class="row">
-                  <div class="twelve columns">
-                    <div class="panel small skyBlue100"> 
-                    </div>                    
-                    <pre><code class="language-markup">$secondary-color-blue: $skyBlue100</code></pre>
-                  </div>
-                </div>
-              </div>
-
-              <div class="four columns">
-                <h2 class="kitchen-sink">Midnight Blue</h2>
-                <div class="row">
-                  <div class="twelve columns">
-                    <div class="panel small midnightBlue100"> 
-                    </div>                    
-                    <pre><code class="language-markup">$secondary-color-mblue: $midnightBlue100</code></pre>
-                  </div>
-                </div>
-              </div>    
-            </div>
-
-          </div>
-
-        </div><!-- /colours -->
+        </div>
+        <div class="wrapper slider-bottom">
+        </div>
 
     </main>
 
     <footer>
 
-      <!-- Necessary Script -->
-      <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-
-      <!-- Resource NOT required -->
-      <!-- Delete for production -->
-      <script src="demo/@prism.js"></script>
+        <div class="container shadow">
+            <div class="eight columns offset-by-two">
+                <p><a href="#">Impressum</a>
+                    <br> Neu Ulmer Schnitzel Express · Karlstr. 116 · 89073 Ulm
+                    <br> powered by <strong><i>pizza.de</i></strong></p>
+            </div>
+        </div>
 
     </footer>
+    <!-- Necessary Script -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script>
+        function initMap() {
+            var myLatLng = {
+                lat: -25.363,
+                lng: 131.044
+            };
 
-  </body>
-  </html>
+            var map = new google.maps.Map(document.getElementById('map'), {
+                zoom: 4,
+                center: myLatLng
+            });
+
+            var marker = new google.maps.Marker({
+                position: myLatLng,
+                map: map,
+                title: 'Hello World!'
+            });
+        }
+    </script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?signed_in=true&callback=initMap"></script>
+
+</body>
+
+</html>
