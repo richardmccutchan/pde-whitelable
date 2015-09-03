@@ -3,14 +3,14 @@
     width: 100%;
 }
 
-.slider {
-    background: url(../assets/pizza/1.jpg) fixed;
-    background-repeat: no-repeat;
-    background-color: #ffffff;
-    background-size: contain;
-    height: 400px;
-    text-align: center;
-}
+//.slider {
+//    background: url(../assets/pizza/1.jpg) fixed;
+//    background-repeat: no-repeat;
+//    background-color: #ffffff;
+//    background-size: contain;
+//    height: 400px;
+//    text-align: center;
+//}
 
 .slider-bottom {
     background: url(../assets/pizza/2.jpg) center top;
@@ -34,6 +34,7 @@
 
 .shadow-mirrored {
     background: url(../assets/shadow-mirrored.png) center bottom;
+
     background-repeat: no-repeat;
     padding: 0 0 2rem 0;
 }
@@ -41,26 +42,78 @@
 .overlay {
     background-color: rgba(0, 0, 0, .5);
     height: 140px;
-    position: relative;
     padding: 1rem 0 1rem 0;
-    top: -16rem;
+    position: relative;
+    top: -17rem;
+    margin-bottom: -17rem;
     text-align: center;
+    z-index: 10000;
     & h3 {
         color: white;
         font-size: 2.5rem;
     }
 }
+.overlay-scroll {
+    background: rgba(0, 0, 0, .5);
+    background-repeat: no-repeat;
+    height: 140px;
+    padding: 2rem 0 0 0;
+    text-align: left;
+    top: -160px;
+    z-index: 10000;
+    & h3 {
+        color: white;
+        font-size: 2rem;
+        line-height: 1.1;
+    }
+}
 
+
+//sticky elements
 .overlay.stick {
-    background-color: rgba(0, 0, 0, .9);
+    background-color: rgba(0, 0, 0, .5);
     position: fixed;
     top: 0;
     z-index: 10000;
 }
-
-main {
-    margin-top: -16rem;
+.rslides.stick {
+    position:fixed;
+    top: -220px;
+    z-index: 9999;
 }
+
+//slider
+.rslides {
+  position: relative;
+  list-style: none;
+  overflow: hidden;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  }
+
+.rslides li {
+  -webkit-backface-visibility: hidden;
+  position: absolute;
+  display: none;
+  width: 100%;
+  left: 0;
+  top: 0;
+  }
+
+.rslides li:first-child {
+  position: relative;
+  display: block;
+  float: left;
+  }
+
+.rslides img {
+  display: block;
+  height: auto;
+  float: left;
+  width: 100%;
+  border: 0;
+  }
 
 //typography
 .margin {
