@@ -2,22 +2,13 @@
 <html lang="en">
 
 <head>
-
     <meta charset="utf-8">
     <title>Whitelabel</title>
     <meta name="description" content="">
     <meta name="author" content="">
-
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
     <link rel="stylesheet" href="css/app.css">
     <link rel="icon" type="image/png" href="http://pizza.de/favicon.ico">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
-    <script src="js/responsiveslides.min.js"></script>
-
-
-
 </head>
 
 <body>
@@ -44,9 +35,9 @@
                         <a class="button" href="#">jetzt online bestellen</a>
                     </div>
                 </div>
-                
-        </div>
+
             </div>
+        </div>
         </div>
         <div class="wrapper overlay-scroll">
             <div class="container">
@@ -59,15 +50,7 @@
                         <a class="button" href="#">jetzt online bestellen</a>
                     </div>
                 </div>
-<!--
-                <div class="row">
-                    <div class="eight columns offset-by-two">
-                        <a class="button" href="#">jetzt online bestellen</a>
-                    </div>
-                </div>
--->
             </div>
-<!--            <img src="assets/pizza/1.jpg" style="margin-top:-200px;z-index:1">-->
         </div>
     </header>
 
@@ -87,15 +70,39 @@
         <div class="container food">
             <div class="row">
                 <div class="twelve columns vh-center-container">
-                    <div class="food-icon asiatisch">
+                    <div class="food-icon asiatisch one-by-one">
                         <br>
                         <div class="food-description">Asiatisch</div>
                     </div>
-                    <div class="food-icon baguette">
+                    <div class="food-icon baguette one-by-one">
                         <br>
-                        <div class="food-description">Baguette</div>
+                        <div class="food-description ">Baguette</div>
                     </div>
-                    <div class="food-icon burger">
+                    <div class="food-icon burger one-by-one">
+                        <br>
+                        <div class="food-description">Burger</div>
+                    </div>
+                    <div class="food-icon asiatisch one-by-one">
+                        <br>
+                        <div class="food-description">Asiatisch</div>
+                    </div>
+                    <div class="food-icon baguette one-by-one">
+                        <br>
+                        <div class="food-description ">Baguette</div>
+                    </div>
+                    <div class="food-icon burger one-by-one">
+                        <br>
+                        <div class="food-description">Burger</div>
+                    </div>
+                    <div class="food-icon asiatisch one-by-one">
+                        <br>
+                        <div class="food-description">Asiatisch</div>
+                    </div>
+                    <div class="food-icon baguette one-by-one">
+                        <br>
+                        <div class="food-description ">Baguette</div>
+                    </div>
+                    <div class="food-icon burger one-by-one">
                         <br>
                         <div class="food-description">Burger</div>
                     </div>
@@ -196,55 +203,11 @@
             });
         }
     </script>
-
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
+    <script src="js/responsiveslides.min.js"></script>
+    <script src="js/main.js"></script>
     <script async defer src="https://maps.googleapis.com/maps/api/js?signed_in=true&callback=initMap"></script>
-    <!--sticky element-->
-    <script type="text/javascript">
-        function sticky_relocate() {
-            var window_top = $(window).scrollTop();
-            var div_top = $('#sticky-anchor').offset().top + (-160);
-            if (window_top > div_top) {
-                $('.overlay').css('visibility','hidden');
-                $('.overlay-scroll').animate({"top":"0","height":130},360, "swing");
-                $('.overlay-scroll').show();
-                $('.overlay-scroll').css('position','fixed');                
-            } else {
-                $('.overlay').css('visibility','visible');
-                $('.overlay-scroll').animate({"top":"-160px","height":130},1, "swing");
-                $('.overlay-scroll').hide();
-                $('.overlay-scroll').css('position','relative');
-                
-            }
-
-        }
-
-        $(function () {
-            $(window).scroll(sticky_relocate);
-            sticky_relocate();
-        });
-    </script>
-    <script>
-        $(function () {
-            $(".rslides").responsiveSlides({
-                auto: true, // Boolean: Animate automatically, true or false
-                speed: 500, // Integer: Speed of the transition, in milliseconds
-                timeout: 4000, // Integer: Time between slide transitions, in milliseconds
-                pager: false, // Boolean: Show pager, true or false
-                nav: false, // Boolean: Show navigation, true or false
-                random: true, // Boolean: Randomize the order of the slides, true or false
-                pause: false, // Boolean: Pause on hover, true or false
-                pauseControls: true, // Boolean: Pause when hovering controls, true or false
-                prevText: "Previous", // String: Text for the "previous" button
-                nextText: "Next", // String: Text for the "next" button
-                maxwidth: "", // Integer: Max-width of the slideshow, in pixels
-                navContainer: "", // Selector: Where controls should be appended to, default is after the 'ul'
-                manualControls: "", // Selector: Declare custom pager navigation
-                namespace: "rslides", // String: Change the default namespace used
-                before: function () {}, // Function: Before callback
-                after: function () {} // Function: After callback
-            });
-        });
-    </script>
 </body>
 
 </html>

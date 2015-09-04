@@ -1327,12 +1327,150 @@ img.img-responsive {
   justify-content: center;
 }
 
-/* line 13, _custom.scss */
+/* line 47, _custom.scss */
+.one-by-one:nth-of-type(1) {
+  -webkit-transition-delay: 0s;
+  -moz-transition-delay: 0s;
+  -o-transition-delay: 0s;
+  transition-delay: 0s;
+}
+/* line 47, _custom.scss */
+.one-by-one:nth-of-type(2) {
+  -webkit-transition-delay: 0.1s;
+  -moz-transition-delay: 0.1s;
+  -o-transition-delay: 0.1s;
+  transition-delay: 0.1s;
+}
+/* line 47, _custom.scss */
+.one-by-one:nth-of-type(3) {
+  -webkit-transition-delay: 0.2s;
+  -moz-transition-delay: 0.2s;
+  -o-transition-delay: 0.2s;
+  transition-delay: 0.2s;
+}
+/* line 47, _custom.scss */
+.one-by-one:nth-of-type(4) {
+  -webkit-transition-delay: 0.3s;
+  -moz-transition-delay: 0.3s;
+  -o-transition-delay: 0.3s;
+  transition-delay: 0.3s;
+}
+/* line 47, _custom.scss */
+.one-by-one:nth-of-type(5) {
+  -webkit-transition-delay: 0.4s;
+  -moz-transition-delay: 0.4s;
+  -o-transition-delay: 0.4s;
+  transition-delay: 0.4s;
+}
+/* line 47, _custom.scss */
+.one-by-one:nth-of-type(6) {
+  -webkit-transition-delay: 0.5s;
+  -moz-transition-delay: 0.5s;
+  -o-transition-delay: 0.5s;
+  transition-delay: 0.5s;
+}
+/* line 47, _custom.scss */
+.one-by-one:nth-of-type(7) {
+  -webkit-transition-delay: 0.6s;
+  -moz-transition-delay: 0.6s;
+  -o-transition-delay: 0.6s;
+  transition-delay: 0.6s;
+}
+/* line 47, _custom.scss */
+.one-by-one:nth-of-type(8) {
+  -webkit-transition-delay: 0.7s;
+  -moz-transition-delay: 0.7s;
+  -o-transition-delay: 0.7s;
+  transition-delay: 0.7s;
+}
+/* line 47, _custom.scss */
+.one-by-one:nth-of-type(9) {
+  -webkit-transition-delay: 0.8s;
+  -moz-transition-delay: 0.8s;
+  -o-transition-delay: 0.8s;
+  transition-delay: 0.8s;
+}
+/* line 47, _custom.scss */
+.one-by-one:nth-of-type(10) {
+  -webkit-transition-delay: 0.9s;
+  -moz-transition-delay: 0.9s;
+  -o-transition-delay: 0.9s;
+  transition-delay: 0.9s;
+}
+/* line 47, _custom.scss */
+.one-by-one:nth-of-type(11) {
+  -webkit-transition-delay: 1s;
+  -moz-transition-delay: 1s;
+  -o-transition-delay: 1s;
+  transition-delay: 1s;
+}
+/* line 47, _custom.scss */
+.one-by-one:nth-of-type(12) {
+  -webkit-transition-delay: 1.1s;
+  -moz-transition-delay: 1.1s;
+  -o-transition-delay: 1.1s;
+  transition-delay: 1.1s;
+}
+/* line 47, _custom.scss */
+.one-by-one:nth-of-type(13) {
+  -webkit-transition-delay: 1.2s;
+  -moz-transition-delay: 1.2s;
+  -o-transition-delay: 1.2s;
+  transition-delay: 1.2s;
+}
+/* line 47, _custom.scss */
+.one-by-one:nth-of-type(14) {
+  -webkit-transition-delay: 1.3s;
+  -moz-transition-delay: 1.3s;
+  -o-transition-delay: 1.3s;
+  transition-delay: 1.3s;
+}
+/* line 47, _custom.scss */
+.one-by-one:nth-of-type(15) {
+  -webkit-transition-delay: 1.4s;
+  -moz-transition-delay: 1.4s;
+  -o-transition-delay: 1.4s;
+  transition-delay: 1.4s;
+}
+/* line 47, _custom.scss */
+.one-by-one:nth-of-type(16) {
+  -webkit-transition-delay: 1.5s;
+  -moz-transition-delay: 1.5s;
+  -o-transition-delay: 1.5s;
+  transition-delay: 1.5s;
+}
+/* line 47, _custom.scss */
+.one-by-one:nth-of-type(17) {
+  -webkit-transition-delay: 1.6s;
+  -moz-transition-delay: 1.6s;
+  -o-transition-delay: 1.6s;
+  transition-delay: 1.6s;
+}
+
+/* line 53, _custom.scss */
+.fade-in-top, .food-icon {
+  opacity: 0;
+  -webkit-transform: translate(0px, 0px);
+  -moz-transform: translate(0px, 0px);
+  -o-transform: translate(0px, 0px);
+  transform: translate(0px, 0px);
+}
+
+/* line 57, _custom.scss */
+.fade-out-top {
+  opacity: 1;
+  -webkit-transform: translate(0px, -20px);
+  -moz-transform: translate(0px, -20px);
+  -o-transform: translate(0px, -20px);
+  transform: translate(0px, -20px);
+}
+
+/* line 63, _custom.scss */
 .wrapper {
   width: 100%;
 }
 
-/* line 18, _custom.scss */
+/* line 67, _custom.scss */
 .slider-bottom {
   background: url(../assets/pizza/2.jpg) center top;
   background-repeat: no-repeat;
@@ -1342,26 +1480,26 @@ img.img-responsive {
   text-align: center;
 }
 
-/* line 27, _custom.scss */
+/* line 76, _custom.scss */
 .shadow, .shadow-last {
   background: url(../assets/shadow.png) center top;
   background-repeat: no-repeat;
   padding: 3rem 0;
 }
 
-/* line 33, _custom.scss */
+/* line 82, _custom.scss */
 .shadow-last {
   padding: 3rem 0 0 0;
 }
 
-/* line 38, _custom.scss */
+/* line 87, _custom.scss */
 .shadow-mirrored {
   background: url(../assets/shadow-mirrored.png) center bottom;
   background-repeat: no-repeat;
   padding: 0 0 2rem 0;
 }
 
-/* line 45, _custom.scss */
+/* line 93, _custom.scss */
 .overlay {
   background: rgba(0, 0, 0, 0.5);
   height: 140px;
@@ -1372,7 +1510,7 @@ img.img-responsive {
   text-align: center;
   z-index: 10000;
 }
-/* line 54, _custom.scss */
+/* line 102, _custom.scss */
 .overlay h3, .overlay h4,
 .overlay h5,
 .overlay h6 {
@@ -1380,7 +1518,7 @@ img.img-responsive {
   font-size: 2.5rem;
 }
 
-/* line 59, _custom.scss */
+/* line 108, _custom.scss */
 .overlay-scroll {
   background: rgba(0, 0, 0, 0.6);
   background-repeat: no-repeat;
@@ -1390,7 +1528,7 @@ img.img-responsive {
   top: -160px;
   z-index: 10000;
 }
-/* line 67, _custom.scss */
+/* line 116, _custom.scss */
 .overlay-scroll h3, .overlay-scroll h4,
 .overlay-scroll h5,
 .overlay-scroll h6 {
@@ -1399,7 +1537,7 @@ img.img-responsive {
   line-height: 1.1;
 }
 
-/* line 76, _custom.scss */
+/* line 124, _custom.scss */
 .overlay.stick {
   background: rgba(0, 0, 0, 0.5);
   position: fixed;
@@ -1407,14 +1545,14 @@ img.img-responsive {
   z-index: 10000;
 }
 
-/* line 82, _custom.scss */
+/* line 131, _custom.scss */
 .rslides.stick {
   position: fixed;
   top: -220px;
   z-index: 9999;
 }
 
-/* line 89, _custom.scss */
+/* line 138, _custom.scss */
 .rslides {
   position: relative;
   list-style: none;
@@ -1424,7 +1562,7 @@ img.img-responsive {
   margin: 0;
 }
 
-/* line 98, _custom.scss */
+/* line 147, _custom.scss */
 .rslides li {
   -webkit-backface-visibility: hidden;
   position: absolute;
@@ -1434,14 +1572,14 @@ img.img-responsive {
   top: 0;
 }
 
-/* line 107, _custom.scss */
+/* line 156, _custom.scss */
 .rslides li:first-child {
   position: relative;
   display: block;
   float: left;
 }
 
-/* line 113, _custom.scss */
+/* line 162, _custom.scss */
 .rslides img {
   display: block;
   height: auto;
@@ -1450,60 +1588,142 @@ img.img-responsive {
   border: 0;
 }
 
-/* line 122, _custom.scss */
+/* line 171, _custom.scss */
 .margin {
   margin: 0;
 }
 
-/* line 128, _custom.scss */
+/* line 177, _custom.scss */
 footer p,
 footer a {
   font-size: 1.2rem;
 }
 
-/* line 134, _custom.scss */
+/* line 183, _custom.scss */
 .pdv {
   margin: 0 0 2rem 0;
   padding: .1rem;
   border: 1px solid #bbbbbb;
 }
 
-/* line 140, _custom.scss */
+/* line 189, _custom.scss */
 .food {
   padding: 0 0 4rem 0;
 }
 
-/* line 144, _custom.scss */
+/* line 193, _custom.scss */
 .food-icon {
   float: left;
   height: 60px;
   margin: 0 1.5rem 0 0;
   width: 60px;
+  -webkit-transition: all 0.15s ease-in 0.05s;
+  -moz-transition: all 0.15s ease-in 0.05s;
+  -o-transition: all 0.15s ease-in 0.05s;
+  transition: all 0.15s ease-in 0.05s;
 }
-/* line 149, _custom.scss */
+/* line 200, _custom.scss */
 .food-icon:last-of-type {
   margin: 0;
 }
 
-/* line 154, _custom.scss */
+/* line 205, _custom.scss */
+.amerikanisch {
+  background: url(../assets/food-icons/amerikanisch.png) center center;
+  background-repeat: no-repeat;
+}
+
+/* line 209, _custom.scss */
 .asiatisch {
   background: url(../assets/food-icons/asiatisch.png) center center;
   background-repeat: no-repeat;
 }
 
-/* line 159, _custom.scss */
+/* line 213, _custom.scss */
 .baguette {
   background: url(../assets/food-icons/baguette.png) center center;
   background-repeat: no-repeat;
 }
 
-/* line 164, _custom.scss */
+/* line 217, _custom.scss */
 .burger {
   background: url(../assets/food-icons/burger.png) center center;
   background-repeat: no-repeat;
 }
 
-/* line 169, _custom.scss */
+/* line 221, _custom.scss */
+.dessert {
+  background: url(../assets/food-icons/dessert.png) center center;
+  background-repeat: no-repeat;
+}
+
+/* line 225, _custom.scss */
+.doener {
+  background: url(../assets/food-icons/doener.png) center center;
+  background-repeat: no-repeat;
+}
+
+/* line 229, _custom.scss */
+.getraenkelieferservice {
+  background: url(../assets/food-icons/getraenkelieferservice.png) center center;
+  background-repeat: no-repeat;
+}
+
+/* line 233, _custom.scss */
+.griechisch {
+  background: url(../assets/food-icons/griechisch.png) center center;
+  background-repeat: no-repeat;
+}
+
+/* line 237, _custom.scss */
+.fisch {
+  background: url(../assets/food-icons/fisch.png) center center;
+  background-repeat: no-repeat;
+}
+
+/* line 241, _custom.scss */
+.haehnchen {
+  background: url(../assets/food-icons/haehnchen.png) center center;
+  background-repeat: no-repeat;
+}
+
+/* line 245, _custom.scss */
+.indisch {
+  background: url(../assets/food-icons/indisch.png) center center;
+  background-repeat: no-repeat;
+}
+
+/* line 249, _custom.scss */
+.mexikanisch {
+  background: url(../assets/food-icons/mexikanisch.png) center center;
+  background-repeat: no-repeat;
+}
+
+/* line 253, _custom.scss */
+.orientalisch {
+  background: url(../assets/food-icons/orientalisch.png) center center;
+  background-repeat: no-repeat;
+}
+
+/* line 257, _custom.scss */
+.pizza-pasta {
+  background: url(../assets/food-icons/pizza-pasta.png) center center;
+  background-repeat: no-repeat;
+}
+
+/* line 261, _custom.scss */
+.sushi {
+  background: url(../assets/food-icons/sushi.png) center center;
+  background-repeat: no-repeat;
+}
+
+/* line 265, _custom.scss */
+.vegetarisch {
+  background: url(../assets/food-icons/vegetarisch.png) center center;
+  background-repeat: no-repeat;
+}
+
+/* line 271, _custom.scss */
 .food-description {
   font-family: "Open Sans", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-style: italic;
@@ -1511,7 +1731,7 @@ footer a {
   margin-top: 4.5rem;
 }
 
-/* line 177, _custom.scss */
+/* line 279, _custom.scss */
 .map-container {
   border: 1px solid #bbbbbb;
   height: 360px;
@@ -1520,7 +1740,7 @@ footer a {
   width: 360px;
 }
 
-/* line 185, _custom.scss */
+/* line 287, _custom.scss */
 #map {
   height: 100%;
   width: 100%;
