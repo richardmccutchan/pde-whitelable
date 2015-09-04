@@ -51,8 +51,11 @@
         <div class="wrapper overlay-scroll">
             <div class="container">
                 <div class="row">
-                    <div class="eight columns offset-by-two">
-                        <img class="pdv" src="http://pizza.de/0_hash/777e29e0cf87643764a2b225628521db73c080d0/100.png" height="100" width="100" style="float:left;margin-right:2rem;"><h3>Neu Ulmer Schnitzel Express liefert Ihnen frisch zubereitete Pizza, Pasta und Salate direkt nach Hause</h3>
+                    <div class="one column offset-by-one">
+                        <img class="pdv" src="http://pizza.de/0_hash/777e29e0cf87643764a2b225628521db73c080d0/100.png" height="100" width="100" style="float:left;margin-right:2rem;">
+                    </div>
+                    <div class="nine columns offset-by-one">
+                        <h3>Neu Ulmer Schnitzel Express liefert Ihnen frisch zubereitete Pizza, Pasta und Salate direkt nach Hause</h3>
                         <a class="button" href="#">jetzt online bestellen</a>
                     </div>
                 </div>
@@ -202,13 +205,12 @@
             var div_top = $('#sticky-anchor').offset().top + (-160);
             if (window_top > div_top) {
                 $('.overlay').css('visibility','hidden');
-                $('.overlay-scroll').animate({"top":"0","height":140},60, "swing");
-//                $('.overlay-scroll').effect('bounce',500);
+                $('.overlay-scroll').animate({"top":"0","height":130},360, "swing");
                 $('.overlay-scroll').show();
                 $('.overlay-scroll').css('position','fixed');                
             } else {
                 $('.overlay').css('visibility','visible');
-                $('.overlay-scroll').animate({"top":"-160px","height":140},1, "swing");
+                $('.overlay-scroll').animate({"top":"-160px","height":130},1, "swing");
                 $('.overlay-scroll').hide();
                 $('.overlay-scroll').css('position','relative');
                 

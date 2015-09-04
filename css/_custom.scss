@@ -1,16 +1,10 @@
+@import "compass/css3";
+
 //Wrapper Backgrounds
 .wrapper {
     width: 100%;
 }
 
-//.slider {
-//    background: url(../assets/pizza/1.jpg) fixed;
-//    background-repeat: no-repeat;
-//    background-color: #ffffff;
-//    background-size: contain;
-//    height: 400px;
-//    text-align: center;
-//}
 
 .slider-bottom {
     background: url(../assets/pizza/2.jpg) center top;
@@ -54,9 +48,9 @@
     }
 }
 .overlay-scroll {
-    background: rgba(0, 0, 0, .5);
+    background: rgba(0, 0, 0, .6);
     background-repeat: no-repeat;
-    height: 140px;
+    height: 130px;
     padding: 2rem 0 0 0;
     text-align: left;
     top: -160px;

@@ -1327,12 +1327,12 @@ img.img-responsive {
   justify-content: center;
 }
 
-/* line 2, _custom.scss */
+/* line 4, _custom.scss */
 .wrapper {
   width: 100%;
 }
 
-/* line 15, _custom.scss */
+/* line 9, _custom.scss */
 .slider-bottom {
   background: url(../assets/pizza/2.jpg) center top;
   background-repeat: no-repeat;
@@ -1342,26 +1342,26 @@ img.img-responsive {
   text-align: center;
 }
 
-/* line 24, _custom.scss */
+/* line 18, _custom.scss */
 .shadow, .shadow-last {
   background: url(../assets/shadow.png) center top;
   background-repeat: no-repeat;
   padding: 3rem 0;
 }
 
-/* line 30, _custom.scss */
+/* line 24, _custom.scss */
 .shadow-last {
   padding: 3rem 0 0 0;
 }
 
-/* line 35, _custom.scss */
+/* line 29, _custom.scss */
 .shadow-mirrored {
   background: url(../assets/shadow-mirrored.png) center bottom;
   background-repeat: no-repeat;
   padding: 0 0 2rem 0;
 }
 
-/* line 42, _custom.scss */
+/* line 36, _custom.scss */
 .overlay {
   background-color: rgba(0, 0, 0, 0.5);
   height: 140px;
@@ -1372,7 +1372,7 @@ img.img-responsive {
   text-align: center;
   z-index: 10000;
 }
-/* line 51, _custom.scss */
+/* line 45, _custom.scss */
 .overlay h3, .overlay h4,
 .overlay h5,
 .overlay h6 {
@@ -1380,17 +1380,17 @@ img.img-responsive {
   font-size: 2.5rem;
 }
 
-/* line 56, _custom.scss */
+/* line 50, _custom.scss */
 .overlay-scroll {
-  background: rgba(0, 0, 0, 0.5);
+  background: rgba(0, 0, 0, 0.6);
   background-repeat: no-repeat;
-  height: 140px;
+  height: 130px;
   padding: 2rem 0 0 0;
   text-align: left;
   top: -160px;
   z-index: 10000;
 }
-/* line 64, _custom.scss */
+/* line 58, _custom.scss */
 .overlay-scroll h3, .overlay-scroll h4,
 .overlay-scroll h5,
 .overlay-scroll h6 {
@@ -1399,7 +1399,7 @@ img.img-responsive {
   line-height: 1.1;
 }
 
-/* line 73, _custom.scss */
+/* line 67, _custom.scss */
 .overlay.stick {
   background-color: rgba(0, 0, 0, 0.5);
   position: fixed;
@@ -1407,14 +1407,14 @@ img.img-responsive {
   z-index: 10000;
 }
 
-/* line 79, _custom.scss */
+/* line 73, _custom.scss */
 .rslides.stick {
   position: fixed;
   top: -220px;
   z-index: 9999;
 }
 
-/* line 86, _custom.scss */
+/* line 80, _custom.scss */
 .rslides {
   position: relative;
   list-style: none;
@@ -1424,7 +1424,7 @@ img.img-responsive {
   margin: 0;
 }
 
-/* line 95, _custom.scss */
+/* line 89, _custom.scss */
 .rslides li {
   -webkit-backface-visibility: hidden;
   position: absolute;
@@ -1434,14 +1434,14 @@ img.img-responsive {
   top: 0;
 }
 
-/* line 104, _custom.scss */
+/* line 98, _custom.scss */
 .rslides li:first-child {
   position: relative;
   display: block;
   float: left;
 }
 
-/* line 110, _custom.scss */
+/* line 104, _custom.scss */
 .rslides img {
   display: block;
   height: auto;
@@ -1450,60 +1450,60 @@ img.img-responsive {
   border: 0;
 }
 
-/* line 119, _custom.scss */
+/* line 113, _custom.scss */
 .margin {
   margin: 0;
 }
 
-/* line 125, _custom.scss */
+/* line 119, _custom.scss */
 footer p,
 footer a {
   font-size: 1.2rem;
 }
 
-/* line 131, _custom.scss */
+/* line 125, _custom.scss */
 .pdv {
   margin: 0 0 2rem 0;
   padding: .1rem;
   border: 1px solid #bbbbbb;
 }
 
-/* line 137, _custom.scss */
+/* line 131, _custom.scss */
 .food {
   padding: 0 0 4rem 0;
 }
 
-/* line 141, _custom.scss */
+/* line 135, _custom.scss */
 .food-icon {
   float: left;
   height: 60px;
   margin: 0 1.5rem 0 0;
   width: 60px;
 }
-/* line 146, _custom.scss */
+/* line 140, _custom.scss */
 .food-icon:last-of-type {
   margin: 0;
 }
 
-/* line 151, _custom.scss */
+/* line 145, _custom.scss */
 .asiatisch {
   background: url(../assets/food-icons/asiatisch.png) center center;
   background-repeat: no-repeat;
 }
 
-/* line 156, _custom.scss */
+/* line 150, _custom.scss */
 .baguette {
   background: url(../assets/food-icons/baguette.png) center center;
   background-repeat: no-repeat;
 }
 
-/* line 161, _custom.scss */
+/* line 155, _custom.scss */
 .burger {
   background: url(../assets/food-icons/burger.png) center center;
   background-repeat: no-repeat;
 }
 
-/* line 166, _custom.scss */
+/* line 160, _custom.scss */
 .food-description {
   font-family: "Open Sans", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-style: italic;
@@ -1511,7 +1511,7 @@ footer a {
   margin-top: 4.5rem;
 }
 
-/* line 174, _custom.scss */
+/* line 168, _custom.scss */
 .map-container {
   border: 1px solid #bbbbbb;
   height: 384px;
@@ -1520,7 +1520,7 @@ footer a {
   width: 384px;
 }
 
-/* line 182, _custom.scss */
+/* line 176, _custom.scss */
 #map {
   height: 100%;
   width: 100%;
