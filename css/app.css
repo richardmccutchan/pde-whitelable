@@ -1450,19 +1450,19 @@ img.img-responsive {
 /* line 53, _custom.scss */
 .fade-in-top, .food-icon {
   opacity: 0;
-  -webkit-transform: translate(0px, 0px);
-  -moz-transform: translate(0px, 0px);
-  -o-transform: translate(0px, 0px);
-  transform: translate(0px, 0px);
+  -webkit-transform: translate(0px, -20px);
+  -moz-transform: translate(0px, -20px);
+  -o-transform: translate(0px, -20px);
+  transform: translate(0px, -20px);
 }
 
 /* line 58, _custom.scss */
 .fade-out-top {
   opacity: 1;
-  -webkit-transform: translate(0px, -20px);
-  -moz-transform: translate(0px, -20px);
-  -o-transform: translate(0px, -20px);
-  transform: translate(0px, -20px);
+  -webkit-transform: translate(0px, 0px);
+  -moz-transform: translate(0px, 0px);
+  -o-transform: translate(0px, 0px);
+  transform: translate(0px, 0px);
 }
 
 /* line 64, _custom.scss */
@@ -1530,7 +1530,7 @@ img.img-responsive {
   top: -160px;
   z-index: 10000;
 }
-/* line 125, _custom.scss */
+/* line 126, _custom.scss */
 .overlay-scroll h3, .overlay-scroll h4,
 .overlay-scroll h5,
 .overlay-scroll h6 {
@@ -1540,19 +1540,25 @@ img.img-responsive {
   margin-bottom: .8rem;
 }
 @media (min-width: 550px) {
-  /* line 125, _custom.scss */
+  /* line 126, _custom.scss */
   .overlay-scroll h3, .overlay-scroll h4,
   .overlay-scroll h5,
   .overlay-scroll h6 {
-    font-size: 2rem;
+    font-size: 2.5rem;
   }
 }
-/* line 134, _custom.scss */
+/* line 135, _custom.scss */
 .overlay-scroll .button {
   font-size: 1.2rem;
 }
+@media (min-width: 550px) {
+  /* line 135, _custom.scss */
+  .overlay-scroll .button {
+    font-size: 1.7rem;
+  }
+}
 
-/* line 141, _custom.scss */
+/* line 144, _custom.scss */
 .overlay.stick {
   background: rgba(0, 0, 0, 0.5);
   position: fixed;
@@ -1560,14 +1566,14 @@ img.img-responsive {
   z-index: 10000;
 }
 
-/* line 148, _custom.scss */
+/* line 151, _custom.scss */
 .rslides.stick {
   position: fixed;
   top: -220px;
   z-index: 9999;
 }
 
-/* line 155, _custom.scss */
+/* line 158, _custom.scss */
 .rslides {
   position: relative;
   list-style: none;
@@ -1577,7 +1583,7 @@ img.img-responsive {
   margin: 0;
 }
 
-/* line 164, _custom.scss */
+/* line 167, _custom.scss */
 .rslides li {
   -webkit-backface-visibility: hidden;
   position: absolute;
@@ -1587,14 +1593,14 @@ img.img-responsive {
   top: 0;
 }
 
-/* line 173, _custom.scss */
+/* line 176, _custom.scss */
 .rslides li:first-child {
   position: relative;
   display: block;
   float: left;
 }
 
-/* line 179, _custom.scss */
+/* line 182, _custom.scss */
 .rslides img {
   display: block;
   height: auto;
@@ -1603,18 +1609,18 @@ img.img-responsive {
   border: 0;
 }
 
-/* line 188, _custom.scss */
+/* line 191, _custom.scss */
 .margin {
   margin: 0;
 }
 
-/* line 194, _custom.scss */
+/* line 197, _custom.scss */
 footer p,
 footer a {
   font-size: 1.2rem;
 }
 
-/* line 200, _custom.scss */
+/* line 203, _custom.scss */
 .pdv {
   border: 1px solid #bbbbbb;
   height: auto;
@@ -1623,19 +1629,19 @@ footer a {
   width: 80px;
 }
 @media (min-width: 550px) {
-  /* line 200, _custom.scss */
+  /* line 203, _custom.scss */
   .pdv {
     height: 100px;
     width: 100px;
   }
 }
 
-/* line 212, _custom.scss */
+/* line 215, _custom.scss */
 .food {
   padding: 0 0 4rem 0;
 }
 
-/* line 216, _custom.scss */
+/* line 219, _custom.scss */
 .food-icon {
   -webkit-transition: all 0.15s ease-in 0.05s;
   -moz-transition: all 0.15s ease-in 0.05s;
@@ -1648,121 +1654,121 @@ footer a {
   width: 30%;
 }
 @media (min-width: 550px) {
-  /* line 216, _custom.scss */
+  /* line 219, _custom.scss */
   .food-icon {
     height: 60px;
     margin: 0 1.5rem 3.5rem 0;
     width: 60px;
   }
-  /* line 228, _custom.scss */
+  /* line 231, _custom.scss */
   .food-icon:last-of-type {
     margin: 0 0 3.5rem 0;
   }
 }
 
-/* line 234, _custom.scss */
+/* line 237, _custom.scss */
 .amerikanisch {
   background: url(../assets/food-icons/amerikanisch.png) center center;
   background-repeat: no-repeat;
 }
 
-/* line 239, _custom.scss */
+/* line 242, _custom.scss */
 .asiatisch {
   background: url(../assets/food-icons/asiatisch.png) center center;
   background-repeat: no-repeat;
 }
 
-/* line 244, _custom.scss */
+/* line 247, _custom.scss */
 .baguette {
   background: url(../assets/food-icons/baguette.png) center center;
   background-repeat: no-repeat;
 }
 
-/* line 249, _custom.scss */
+/* line 252, _custom.scss */
 .burger {
   background: url(../assets/food-icons/burger.png) center center;
   background-repeat: no-repeat;
 }
 
-/* line 254, _custom.scss */
+/* line 257, _custom.scss */
 .dessertdessert {
   background: url(../assets/food-icons/dessert.png) center center;
   background-repeat: no-repeat;
 }
 
-/* line 259, _custom.scss */
+/* line 262, _custom.scss */
 .doener {
   background: url(../assets/food-icons/doener.png) center center;
   background-repeat: no-repeat;
 }
 
-/* line 264, _custom.scss */
+/* line 267, _custom.scss */
 .getraenkelieferservice {
   background: url(../assets/food-icons/getraenkelieferservice.png) center center;
   background-repeat: no-repeat;
 }
 
-/* line 269, _custom.scss */
+/* line 272, _custom.scss */
 .griechisch {
   background: url(../assets/food-icons/griechisch.png) center center;
   background-repeat: no-repeat;
 }
 
-/* line 274, _custom.scss */
+/* line 277, _custom.scss */
 .fisch {
   background: url(../assets/food-icons/fisch.png) center center;
   background-repeat: no-repeat;
 }
 
-/* line 279, _custom.scss */
+/* line 282, _custom.scss */
 .haehnchen {
   background: url(../assets/food-icons/haehnchen.png) center center;
   background-repeat: no-repeat;
 }
 
-/* line 284, _custom.scss */
+/* line 287, _custom.scss */
 .indisch {
   background: url(../assets/food-icons/indisch.png) center center;
   background-repeat: no-repeat;
 }
 
-/* line 289, _custom.scss */
+/* line 292, _custom.scss */
 .mexikanisch {
   background: url(../assets/food-icons/mexikanisch.png) center center;
   background-repeat: no-repeat;
 }
 
-/* line 294, _custom.scss */
+/* line 297, _custom.scss */
 .orientalisch {
   background: url(../assets/food-icons/orientalisch.png) center center;
   background-repeat: no-repeat;
 }
 
-/* line 299, _custom.scss */
+/* line 302, _custom.scss */
 .pizza-pasta {
   background: url(../assets/food-icons/pizza-pasta.png) center center;
   background-repeat: no-repeat;
 }
 
-/* line 304, _custom.scss */
+/* line 307, _custom.scss */
 .steak-schnitzel {
   background: url(../assets/food-icons/steak-schnitzel.png) center center;
   background-repeat: no-repeat;
 }
 
-/* line 309, _custom.scss */
+/* line 312, _custom.scss */
 .sushi {
   background: url(../assets/food-icons/sushi.png) center center;
   background-repeat: no-repeat;
 }
 
-/* line 314, _custom.scss */
+/* line 317, _custom.scss */
 .vegetarisch {
   background: url(../assets/food-icons/vegetarisch.png) center center;
   background-repeat: no-repeat;
 }
 
-/* line 319, _custom.scss */
+/* line 322, _custom.scss */
 .food-description {
   font-family: "Open Sans", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-style: italic;
@@ -1770,33 +1776,33 @@ footer a {
   margin-top: 6rem;
 }
 @media (min-width: 550px) {
-  /* line 319, _custom.scss */
+  /* line 322, _custom.scss */
   .food-description {
     margin-top: 4.5rem;
   }
 }
 
-/* line 330, _custom.scss */
+/* line 333, _custom.scss */
 .map-container {
   border: 1px solid #bbbbbb;
   margin: 0 0 3rem 0;
   padding: 2px;
 }
 
-/* line 336, _custom.scss */
+/* line 339, _custom.scss */
 #map {
   height: 360px;
   width: 360px;
 }
 @media (min-width: 400px) {
-  /* line 336, _custom.scss */
+  /* line 339, _custom.scss */
   #map {
     height: 320px;
     width: auto;
   }
 }
 @media (min-width: 550px) {
-  /* line 336, _custom.scss */
+  /* line 339, _custom.scss */
   #map {
     height: 450px;
     width: auto;

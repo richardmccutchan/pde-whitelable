@@ -5,18 +5,21 @@ var app = function () {
         $('.food-icon').toggleClass('fade-out-top');
     });
 }
+
 function windowSize() {
     windowHeight = window.innerHeight ? window.innerHeight : $(window).height();
     windowWidth = window.innerWidth ? window.innerWidth : $(window).width();
 }
 windowSize();
-$( window ).resize(function() {
+$(window).resize(function () {
     windowSize();
 });
-if(windowWidth < 768){
+if (windowWidth < 768) {
     $('.icons-row').children().removeClass('vh-center-container');
+    $('h3').addClass('truncate');
 } else {
     $('.icons-row').children().addClass('vh-center-container');
+    $('h3').removeClass('truncate');
 }
 
 //sticky element
