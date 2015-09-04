@@ -51,12 +51,13 @@
 }
 
 .fade-in-top {
-	opacity: 0;
-	@include prefixer(transform, translate(0px, 0px));
+    opacity: 0;
+    @include prefixer(transform, translate(0px, 0px));
 }
+
 .fade-out-top {
-	opacity: 1;
-	@include prefixer(transform, translate(0px, -20px));
+    opacity: 1;
+    @include prefixer(transform, translate(0px, -20px));
 }
 
 //Wrapper Backgrounds
@@ -76,6 +77,7 @@
 .shadow {
     background: url(../assets/shadow.png) center top;
     background-repeat: no-repeat;
+    background-size: contain;
     padding: 3rem 0;
 }
 
@@ -87,6 +89,7 @@
 .shadow-mirrored {
     background: url(../assets/shadow-mirrored.png) center bottom;
     background-repeat: no-repeat;
+    background-size: contain;
     padding: 0 0 2rem 0;
 }
 
@@ -113,10 +116,24 @@
     text-align: left;
     top: -160px;
     z-index: 10000;
+//    & .two.columns {
+//        width:30%
+//    }
+//    & .ten.columns {
+//        width:65%
+//    }
     & h3 {
         color: white;
-        font-size: 2rem;
+        font-size: 1.4rem;
         line-height: 1.1;
+        margin-bottom: .8rem;
+        @media (#{$bp-larger-than-phablet}) {
+            font-size: 2rem;
+        }
+    }
+    & .button {
+        font-size: 1.2rem;
+        @media (#{$bp-larger-than-phablet}) {}
     }
 }
 
@@ -181,9 +198,15 @@ footer {
 
 //images & icons
 .pdv {
+    border: 1px solid $border-color;
+    height: auto;
     margin: 0 0 2rem 0;
     padding: .1rem;
-    border: 1px solid $border-color;
+    width: 80px;
+    @media (#{$bp-larger-than-phablet}) {
+        height: 100px;
+        width: 100px;
+    }
 }
 
 .food {
@@ -192,13 +215,19 @@ footer {
 
 .food-icon {
     @extend .fade-in-top;
+    @include transition();
+    display: block;
     float: left;
-    height: 60px;
-    margin: 0 1.5rem 0 0;
-    width: 60px;
-    @include transition();    
-    &:last-of-type {
-        margin: 0;
+    margin: 0 .5rem 1.5rem .5rem;
+    text-align: center;
+    width: 30%;
+    @media (#{$bp-larger-than-phablet}) {
+        height: 60px;
+        margin: 0 1.5rem 3.5rem 0;
+        width: 60px;
+        &:last-of-type {
+            margin: 0 0 3.5rem 0;
+        }
     }
 }
 
@@ -206,89 +235,113 @@ footer {
     background: url(../assets/food-icons/amerikanisch.png) center center;
     background-repeat: no-repeat;
 }
+
 .asiatisch {
     background: url(../assets/food-icons/asiatisch.png) center center;
     background-repeat: no-repeat;
 }
+
 .baguette {
     background: url(../assets/food-icons/baguette.png) center center;
     background-repeat: no-repeat;
 }
+
 .burger {
     background: url(../assets/food-icons/burger.png) center center;
     background-repeat: no-repeat;
 }
+
 .dessertdessert {
     background: url(../assets/food-icons/dessert.png) center center;
     background-repeat: no-repeat;
 }
+
 .doener {
     background: url(../assets/food-icons/doener.png) center center;
     background-repeat: no-repeat;
 }
+
 .getraenkelieferservice {
     background: url(../assets/food-icons/getraenkelieferservice.png) center center;
     background-repeat: no-repeat;
 }
+
 .griechisch {
     background: url(../assets/food-icons/griechisch.png) center center;
     background-repeat: no-repeat;
 }
+
 .fisch {
     background: url(../assets/food-icons/fisch.png) center center;
     background-repeat: no-repeat;
 }
+
 .haehnchen {
     background: url(../assets/food-icons/haehnchen.png) center center;
     background-repeat: no-repeat;
 }
+
 .indisch {
     background: url(../assets/food-icons/indisch.png) center center;
     background-repeat: no-repeat;
 }
+
 .mexikanisch {
     background: url(../assets/food-icons/mexikanisch.png) center center;
     background-repeat: no-repeat;
 }
+
 .orientalisch {
     background: url(../assets/food-icons/orientalisch.png) center center;
     background-repeat: no-repeat;
 }
+
 .pizza-pasta {
     background: url(../assets/food-icons/pizza-pasta.png) center center;
     background-repeat: no-repeat;
 }
+
 .steak-schnitzel {
     background: url(../assets/food-icons/steak-schnitzel.png) center center;
     background-repeat: no-repeat;
 }
+
 .sushi {
     background: url(../assets/food-icons/sushi.png) center center;
     background-repeat: no-repeat;
 }
+
 .vegetarisch {
     background: url(../assets/food-icons/vegetarisch.png) center center;
     background-repeat: no-repeat;
 }
 
-
 .food-description {
     font-family: $open-sans;
     font-style: italic;
     font-weight: 400;
-    margin-top: 4.5rem;
+    margin-top: 6rem;
+    @media (#{$bp-larger-than-phablet}) {
+        margin-top: 4.5rem;
+    }
 }
 
 //map
 .map-container {
     border: 1px solid $border-color;
-    height: 360px;
     margin: 0 0 3rem 0;
     padding: 2px;
-    width: 360px;
 }
 
 #map {
-    height: 100%;
-    width: 100%;
+    height: 360px;
+    width: 360px;
+    @media (#{$bp-larger-than-mobile}) {
+        height: 320px;
+        width: auto;
+    }
+    @media (#{$bp-larger-than-phablet}) {
+        height: 450px;
+        width: auto;
+    }
 }

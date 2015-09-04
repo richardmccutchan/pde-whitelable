@@ -1456,7 +1456,7 @@ img.img-responsive {
   transform: translate(0px, 0px);
 }
 
-/* line 57, _custom.scss */
+/* line 58, _custom.scss */
 .fade-out-top {
   opacity: 1;
   -webkit-transform: translate(0px, -20px);
@@ -1465,12 +1465,12 @@ img.img-responsive {
   transform: translate(0px, -20px);
 }
 
-/* line 63, _custom.scss */
+/* line 64, _custom.scss */
 .wrapper {
   width: 100%;
 }
 
-/* line 67, _custom.scss */
+/* line 68, _custom.scss */
 .slider-bottom {
   background: url(../assets/pizza/2.jpg) center top;
   background-repeat: no-repeat;
@@ -1480,26 +1480,28 @@ img.img-responsive {
   text-align: center;
 }
 
-/* line 76, _custom.scss */
+/* line 77, _custom.scss */
 .shadow, .shadow-last {
   background: url(../assets/shadow.png) center top;
   background-repeat: no-repeat;
+  background-size: contain;
   padding: 3rem 0;
 }
 
-/* line 82, _custom.scss */
+/* line 84, _custom.scss */
 .shadow-last {
   padding: 3rem 0 0 0;
 }
 
-/* line 87, _custom.scss */
+/* line 89, _custom.scss */
 .shadow-mirrored {
   background: url(../assets/shadow-mirrored.png) center bottom;
   background-repeat: no-repeat;
+  background-size: contain;
   padding: 0 0 2rem 0;
 }
 
-/* line 93, _custom.scss */
+/* line 96, _custom.scss */
 .overlay {
   background: rgba(0, 0, 0, 0.5);
   height: 140px;
@@ -1510,7 +1512,7 @@ img.img-responsive {
   text-align: center;
   z-index: 10000;
 }
-/* line 102, _custom.scss */
+/* line 105, _custom.scss */
 .overlay h3, .overlay h4,
 .overlay h5,
 .overlay h6 {
@@ -1518,7 +1520,7 @@ img.img-responsive {
   font-size: 2.5rem;
 }
 
-/* line 108, _custom.scss */
+/* line 111, _custom.scss */
 .overlay-scroll {
   background: rgba(0, 0, 0, 0.6);
   background-repeat: no-repeat;
@@ -1528,16 +1530,29 @@ img.img-responsive {
   top: -160px;
   z-index: 10000;
 }
-/* line 116, _custom.scss */
+/* line 125, _custom.scss */
 .overlay-scroll h3, .overlay-scroll h4,
 .overlay-scroll h5,
 .overlay-scroll h6 {
   color: white;
-  font-size: 2rem;
+  font-size: 1.4rem;
   line-height: 1.1;
+  margin-bottom: .8rem;
+}
+@media (min-width: 550px) {
+  /* line 125, _custom.scss */
+  .overlay-scroll h3, .overlay-scroll h4,
+  .overlay-scroll h5,
+  .overlay-scroll h6 {
+    font-size: 2rem;
+  }
+}
+/* line 134, _custom.scss */
+.overlay-scroll .button {
+  font-size: 1.2rem;
 }
 
-/* line 124, _custom.scss */
+/* line 141, _custom.scss */
 .overlay.stick {
   background: rgba(0, 0, 0, 0.5);
   position: fixed;
@@ -1545,14 +1560,14 @@ img.img-responsive {
   z-index: 10000;
 }
 
-/* line 131, _custom.scss */
+/* line 148, _custom.scss */
 .rslides.stick {
   position: fixed;
   top: -220px;
   z-index: 9999;
 }
 
-/* line 138, _custom.scss */
+/* line 155, _custom.scss */
 .rslides {
   position: relative;
   list-style: none;
@@ -1562,7 +1577,7 @@ img.img-responsive {
   margin: 0;
 }
 
-/* line 147, _custom.scss */
+/* line 164, _custom.scss */
 .rslides li {
   -webkit-backface-visibility: hidden;
   position: absolute;
@@ -1572,14 +1587,14 @@ img.img-responsive {
   top: 0;
 }
 
-/* line 156, _custom.scss */
+/* line 173, _custom.scss */
 .rslides li:first-child {
   position: relative;
   display: block;
   float: left;
 }
 
-/* line 162, _custom.scss */
+/* line 179, _custom.scss */
 .rslides img {
   display: block;
   height: auto;
@@ -1588,166 +1603,202 @@ img.img-responsive {
   border: 0;
 }
 
-/* line 171, _custom.scss */
+/* line 188, _custom.scss */
 .margin {
   margin: 0;
 }
 
-/* line 177, _custom.scss */
+/* line 194, _custom.scss */
 footer p,
 footer a {
   font-size: 1.2rem;
 }
 
-/* line 183, _custom.scss */
+/* line 200, _custom.scss */
 .pdv {
+  border: 1px solid #bbbbbb;
+  height: auto;
   margin: 0 0 2rem 0;
   padding: .1rem;
-  border: 1px solid #bbbbbb;
+  width: 80px;
+}
+@media (min-width: 550px) {
+  /* line 200, _custom.scss */
+  .pdv {
+    height: 100px;
+    width: 100px;
+  }
 }
 
-/* line 189, _custom.scss */
+/* line 212, _custom.scss */
 .food {
   padding: 0 0 4rem 0;
 }
 
-/* line 193, _custom.scss */
+/* line 216, _custom.scss */
 .food-icon {
-  float: left;
-  height: 60px;
-  margin: 0 1.5rem 0 0;
-  width: 60px;
   -webkit-transition: all 0.15s ease-in 0.05s;
   -moz-transition: all 0.15s ease-in 0.05s;
   -o-transition: all 0.15s ease-in 0.05s;
   transition: all 0.15s ease-in 0.05s;
+  display: block;
+  float: left;
+  margin: 0 .5rem 1.5rem .5rem;
+  text-align: center;
+  width: 30%;
 }
-/* line 200, _custom.scss */
-.food-icon:last-of-type {
-  margin: 0;
+@media (min-width: 550px) {
+  /* line 216, _custom.scss */
+  .food-icon {
+    height: 60px;
+    margin: 0 1.5rem 3.5rem 0;
+    width: 60px;
+  }
+  /* line 228, _custom.scss */
+  .food-icon:last-of-type {
+    margin: 0 0 3.5rem 0;
+  }
 }
 
-/* line 205, _custom.scss */
+/* line 234, _custom.scss */
 .amerikanisch {
   background: url(../assets/food-icons/amerikanisch.png) center center;
   background-repeat: no-repeat;
 }
 
-/* line 209, _custom.scss */
+/* line 239, _custom.scss */
 .asiatisch {
   background: url(../assets/food-icons/asiatisch.png) center center;
   background-repeat: no-repeat;
 }
 
-/* line 213, _custom.scss */
+/* line 244, _custom.scss */
 .baguette {
   background: url(../assets/food-icons/baguette.png) center center;
   background-repeat: no-repeat;
 }
 
-/* line 217, _custom.scss */
+/* line 249, _custom.scss */
 .burger {
   background: url(../assets/food-icons/burger.png) center center;
   background-repeat: no-repeat;
 }
 
-/* line 221, _custom.scss */
+/* line 254, _custom.scss */
 .dessertdessert {
   background: url(../assets/food-icons/dessert.png) center center;
   background-repeat: no-repeat;
 }
 
-/* line 225, _custom.scss */
+/* line 259, _custom.scss */
 .doener {
   background: url(../assets/food-icons/doener.png) center center;
   background-repeat: no-repeat;
 }
 
-/* line 229, _custom.scss */
+/* line 264, _custom.scss */
 .getraenkelieferservice {
   background: url(../assets/food-icons/getraenkelieferservice.png) center center;
   background-repeat: no-repeat;
 }
 
-/* line 233, _custom.scss */
+/* line 269, _custom.scss */
 .griechisch {
   background: url(../assets/food-icons/griechisch.png) center center;
   background-repeat: no-repeat;
 }
 
-/* line 237, _custom.scss */
+/* line 274, _custom.scss */
 .fisch {
   background: url(../assets/food-icons/fisch.png) center center;
   background-repeat: no-repeat;
 }
 
-/* line 241, _custom.scss */
+/* line 279, _custom.scss */
 .haehnchen {
   background: url(../assets/food-icons/haehnchen.png) center center;
   background-repeat: no-repeat;
 }
 
-/* line 245, _custom.scss */
+/* line 284, _custom.scss */
 .indisch {
   background: url(../assets/food-icons/indisch.png) center center;
   background-repeat: no-repeat;
 }
 
-/* line 249, _custom.scss */
+/* line 289, _custom.scss */
 .mexikanisch {
   background: url(../assets/food-icons/mexikanisch.png) center center;
   background-repeat: no-repeat;
 }
 
-/* line 253, _custom.scss */
+/* line 294, _custom.scss */
 .orientalisch {
   background: url(../assets/food-icons/orientalisch.png) center center;
   background-repeat: no-repeat;
 }
 
-/* line 257, _custom.scss */
+/* line 299, _custom.scss */
 .pizza-pasta {
   background: url(../assets/food-icons/pizza-pasta.png) center center;
   background-repeat: no-repeat;
 }
 
-/* line 261, _custom.scss */
+/* line 304, _custom.scss */
 .steak-schnitzel {
   background: url(../assets/food-icons/steak-schnitzel.png) center center;
   background-repeat: no-repeat;
 }
 
-/* line 265, _custom.scss */
+/* line 309, _custom.scss */
 .sushi {
   background: url(../assets/food-icons/sushi.png) center center;
   background-repeat: no-repeat;
 }
 
-/* line 269, _custom.scss */
+/* line 314, _custom.scss */
 .vegetarisch {
   background: url(../assets/food-icons/vegetarisch.png) center center;
   background-repeat: no-repeat;
 }
 
-/* line 275, _custom.scss */
+/* line 319, _custom.scss */
 .food-description {
   font-family: "Open Sans", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-style: italic;
   font-weight: 400;
-  margin-top: 4.5rem;
+  margin-top: 6rem;
+}
+@media (min-width: 550px) {
+  /* line 319, _custom.scss */
+  .food-description {
+    margin-top: 4.5rem;
+  }
 }
 
-/* line 283, _custom.scss */
+/* line 330, _custom.scss */
 .map-container {
   border: 1px solid #bbbbbb;
-  height: 360px;
   margin: 0 0 3rem 0;
   padding: 2px;
-  width: 360px;
 }
 
-/* line 291, _custom.scss */
+/* line 336, _custom.scss */
 #map {
-  height: 100%;
-  width: 100%;
+  height: 360px;
+  width: 360px;
+}
+@media (min-width: 400px) {
+  /* line 336, _custom.scss */
+  #map {
+    height: 320px;
+    width: auto;
+  }
+}
+@media (min-width: 550px) {
+  /* line 336, _custom.scss */
+  #map {
+    height: 450px;
+    width: auto;
+  }
 }
