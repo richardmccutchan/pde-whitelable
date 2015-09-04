@@ -1,5 +1,14 @@
 @import "compass/css3";
 
+//mixin
+@mixin backgroundopacitiy-50 {
+    background: rgba(0, 0, 0, .5);
+}
+
+@mixin backgroundopacitiy-60 {
+    background: rgba(0, 0, 0, .6);
+}
+
 //Wrapper Backgrounds
 .wrapper {
     width: 100%;
@@ -34,7 +43,7 @@
 }
 
 .overlay {
-    background-color: rgba(0, 0, 0, .5);
+    @include backgroundopacitiy-50;
     height: 140px;
     padding: 1rem 0 1rem 0;
     position: relative;
@@ -48,7 +57,7 @@
     }
 }
 .overlay-scroll {
-    background: rgba(0, 0, 0, .6);
+    @include backgroundopacitiy-60;
     background-repeat: no-repeat;
     height: 130px;
     padding: 2rem 0 0 0;
@@ -65,7 +74,7 @@
 
 //sticky elements
 .overlay.stick {
-    background-color: rgba(0, 0, 0, .5);
+    @include backgroundopacitiy-50;
     position: fixed;
     top: 0;
     z-index: 10000;
@@ -167,10 +176,10 @@ footer {
 //map
 .map-container {
     border: 1px solid $border-color;
-    height: 384px;
+    height: 360px;
     margin: 0 0 3rem 0;
     padding: 2px;
-    width: 384px;
+    width: 360px;
 }
 
 #map {
