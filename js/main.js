@@ -1,7 +1,9 @@
 //fire off animation
 var app = function () {
-//    var animation = $(this).attr('fade-out-top');
-    $('.food-icon').toggleClass('fade-out-top');
+    $('.food-icon').scrolling();
+    $('.food-icon').one('scrollin', function (event, $all_elements) {
+        $('.food-icon').toggleClass('fade-out-top');
+    });
 }
 
 //sticky element

@@ -1652,7 +1652,7 @@ footer a {
 }
 
 /* line 221, _custom.scss */
-.dessert {
+.dessertdessert {
   background: url(../assets/food-icons/dessert.png) center center;
   background-repeat: no-repeat;
 }
@@ -1712,18 +1712,24 @@ footer a {
 }
 
 /* line 261, _custom.scss */
+.steak-schnitzel {
+  background: url(../assets/food-icons/steak-schnitzel.png) center center;
+  background-repeat: no-repeat;
+}
+
+/* line 265, _custom.scss */
 .sushi {
   background: url(../assets/food-icons/sushi.png) center center;
   background-repeat: no-repeat;
 }
 
-/* line 265, _custom.scss */
+/* line 269, _custom.scss */
 .vegetarisch {
   background: url(../assets/food-icons/vegetarisch.png) center center;
   background-repeat: no-repeat;
 }
 
-/* line 271, _custom.scss */
+/* line 275, _custom.scss */
 .food-description {
   font-family: "Open Sans", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-style: italic;
@@ -1731,7 +1737,7 @@ footer a {
   margin-top: 4.5rem;
 }
 
-/* line 279, _custom.scss */
+/* line 283, _custom.scss */
 .map-container {
   border: 1px solid #bbbbbb;
   height: 360px;
@@ -1740,7 +1746,7 @@ footer a {
   width: 360px;
 }
 
-/* line 287, _custom.scss */
+/* line 291, _custom.scss */
 #map {
   height: 100%;
   width: 100%;
