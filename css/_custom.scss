@@ -60,6 +60,13 @@
     @include prefixer(transform, translate(0px, 0px));
 }
 
+//FF adjustments
+@-moz-document url-prefix() {
+    .ff-adjust {
+        margin-top: -12rem;
+    }
+}
+
 //Wrapper Backgrounds
 .wrapper {
     width: 100%;
@@ -78,19 +85,28 @@
     background: url(../assets/shadow.png) center top;
     background-repeat: no-repeat;
     background-size: contain;
-    padding: 3rem 0;
+    padding:2rem 2rem 0;
+    @media (#{$bp-larger-than-mobile}) {
+    padding: 3rem 0 2rem;
+    }
 }
 
 .shadow-last {
     @extend .shadow;
+    padding:2rem 2rem 0;
+    @media (#{$bp-larger-than-mobile}) {
     padding: 3rem 0 0 0;
+    }
 }
 
 .shadow-mirrored {
     background: url(../assets/shadow-mirrored.png) center bottom;
     background-repeat: no-repeat;
     background-size: contain;
+    padding:2rem;
+    @media (#{$bp-larger-than-mobile}) {
     padding: 0 0 2rem 0;
+    }
 }
 
 .overlay {
@@ -106,38 +122,74 @@
         color: white;
         font-size: 2.5rem;
     }
+    & a {
+            font-style: normal;
+        }
 }
 
 .overlay-scroll {
     @include backgroundopacitiy (0, 0, 0, .6);
     background-repeat: no-repeat;
-    height: 130px;
+    height: 60px;
     padding: 2rem 0 0 0;
-    text-align: left;
-    top: -160px;
+    text-align: center;
+    top: -260px;
     z-index: 10000;
-//        & .two.columns {
-//            width:30%
-//        }
-//        & .ten.columns {
-//            width:65%
-//        }
-   
+    @media (#{$bp-larger-than-mobile}) {
+        height: 100px;
+    }
+    @media (#{$bp-larger-than-phablet}) {
+        height: 130px;
+        text-align: left
+    }
     & h3 {
         color: white;
         font-size: 1.4rem;
         line-height: 1.1;
         margin-bottom: .8rem;
+        text-align: center;
         @media (#{$bp-larger-than-phablet}) {
-            font-size: 2.5rem;
+            font-size: 1.8rem;
+        }
+        @media (#{$bp-larger-than-tablet}) {
+            font-size: 2.3rem;
+            margin-left:1rem;
+            text-align: left;
         }
     }
+    & a {
+            font-style: normal;
+        }
     & .button {
         font-size: 1.2rem;
+        margin: 0 auto;
+        
         @media (#{$bp-larger-than-phablet}) {
-            font-size: 1.7rem;
+            font-size: 1.4rem;
+            margin-left:1rem;
         }
-    }
+        @media (#{$bp-larger-than-tablet}) {
+                font-size: 1.7rem;
+            }
+        }
+    & .pdv {
+        display:none;
+//        height: 60px;
+//        width: 60px;
+//        margin-right:1.5rem;
+        @media (#{$bp-larger-than-phablet}) {
+//            display:block;
+            height: 80px;
+            width: 80px;
+            margin-right:1.5rem;
+        }
+        @media (#{$bp-larger-than-tablet}) {
+            display:block;
+            height: 100px;
+            width: 100px;
+            margin-right:1.5rem;
+        }
+}
 }
 
 //sticky elements
@@ -199,21 +251,24 @@ footer {
     }
 }
 
+//truncate text
+.truncate {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
 //images & icons
 .pdv {
     border: 1px solid $border-color;
     height: auto;
     margin: 0 0 2rem 0;
     padding: .1rem;
-    width: 80px;
-    @media (#{$bp-larger-than-phablet}) {
-        height: 100px;
-        width: 100px;
-    }
+    width: 100px;
 }
 
 .food {
-    padding: 0 0 4rem 0;
+    padding: 0 0 2rem 0;
 }
 
 .food-icon {
@@ -226,8 +281,8 @@ footer {
     width: 30%;
     @media (#{$bp-larger-than-phablet}) {
         height: 60px;
-        margin: 0 1.5rem 3.5rem 0;
-        width: 60px;
+        margin: 0 .5rem 3.5rem 0;
+        width: 100px;
         &:last-of-type {
             margin: 0 0 3.5rem 0;
         }
@@ -254,7 +309,7 @@ footer {
     background-repeat: no-repeat;
 }
 
-.dessertdessert {
+.dessert {
     background: url(../assets/food-icons/dessert.png) center center;
     background-repeat: no-repeat;
 }
@@ -324,6 +379,7 @@ footer {
     font-style: italic;
     font-weight: 400;
     margin-top: 6rem;
+    text-align: center;
     @media (#{$bp-larger-than-phablet}) {
         margin-top: 4.5rem;
     }
@@ -346,5 +402,12 @@ footer {
     @media (#{$bp-larger-than-phablet}) {
         height: 450px;
         width: auto;
+    }
+}
+
+.hide {
+    display:none;
+    @media (#{$bp-larger-than-mobile}) {
+        display: block;
     }
 }
