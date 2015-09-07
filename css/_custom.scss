@@ -85,17 +85,17 @@
     background: url(../assets/shadow.png) center top;
     background-repeat: no-repeat;
     background-size: contain;
-    padding:2rem 2rem 0;
+    padding: 2rem 2rem 0;
     @media (#{$bp-larger-than-mobile}) {
-    padding: 3rem 0 2rem;
+        padding: 3rem 0 2rem;
     }
 }
 
 .shadow-last {
     @extend .shadow;
-    padding:2rem 2rem 0;
+    padding: 2rem 2rem 0;
     @media (#{$bp-larger-than-mobile}) {
-    padding: 3rem 0 0 0;
+        padding: 3rem 0 0 0;
     }
 }
 
@@ -103,9 +103,9 @@
     background: url(../assets/shadow-mirrored.png) center bottom;
     background-repeat: no-repeat;
     background-size: contain;
-    padding:2rem;
+    padding: 2rem;
     @media (#{$bp-larger-than-mobile}) {
-    padding: 0 0 2rem 0;
+        padding: 0 0 2rem 0;
     }
 }
 
@@ -118,29 +118,57 @@
     margin-bottom: -17rem;
     text-align: center;
     z-index: 10000;
+    @media (#{$bp-larger-than-mobile}) {
+        height: 80px;
+        top: -11rem;
+        margin-bottom: -11rem;
+    }
+    @media (#{$bp-larger-than-tablet}) {
+        height: 100px;
+        top: -13rem;
+        margin-bottom: -13rem;
+    }
+    @media (#{$bp-larger-than-desktop}) {
+        height: 100px;
+        top: -13rem;
+        margin-bottom: -13rem;
+    }
     & h3 {
         color: white;
         font-size: 2.5rem;
+        @media (#{$bp-larger-than-phablet}) {
+            font-size: 1.8rem;
+        }
+        @media (#{$bp-larger-than-tablet}) {
+            font-size: 1.8rem;
+        }
     }
     & a {
-            font-style: normal;
-        }
+        font-style: normal;
+        font-size: 1.4rem;
+    }
 }
 
 .overlay-scroll {
     @include backgroundopacitiy (0, 0, 0, .6);
     background-repeat: no-repeat;
     height: 60px;
-    padding: 2rem 0 0 0;
+    padding: 1rem 0 1rem 0;
     text-align: center;
     top: -260px;
     z-index: 10000;
     @media (#{$bp-larger-than-mobile}) {
-        height: 100px;
+        height: 80px;
+        padding: 2rem 0 0 0;
     }
     @media (#{$bp-larger-than-phablet}) {
-        height: 130px;
-        text-align: left
+        height: 80px;
+        padding: 1rem 0 1rem 0;
+    }
+    @media (#{$bp-larger-than-tablet}) {
+        height: 100px;
+        padding: 2rem 0 2rem 0;
+        text-align: left;
     }
     & h3 {
         color: white;
@@ -153,43 +181,42 @@
         }
         @media (#{$bp-larger-than-tablet}) {
             font-size: 2.3rem;
-            margin-left:1rem;
+            margin-left: 1rem;
             text-align: left;
         }
     }
     & a {
-            font-style: normal;
-        }
+        font-style: normal;
+    }
     & .button {
         font-size: 1.2rem;
         margin: 0 auto;
-        
         @media (#{$bp-larger-than-phablet}) {
             font-size: 1.4rem;
-            margin-left:1rem;
+            margin-left: 1rem;
         }
         @media (#{$bp-larger-than-tablet}) {
-                font-size: 1.7rem;
-            }
+            font-size: 1.7rem;
         }
+    }
     & .pdv {
-        display:none;
-//        height: 60px;
-//        width: 60px;
-//        margin-right:1.5rem;
+        display: none;
+        //        height: 60px;
+        //        width: 60px;
+        //        margin-right:1.5rem;
         @media (#{$bp-larger-than-phablet}) {
-//            display:block;
+            //            display:block;
             height: 80px;
             width: 80px;
-            margin-right:1.5rem;
+            margin-right: 1.5rem;
         }
         @media (#{$bp-larger-than-tablet}) {
-            display:block;
+            display: block;
             height: 100px;
             width: 100px;
-            margin-right:1.5rem;
+            margin-right: 1.5rem;
         }
-}
+    }
 }
 
 //sticky elements
@@ -406,8 +433,14 @@ footer {
 }
 
 .hide {
-    display:none;
+    display: none;
     @media (#{$bp-larger-than-mobile}) {
         display: block;
     }
+}
+
+//table adjust
+th,
+td {
+    padding: 0px 10px;
 }
