@@ -81,12 +81,9 @@ _:-ms-lang(x), .ie10up {
 }
 
 .slider-bottom {
-    background: url(../assets/pizza/2.jpg) center top;
-    background-repeat: no-repeat;
-    background-color: #ffffff;
-    background-size: cover;
-    height: 350px;
-    text-align: center;
+    & li {
+        margin-bottom: 0;
+    }
 }
 
 .shadow {

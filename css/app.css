@@ -1487,17 +1487,12 @@ _:-ms-lang(x), .ie10up {
   width: 100%;
 }
 
-/* line 83, _custom.scss */
-.slider-bottom {
-  background: url(../assets/pizza/2.jpg) center top;
-  background-repeat: no-repeat;
-  background-color: #ffffff;
-  background-size: cover;
-  height: 350px;
-  text-align: center;
+/* line 84, _custom.scss */
+.slider-bottom li {
+  margin-bottom: 0;
 }
 
-/* line 92, _custom.scss */
+/* line 89, _custom.scss */
 .shadow, .shadow-last {
   background: url(../assets/shadow.png) center top;
   background-repeat: no-repeat;
@@ -1505,24 +1500,24 @@ _:-ms-lang(x), .ie10up {
   padding: 2rem 2rem 0;
 }
 @media (min-width: 400px) {
-  /* line 92, _custom.scss */
+  /* line 89, _custom.scss */
   .shadow, .shadow-last {
     padding: 3rem 0 2rem;
   }
 }
 
-/* line 102, _custom.scss */
+/* line 99, _custom.scss */
 .shadow-last {
   padding: 2rem 2rem 0;
 }
 @media (min-width: 400px) {
-  /* line 102, _custom.scss */
+  /* line 99, _custom.scss */
   .shadow-last {
     padding: 3rem 0 0 0;
   }
 }
 
-/* line 110, _custom.scss */
+/* line 107, _custom.scss */
 .shadow-mirrored {
   background: url(../assets/shadow-mirrored.png) center bottom;
   background-repeat: no-repeat;
@@ -1530,13 +1525,13 @@ _:-ms-lang(x), .ie10up {
   padding: 2rem;
 }
 @media (min-width: 400px) {
-  /* line 110, _custom.scss */
+  /* line 107, _custom.scss */
   .shadow-mirrored {
     padding: 0 0 2rem 0;
   }
 }
 
-/* line 120, _custom.scss */
+/* line 117, _custom.scss */
 .overlay {
   background: rgba(0, 0, 0, 0.5);
   height: 140px;
@@ -1548,7 +1543,7 @@ _:-ms-lang(x), .ie10up {
   z-index: 10000;
 }
 @media (min-width: 400px) {
-  /* line 120, _custom.scss */
+  /* line 117, _custom.scss */
   .overlay {
     height: 80px;
     top: -11rem;
@@ -1556,7 +1551,7 @@ _:-ms-lang(x), .ie10up {
   }
 }
 @media (min-width: 750px) {
-  /* line 120, _custom.scss */
+  /* line 117, _custom.scss */
   .overlay {
     height: 100px;
     top: -13rem;
@@ -1564,14 +1559,14 @@ _:-ms-lang(x), .ie10up {
   }
 }
 @media (min-width: 1000px) {
-  /* line 120, _custom.scss */
+  /* line 117, _custom.scss */
   .overlay {
     height: auto;
     top: -15.9rem;
     margin-bottom: -15.9rem;
   }
 }
-/* line 144, _custom.scss */
+/* line 141, _custom.scss */
 .overlay h3, .overlay h4,
 .overlay h5,
 .overlay h6 {
@@ -1579,7 +1574,7 @@ _:-ms-lang(x), .ie10up {
   font-size: 2.5rem;
 }
 @media (min-width: 550px) {
-  /* line 144, _custom.scss */
+  /* line 141, _custom.scss */
   .overlay h3, .overlay h4,
   .overlay h5,
   .overlay h6 {
@@ -1587,7 +1582,7 @@ _:-ms-lang(x), .ie10up {
   }
 }
 @media (min-width: 750px) {
-  /* line 144, _custom.scss */
+  /* line 141, _custom.scss */
   .overlay h3, .overlay h4,
   .overlay h5,
   .overlay h6 {
@@ -1595,20 +1590,20 @@ _:-ms-lang(x), .ie10up {
   }
 }
 @media (min-width: 1000px) {
-  /* line 144, _custom.scss */
+  /* line 141, _custom.scss */
   .overlay h3, .overlay h4,
   .overlay h5,
   .overlay h6 {
     font-size: 2.5rem;
   }
 }
-/* line 157, _custom.scss */
+/* line 154, _custom.scss */
 .overlay a {
   font-style: normal;
   font-size: 1.4rem;
 }
 
-/* line 163, _custom.scss */
+/* line 160, _custom.scss */
 .overlay-scroll {
   background: rgba(0, 0, 0, 0.6);
   background-repeat: no-repeat;
@@ -1619,28 +1614,28 @@ _:-ms-lang(x), .ie10up {
   z-index: 10000;
 }
 @media (min-width: 400px) {
-  /* line 163, _custom.scss */
+  /* line 160, _custom.scss */
   .overlay-scroll {
     height: 80px;
     padding: 2rem 0 0 0;
   }
 }
 @media (min-width: 550px) {
-  /* line 163, _custom.scss */
+  /* line 160, _custom.scss */
   .overlay-scroll {
     height: 80px;
     padding: 1rem 0 1rem 0;
   }
 }
 @media (min-width: 750px) {
-  /* line 163, _custom.scss */
+  /* line 160, _custom.scss */
   .overlay-scroll {
     height: 100px;
     padding: 2rem 0 2rem 0;
     text-align: left;
   }
 }
-/* line 184, _custom.scss */
+/* line 181, _custom.scss */
 .overlay-scroll h3, .overlay-scroll h4,
 .overlay-scroll h5,
 .overlay-scroll h6 {
@@ -1651,7 +1646,7 @@ _:-ms-lang(x), .ie10up {
   text-align: center;
 }
 @media (min-width: 550px) {
-  /* line 184, _custom.scss */
+  /* line 181, _custom.scss */
   .overlay-scroll h3, .overlay-scroll h4,
   .overlay-scroll h5,
   .overlay-scroll h6 {
@@ -1659,7 +1654,7 @@ _:-ms-lang(x), .ie10up {
   }
 }
 @media (min-width: 750px) {
-  /* line 184, _custom.scss */
+  /* line 181, _custom.scss */
   .overlay-scroll h3, .overlay-scroll h4,
   .overlay-scroll h5,
   .overlay-scroll h6 {
@@ -1668,34 +1663,34 @@ _:-ms-lang(x), .ie10up {
     text-align: left;
   }
 }
-/* line 199, _custom.scss */
+/* line 196, _custom.scss */
 .overlay-scroll a {
   font-style: normal;
 }
-/* line 202, _custom.scss */
+/* line 199, _custom.scss */
 .overlay-scroll .button {
   font-size: 1.2rem;
   margin: 0 auto;
 }
 @media (min-width: 550px) {
-  /* line 202, _custom.scss */
+  /* line 199, _custom.scss */
   .overlay-scroll .button {
     font-size: 1.4rem;
     margin-left: 1rem;
   }
 }
 @media (min-width: 750px) {
-  /* line 202, _custom.scss */
+  /* line 199, _custom.scss */
   .overlay-scroll .button {
     font-size: 1.7rem;
   }
 }
-/* line 213, _custom.scss */
+/* line 210, _custom.scss */
 .overlay-scroll .pdv {
   display: none;
 }
 @media (min-width: 550px) {
-  /* line 213, _custom.scss */
+  /* line 210, _custom.scss */
   .overlay-scroll .pdv {
     height: 80px;
     width: 80px;
@@ -1703,7 +1698,7 @@ _:-ms-lang(x), .ie10up {
   }
 }
 @media (min-width: 750px) {
-  /* line 213, _custom.scss */
+  /* line 210, _custom.scss */
   .overlay-scroll .pdv {
     display: block;
     height: 100px;
@@ -1712,7 +1707,7 @@ _:-ms-lang(x), .ie10up {
   }
 }
 
-/* line 234, _custom.scss */
+/* line 231, _custom.scss */
 .overlay.stick {
   background: rgba(0, 0, 0, 0.5);
   position: fixed;
@@ -1720,14 +1715,14 @@ _:-ms-lang(x), .ie10up {
   z-index: 10000;
 }
 
-/* line 241, _custom.scss */
+/* line 238, _custom.scss */
 .rslides.stick {
   position: fixed;
   top: -220px;
   z-index: 9999;
 }
 
-/* line 248, _custom.scss */
+/* line 245, _custom.scss */
 .rslides {
   position: relative;
   list-style: none;
@@ -1737,7 +1732,7 @@ _:-ms-lang(x), .ie10up {
   margin: 0;
 }
 
-/* line 257, _custom.scss */
+/* line 254, _custom.scss */
 .rslides li {
   -webkit-backface-visibility: hidden;
   position: absolute;
@@ -1747,14 +1742,14 @@ _:-ms-lang(x), .ie10up {
   top: 0;
 }
 
-/* line 266, _custom.scss */
+/* line 263, _custom.scss */
 .rslides li:first-child {
   position: relative;
   display: block;
   float: left;
 }
 
-/* line 272, _custom.scss */
+/* line 269, _custom.scss */
 .rslides img {
   display: block;
   height: auto;
@@ -1763,25 +1758,25 @@ _:-ms-lang(x), .ie10up {
   border: 0;
 }
 
-/* line 281, _custom.scss */
+/* line 278, _custom.scss */
 .margin {
   margin: 0;
 }
 
-/* line 287, _custom.scss */
+/* line 284, _custom.scss */
 footer p,
 footer a {
   font-size: 1.2rem;
 }
 
-/* line 293, _custom.scss */
+/* line 290, _custom.scss */
 .truncate {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
 }
 
-/* line 300, _custom.scss */
+/* line 297, _custom.scss */
 .pdv {
   border: 1px solid #bbbbbb;
   height: auto;
@@ -1790,12 +1785,12 @@ footer a {
   width: 100px;
 }
 
-/* line 308, _custom.scss */
+/* line 305, _custom.scss */
 .food {
   padding: 0 0 2rem 0;
 }
 
-/* line 312, _custom.scss */
+/* line 309, _custom.scss */
 .food-icon {
   -webkit-transition: all 0.15s ease-in 0.05s;
   -moz-transition: all 0.15s ease-in 0.05s;
@@ -1808,121 +1803,121 @@ footer a {
   width: 30%;
 }
 @media (min-width: 550px) {
-  /* line 312, _custom.scss */
+  /* line 309, _custom.scss */
   .food-icon {
     height: 60px;
     margin: 0 .5rem 3.5rem 0;
     width: 100px;
   }
-  /* line 324, _custom.scss */
+  /* line 321, _custom.scss */
   .food-icon:last-of-type {
     margin: 0 0 3.5rem 0;
   }
 }
 
-/* line 330, _custom.scss */
+/* line 327, _custom.scss */
 .amerikanisch {
   background: url(../assets/food-icons/amerikanisch.png) center center;
   background-repeat: no-repeat;
 }
 
-/* line 335, _custom.scss */
+/* line 332, _custom.scss */
 .asiatisch {
   background: url(../assets/food-icons/asiatisch.png) center center;
   background-repeat: no-repeat;
 }
 
-/* line 340, _custom.scss */
+/* line 337, _custom.scss */
 .baguette {
   background: url(../assets/food-icons/baguette.png) center center;
   background-repeat: no-repeat;
 }
 
-/* line 345, _custom.scss */
+/* line 342, _custom.scss */
 .burger {
   background: url(../assets/food-icons/burger.png) center center;
   background-repeat: no-repeat;
 }
 
-/* line 350, _custom.scss */
+/* line 347, _custom.scss */
 .dessert {
   background: url(../assets/food-icons/dessert.png) center center;
   background-repeat: no-repeat;
 }
 
-/* line 355, _custom.scss */
+/* line 352, _custom.scss */
 .doener {
   background: url(../assets/food-icons/doener.png) center center;
   background-repeat: no-repeat;
 }
 
-/* line 360, _custom.scss */
+/* line 357, _custom.scss */
 .getraenkelieferservice {
   background: url(../assets/food-icons/getraenkelieferservice.png) center center;
   background-repeat: no-repeat;
 }
 
-/* line 365, _custom.scss */
+/* line 362, _custom.scss */
 .griechisch {
   background: url(../assets/food-icons/griechisch.png) center center;
   background-repeat: no-repeat;
 }
 
-/* line 370, _custom.scss */
+/* line 367, _custom.scss */
 .fisch {
   background: url(../assets/food-icons/fisch.png) center center;
   background-repeat: no-repeat;
 }
 
-/* line 375, _custom.scss */
+/* line 372, _custom.scss */
 .haehnchen {
   background: url(../assets/food-icons/haehnchen.png) center center;
   background-repeat: no-repeat;
 }
 
-/* line 380, _custom.scss */
+/* line 377, _custom.scss */
 .indisch {
   background: url(../assets/food-icons/indisch.png) center center;
   background-repeat: no-repeat;
 }
 
-/* line 385, _custom.scss */
+/* line 382, _custom.scss */
 .mexikanisch {
   background: url(../assets/food-icons/mexikanisch.png) center center;
   background-repeat: no-repeat;
 }
 
-/* line 390, _custom.scss */
+/* line 387, _custom.scss */
 .orientalisch {
   background: url(../assets/food-icons/orientalisch.png) center center;
   background-repeat: no-repeat;
 }
 
-/* line 395, _custom.scss */
+/* line 392, _custom.scss */
 .pizza-pasta {
   background: url(../assets/food-icons/pizza-pasta.png) center center;
   background-repeat: no-repeat;
 }
 
-/* line 400, _custom.scss */
+/* line 397, _custom.scss */
 .steak-schnitzel {
   background: url(../assets/food-icons/steak-schnitzel.png) center center;
   background-repeat: no-repeat;
 }
 
-/* line 405, _custom.scss */
+/* line 402, _custom.scss */
 .sushi {
   background: url(../assets/food-icons/sushi.png) center center;
   background-repeat: no-repeat;
 }
 
-/* line 410, _custom.scss */
+/* line 407, _custom.scss */
 .vegetarisch {
   background: url(../assets/food-icons/vegetarisch.png) center center;
   background-repeat: no-repeat;
 }
 
-/* line 415, _custom.scss */
+/* line 412, _custom.scss */
 .food-description {
   font-family: "Open Sans", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-style: italic;
@@ -1931,51 +1926,51 @@ footer a {
   text-align: center;
 }
 @media (min-width: 550px) {
-  /* line 415, _custom.scss */
+  /* line 412, _custom.scss */
   .food-description {
     margin-top: 4.5rem;
   }
 }
 
-/* line 427, _custom.scss */
+/* line 424, _custom.scss */
 .map-container {
   border: 1px solid #bbbbbb;
   margin: 0 0 3rem 0;
   padding: 2px;
 }
 
-/* line 433, _custom.scss */
+/* line 430, _custom.scss */
 #map {
   height: 360px;
   width: 360px;
 }
 @media (min-width: 400px) {
-  /* line 433, _custom.scss */
+  /* line 430, _custom.scss */
   #map {
     height: 320px;
     width: auto;
   }
 }
 @media (min-width: 550px) {
-  /* line 433, _custom.scss */
+  /* line 430, _custom.scss */
   #map {
     height: 450px;
     width: auto;
   }
 }
 
-/* line 446, _custom.scss */
+/* line 443, _custom.scss */
 .hide {
   display: none;
 }
 @media (min-width: 400px) {
-  /* line 446, _custom.scss */
+  /* line 443, _custom.scss */
   .hide {
     display: block;
   }
 }
 
-/* line 455, _custom.scss */
+/* line 452, _custom.scss */
 th,
 td {
   padding: 0px 10px;
