@@ -1556,9 +1556,9 @@ img.img-responsive {
 @media (min-width: 1000px) {
   /* line 112, _custom.scss */
   .overlay {
-    height: 100px;
-    top: -13rem;
-    margin-bottom: -13rem;
+    height: auto;
+    top: -16rem;
+    margin-bottom: -16rem;
   }
 }
 /* line 136, _custom.scss */
@@ -1584,13 +1584,21 @@ img.img-responsive {
     font-size: 1.8rem;
   }
 }
-/* line 146, _custom.scss */
+@media (min-width: 1000px) {
+  /* line 136, _custom.scss */
+  .overlay h3, .overlay h4,
+  .overlay h5,
+  .overlay h6 {
+    font-size: 2.5rem;
+  }
+}
+/* line 149, _custom.scss */
 .overlay a {
   font-style: normal;
   font-size: 1.4rem;
 }
 
-/* line 152, _custom.scss */
+/* line 155, _custom.scss */
 .overlay-scroll {
   background: rgba(0, 0, 0, 0.6);
   background-repeat: no-repeat;
@@ -1601,28 +1609,28 @@ img.img-responsive {
   z-index: 10000;
 }
 @media (min-width: 400px) {
-  /* line 152, _custom.scss */
+  /* line 155, _custom.scss */
   .overlay-scroll {
     height: 80px;
     padding: 2rem 0 0 0;
   }
 }
 @media (min-width: 550px) {
-  /* line 152, _custom.scss */
+  /* line 155, _custom.scss */
   .overlay-scroll {
     height: 80px;
     padding: 1rem 0 1rem 0;
   }
 }
 @media (min-width: 750px) {
-  /* line 152, _custom.scss */
+  /* line 155, _custom.scss */
   .overlay-scroll {
     height: 100px;
     padding: 2rem 0 2rem 0;
     text-align: left;
   }
 }
-/* line 173, _custom.scss */
+/* line 176, _custom.scss */
 .overlay-scroll h3, .overlay-scroll h4,
 .overlay-scroll h5,
 .overlay-scroll h6 {
@@ -1633,7 +1641,7 @@ img.img-responsive {
   text-align: center;
 }
 @media (min-width: 550px) {
-  /* line 173, _custom.scss */
+  /* line 176, _custom.scss */
   .overlay-scroll h3, .overlay-scroll h4,
   .overlay-scroll h5,
   .overlay-scroll h6 {
@@ -1641,7 +1649,7 @@ img.img-responsive {
   }
 }
 @media (min-width: 750px) {
-  /* line 173, _custom.scss */
+  /* line 176, _custom.scss */
   .overlay-scroll h3, .overlay-scroll h4,
   .overlay-scroll h5,
   .overlay-scroll h6 {
@@ -1650,34 +1658,34 @@ img.img-responsive {
     text-align: left;
   }
 }
-/* line 188, _custom.scss */
+/* line 191, _custom.scss */
 .overlay-scroll a {
   font-style: normal;
 }
-/* line 191, _custom.scss */
+/* line 194, _custom.scss */
 .overlay-scroll .button {
   font-size: 1.2rem;
   margin: 0 auto;
 }
 @media (min-width: 550px) {
-  /* line 191, _custom.scss */
+  /* line 194, _custom.scss */
   .overlay-scroll .button {
     font-size: 1.4rem;
     margin-left: 1rem;
   }
 }
 @media (min-width: 750px) {
-  /* line 191, _custom.scss */
+  /* line 194, _custom.scss */
   .overlay-scroll .button {
     font-size: 1.7rem;
   }
 }
-/* line 202, _custom.scss */
+/* line 205, _custom.scss */
 .overlay-scroll .pdv {
   display: none;
 }
 @media (min-width: 550px) {
-  /* line 202, _custom.scss */
+  /* line 205, _custom.scss */
   .overlay-scroll .pdv {
     height: 80px;
     width: 80px;
@@ -1685,7 +1693,7 @@ img.img-responsive {
   }
 }
 @media (min-width: 750px) {
-  /* line 202, _custom.scss */
+  /* line 205, _custom.scss */
   .overlay-scroll .pdv {
     display: block;
     height: 100px;
@@ -1694,7 +1702,7 @@ img.img-responsive {
   }
 }
 
-/* line 223, _custom.scss */
+/* line 226, _custom.scss */
 .overlay.stick {
   background: rgba(0, 0, 0, 0.5);
   position: fixed;
@@ -1702,14 +1710,14 @@ img.img-responsive {
   z-index: 10000;
 }
 
-/* line 230, _custom.scss */
+/* line 233, _custom.scss */
 .rslides.stick {
   position: fixed;
   top: -220px;
   z-index: 9999;
 }
 
-/* line 237, _custom.scss */
+/* line 240, _custom.scss */
 .rslides {
   position: relative;
   list-style: none;
@@ -1719,7 +1727,7 @@ img.img-responsive {
   margin: 0;
 }
 
-/* line 246, _custom.scss */
+/* line 249, _custom.scss */
 .rslides li {
   -webkit-backface-visibility: hidden;
   position: absolute;
@@ -1729,14 +1737,14 @@ img.img-responsive {
   top: 0;
 }
 
-/* line 255, _custom.scss */
+/* line 258, _custom.scss */
 .rslides li:first-child {
   position: relative;
   display: block;
   float: left;
 }
 
-/* line 261, _custom.scss */
+/* line 264, _custom.scss */
 .rslides img {
   display: block;
   height: auto;
@@ -1745,25 +1753,25 @@ img.img-responsive {
   border: 0;
 }
 
-/* line 270, _custom.scss */
+/* line 273, _custom.scss */
 .margin {
   margin: 0;
 }
 
-/* line 276, _custom.scss */
+/* line 279, _custom.scss */
 footer p,
 footer a {
   font-size: 1.2rem;
 }
 
-/* line 282, _custom.scss */
+/* line 285, _custom.scss */
 .truncate {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
 }
 
-/* line 289, _custom.scss */
+/* line 292, _custom.scss */
 .pdv {
   border: 1px solid #bbbbbb;
   height: auto;
@@ -1772,12 +1780,12 @@ footer a {
   width: 100px;
 }
 
-/* line 297, _custom.scss */
+/* line 300, _custom.scss */
 .food {
   padding: 0 0 2rem 0;
 }
 
-/* line 301, _custom.scss */
+/* line 304, _custom.scss */
 .food-icon {
   -webkit-transition: all 0.15s ease-in 0.05s;
   -moz-transition: all 0.15s ease-in 0.05s;
@@ -1790,121 +1798,121 @@ footer a {
   width: 30%;
 }
 @media (min-width: 550px) {
-  /* line 301, _custom.scss */
+  /* line 304, _custom.scss */
   .food-icon {
     height: 60px;
     margin: 0 .5rem 3.5rem 0;
     width: 100px;
   }
-  /* line 313, _custom.scss */
+  /* line 316, _custom.scss */
   .food-icon:last-of-type {
     margin: 0 0 3.5rem 0;
   }
 }
 
-/* line 319, _custom.scss */
+/* line 322, _custom.scss */
 .amerikanisch {
   background: url(../assets/food-icons/amerikanisch.png) center center;
   background-repeat: no-repeat;
 }
 
-/* line 324, _custom.scss */
+/* line 327, _custom.scss */
 .asiatisch {
   background: url(../assets/food-icons/asiatisch.png) center center;
   background-repeat: no-repeat;
 }
 
-/* line 329, _custom.scss */
+/* line 332, _custom.scss */
 .baguette {
   background: url(../assets/food-icons/baguette.png) center center;
   background-repeat: no-repeat;
 }
 
-/* line 334, _custom.scss */
+/* line 337, _custom.scss */
 .burger {
   background: url(../assets/food-icons/burger.png) center center;
   background-repeat: no-repeat;
 }
 
-/* line 339, _custom.scss */
+/* line 342, _custom.scss */
 .dessert {
   background: url(../assets/food-icons/dessert.png) center center;
   background-repeat: no-repeat;
 }
 
-/* line 344, _custom.scss */
+/* line 347, _custom.scss */
 .doener {
   background: url(../assets/food-icons/doener.png) center center;
   background-repeat: no-repeat;
 }
 
-/* line 349, _custom.scss */
+/* line 352, _custom.scss */
 .getraenkelieferservice {
   background: url(../assets/food-icons/getraenkelieferservice.png) center center;
   background-repeat: no-repeat;
 }
 
-/* line 354, _custom.scss */
+/* line 357, _custom.scss */
 .griechisch {
   background: url(../assets/food-icons/griechisch.png) center center;
   background-repeat: no-repeat;
 }
 
-/* line 359, _custom.scss */
+/* line 362, _custom.scss */
 .fisch {
   background: url(../assets/food-icons/fisch.png) center center;
   background-repeat: no-repeat;
 }
 
-/* line 364, _custom.scss */
+/* line 367, _custom.scss */
 .haehnchen {
   background: url(../assets/food-icons/haehnchen.png) center center;
   background-repeat: no-repeat;
 }
 
-/* line 369, _custom.scss */
+/* line 372, _custom.scss */
 .indisch {
   background: url(../assets/food-icons/indisch.png) center center;
   background-repeat: no-repeat;
 }
 
-/* line 374, _custom.scss */
+/* line 377, _custom.scss */
 .mexikanisch {
   background: url(../assets/food-icons/mexikanisch.png) center center;
   background-repeat: no-repeat;
 }
 
-/* line 379, _custom.scss */
+/* line 382, _custom.scss */
 .orientalisch {
   background: url(../assets/food-icons/orientalisch.png) center center;
   background-repeat: no-repeat;
 }
 
-/* line 384, _custom.scss */
+/* line 387, _custom.scss */
 .pizza-pasta {
   background: url(../assets/food-icons/pizza-pasta.png) center center;
   background-repeat: no-repeat;
 }
 
-/* line 389, _custom.scss */
+/* line 392, _custom.scss */
 .steak-schnitzel {
   background: url(../assets/food-icons/steak-schnitzel.png) center center;
   background-repeat: no-repeat;
 }
 
-/* line 394, _custom.scss */
+/* line 397, _custom.scss */
 .sushi {
   background: url(../assets/food-icons/sushi.png) center center;
   background-repeat: no-repeat;
 }
 
-/* line 399, _custom.scss */
+/* line 402, _custom.scss */
 .vegetarisch {
   background: url(../assets/food-icons/vegetarisch.png) center center;
   background-repeat: no-repeat;
 }
 
-/* line 404, _custom.scss */
+/* line 407, _custom.scss */
 .food-description {
   font-family: "Open Sans", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-style: italic;
@@ -1913,51 +1921,51 @@ footer a {
   text-align: center;
 }
 @media (min-width: 550px) {
-  /* line 404, _custom.scss */
+  /* line 407, _custom.scss */
   .food-description {
     margin-top: 4.5rem;
   }
 }
 
-/* line 416, _custom.scss */
+/* line 419, _custom.scss */
 .map-container {
   border: 1px solid #bbbbbb;
   margin: 0 0 3rem 0;
   padding: 2px;
 }
 
-/* line 422, _custom.scss */
+/* line 425, _custom.scss */
 #map {
   height: 360px;
   width: 360px;
 }
 @media (min-width: 400px) {
-  /* line 422, _custom.scss */
+  /* line 425, _custom.scss */
   #map {
     height: 320px;
     width: auto;
   }
 }
 @media (min-width: 550px) {
-  /* line 422, _custom.scss */
+  /* line 425, _custom.scss */
   #map {
     height: 450px;
     width: auto;
   }
 }
 
-/* line 435, _custom.scss */
+/* line 438, _custom.scss */
 .hide {
   display: none;
 }
 @media (min-width: 400px) {
-  /* line 435, _custom.scss */
+  /* line 438, _custom.scss */
   .hide {
     display: block;
   }
 }
 
-/* line 444, _custom.scss */
+/* line 447, _custom.scss */
 th,
 td {
   padding: 0px 10px;

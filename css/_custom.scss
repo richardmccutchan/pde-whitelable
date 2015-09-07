@@ -129,9 +129,9 @@
         margin-bottom: -13rem;
     }
     @media (#{$bp-larger-than-desktop}) {
-        height: 100px;
-        top: -13rem;
-        margin-bottom: -13rem;
+        height: auto;
+        top: -16rem;
+        margin-bottom: -16rem;
     }
     & h3 {
         color: white;
@@ -141,6 +141,9 @@
         }
         @media (#{$bp-larger-than-tablet}) {
             font-size: 1.8rem;
+        }
+        @media (#{$bp-larger-than-desktop}) {
+            font-size: 2.5rem;
         }
     }
     & a {
