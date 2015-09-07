@@ -66,6 +66,14 @@
         margin-top: -12rem;
     }
 }
+//Win10 Edge 20 adjustments
+_:-ms-lang(x), .ie10up {
+        margin-top: -12rem;
+}
+//IE 9 adjustments
+.ff-adjust {
+        margin-top: -12rem\9;
+    }
 
 //Wrapper Backgrounds
 .wrapper {
@@ -130,8 +138,8 @@
     }
     @media (#{$bp-larger-than-desktop}) {
         height: auto;
-        top: -16rem;
-        margin-bottom: -16rem;
+        top: -15.9rem;
+        margin-bottom: -15.9rem;
     }
     & h3 {
         color: white;
