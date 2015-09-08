@@ -70,9 +70,9 @@
 _:-ms-lang(x), .ie10up {
         margin-top: -12rem;
 }
-//IE 9 adjustments
+
 .ff-adjust {
-        margin-top: -12rem\9;
+        margin-top: -12rem;
     }
 
 //Wrapper Backgrounds
@@ -117,11 +117,11 @@ _:-ms-lang(x), .ie10up {
 .overlay {
     @include backgroundopacitiy (0, 0, 0, .5);
     height: 140px;
-    padding: 1rem 0 1rem 0;
+    padding: 2rem 0 2rem 0;
     position: relative;
     top: -17rem;
     margin-bottom: -17rem;
-    text-align: center;
+    text-align: left;
     z-index: 10000;
     @media (#{$bp-larger-than-mobile}) {
         height: 80px;
@@ -134,26 +134,56 @@ _:-ms-lang(x), .ie10up {
         margin-bottom: -13rem;
     }
     @media (#{$bp-larger-than-desktop}) {
-        height: auto;
-        top: -15.9rem;
-        margin-bottom: -15.9rem;
+        height: 100px;
+        top: -15rem;
+        margin-bottom: -15rem;
     }
     & h3 {
         color: white;
-        font-size: 2.5rem;
+        font-size: 1.4rem;
+        line-height: 1.1;
+        margin-bottom: .8rem;
+        text-align: center;
         @media (#{$bp-larger-than-phablet}) {
             font-size: 1.8rem;
         }
         @media (#{$bp-larger-than-tablet}) {
-            font-size: 1.8rem;
-        }
-        @media (#{$bp-larger-than-desktop}) {
-            font-size: 2.5rem;
+            font-size: 2.3rem;
+            margin-left: 1rem;
+            text-align: left;
         }
     }
     & a {
         font-style: normal;
-        font-size: 1.4rem;
+    }
+    & .button {
+        font-size: 1.2rem;
+        margin: 0 auto;
+        @media (#{$bp-larger-than-phablet}) {
+            font-size: 1.4rem;
+            margin-left: 1rem;
+        }
+        @media (#{$bp-larger-than-tablet}) {
+            font-size: 1.7rem;
+        }
+    }
+    & .pdv {
+        display: none;
+        //        height: 60px;
+        //        width: 60px;
+        //        margin-right:1.5rem;
+        @media (#{$bp-larger-than-phablet}) {
+            //            display:block;
+            height: 80px;
+            width: 80px;
+            margin-right: 1.5rem;
+        }
+        @media (#{$bp-larger-than-tablet}) {
+            display: block;
+            height: 100px;
+            width: 100px;
+            margin-right: 1.5rem;
+        }
     }
 }
 

@@ -44,7 +44,7 @@ if (windowWidth < 569) {
 //sticky element
 function sticky_relocate() {
     var window_top = $(window).scrollTop();
-    var div_top = $('#sticky-anchor').offset().top + (-160);
+    var div_top = $('#sticky-anchor').offset().top + (-150);
     if (window_top > div_top) {
         $('.overlay').css('visibility', 'hidden');
         $('.overlay-scroll').animate({'top': '0'}, 360, 'swing');
