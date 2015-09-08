@@ -14,7 +14,7 @@ windowSize();
 $(window).resize(function () {
     windowSize();
 });
-if (windowWidth < 768) {
+if (windowWidth < 769) {
     $('.icons-row').children().removeClass('vh-center-container');
     $('.overlay h3').addClass('truncate');
     $('.overlay-scroll h3').addClass('truncate');
