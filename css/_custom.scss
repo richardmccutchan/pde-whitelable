@@ -66,15 +66,16 @@
         margin-top: -12rem;
     }
 }
+
 //Win10 Edge 20 adjustments
-_:-ms-lang(x), .ie10up {
-        margin-top: -12rem;
+_:-ms-lang(x),
+.ie10up {
+    margin-top: -12rem;
 }
 
-.ff-adjust {
-        margin-top: -12rem;
-    }
-
+//.ff-adjust {
+//        margin-top: -12rem;
+//    }
 //Wrapper Backgrounds
 .wrapper {
     width: 100%;
@@ -94,7 +95,14 @@ _:-ms-lang(x), .ie10up {
     background-size: contain;
     padding: 2rem 2rem 0;
     @media (#{$bp-larger-than-mobile}) {
+        margin-top: 2rem;
         padding: 3rem 0 2rem;
+    }
+    @media (#{$bp-larger-than-phablet}) {
+        padding: 2rem 2rem 0;
+    }
+    @media (#{$bp-larger-than-tablet}) {
+        margin-top: 0rem;
     }
 }
 
@@ -119,39 +127,43 @@ _:-ms-lang(x), .ie10up {
 .overlay {
     @include backgroundopacitiy (0, 0, 0, .5);
     height: 140px;
-    padding: 2rem 0 2rem 0;
+    margin-bottom: -17rem;
+    padding: 0 0 2rem 0;
     position: relative;
     top: -17rem;
-    margin-bottom: -17rem;
     text-align: left;
     z-index: 10000;
     @media (#{$bp-larger-than-mobile}) {
         height: 80px;
-        top: -13rem;
+        padding: 2rem 0 0 0;
         margin-bottom: -13rem;
+        top: -13rem;
+    }
+    @media (#{$bp-larger-than-phablet}) {
+        height: 100px;
+        margin-bottom: -15rem;
+        padding: 1rem 0 1rem 0;
+        top: -15rem;
     }
     @media (#{$bp-larger-than-tablet}) {
         height: 100px;
-        top: -15rem;
         margin-bottom: -15rem;
-    }
-    @media (#{$bp-larger-than-desktop}) {
-        height: 100px;
+        padding: 2rem 0 2rem 0;
         top: -15rem;
-        margin-bottom: -15rem;
     }
     & h3 {
         color: white;
         font-size: 1.4rem;
         line-height: 1.1;
         margin-bottom: .8rem;
+        text-align: center;
         @media (#{$bp-larger-than-phablet}) {
             font-size: 1.8rem;
-            margin-left: 2rem;
         }
         @media (#{$bp-larger-than-tablet}) {
             font-size: 2.3rem;
-            margin-left: 2rem;
+            margin-left: 1rem;
+            text-align: left;
         }
     }
     & a {
@@ -159,18 +171,17 @@ _:-ms-lang(x), .ie10up {
     }
     & .button {
         font-size: 1.2rem;
-        bottom: -2.7rem;
+        margin: 0 auto;
         @media (#{$bp-larger-than-phablet}) {
             font-size: 1.4rem;
-            margin-left: 2rem;
+            margin-left: 1rem;
         }
         @media (#{$bp-larger-than-tablet}) {
             font-size: 1.7rem;
-            margin-left: 2rem;
         }
     }
     & .pdv {
-//        display: none;
+        //        display: none;
         //        height: 60px;
         //        width: 60px;
         //        margin-right:1.5rem;
@@ -296,7 +307,6 @@ _:-ms-lang(x), .ie10up {
     position: relative;
     display: block;
     float: left;
-
 }
 
 .rslides img {
@@ -337,6 +347,10 @@ footer {
     margin: 0 0 2rem 0;
     padding: .1rem;
     width: 100px;
+}
+
+.mobile {
+    display: none;
 }
 
 .food {

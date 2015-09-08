@@ -26,35 +26,46 @@ if (windowWidth < 769) {
     $('.overlay-scroll h3').removeClass('hide');
 }
 
-if (windowWidth < 321) {
-    $('.overlay-scroll h3').addClass('hide');
-//    $('overlay-scroll h3').addClass('truncate');
-    $('.overlay-scroll').css('text-align', 'center'); 
-    $('.overlay-scroll').css('height', '40px');
-   } else {
-    $('.overlay-scroll h3').removeClass('hide');  
+if (windowWidth < 668) {
+    $('.overlay').css('visibility', 'hidden');
+    $('.overlay-scroll').css('display', 'none');
+    $('.mobile').css('display', 'block');
+    $('.poweredby').css('margin-top', '0');
+    //    $('overlay-scroll h3').addClass('truncate');
+    //    $('.overlay-scroll').css('text-align', 'center'); 
+    //    $('.overlay-scroll').css('height', '40px');
+} else {
+    //    $('.overlay-scroll h3').removeClass('hide');  
 }
-if (windowWidth < 569) {
-    $('.overlay-scroll').css('text-align', 'center');  
-    $('.overlay-scroll h3').css('font-size', '2rem');    
-   } else {
-}
+//if (windowWidth < 569) {
+//    $('.overlay-scroll').css('text-align', 'center');  
+//    $('.overlay-scroll h3').css('font-size', '2rem');    
+//   } else {
+//}
 
 
 //sticky element
 function sticky_relocate() {
     var window_top = $(window).scrollTop();
-    var div_top = $('#sticky-anchor').offset().top + (-150);
+    var div_top = $('#sticky-anchor').offset().top - 150;
     if (window_top > div_top) {
         $('.overlay').css('visibility', 'hidden');
-        $('.overlay-scroll').animate({'top': '0'}, 360, 'swing');
-        $('.overlay-scroll').show();
-        $('.overlay-scroll').css('position', 'fixed');
+        if (windowWidth > 667) {
+            $('.overlay-scroll').animate({
+                'top': '0'
+            }, 360, 'swing');
+            $('.overlay-scroll').show();
+            $('.overlay-scroll').css('position', 'fixed');
+        }
     } else {
-        $('.overlay').css('visibility', 'visible');
-        $('.overlay-scroll').animate({'top': '-160px'}, 1, 'swing');
-        $('.overlay-scroll').css('position', 'relative');
-        $('.overlay-scroll').hide();
+        if (windowWidth > 667) {
+            $('.overlay').css('visibility', 'visible');
+            $('.overlay-scroll').animate({
+                'top': '-160px'
+            }, 1, 'swing');
+            $('.overlay-scroll').css('position', 'relative');
+            $('.overlay-scroll').hide();
+        }
     }
 }
 
