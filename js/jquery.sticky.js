@@ -64,14 +64,21 @@
             s.stickyElement.parent().removeClass(s.className);
             s.stickyElement.trigger('sticky-end', [s]);
             s.currentTop = null;
-//              update for pizza.de
+//              update for whitelabel - closing the sticky element
                 $('.sticky-wrapper').stop().animate({
                     opacity: 0}, 1, "linear", function() {$('.sticky-wrapper').stop().animate({opacity: 1},100,"linear");}
                                                    );
                 $('.overlay').removeClass('margin-top');
-            if (windowWidth > 668) {
-                $('.powered-overlay').addClass('powered-hidden');
-                $('.powered-content').removeClass('powered-hidden');
+            if (windowWidth > 666) {
+                $('.hide-column-overlay').addClass('powered-hidden');
+                $('.hide-column-content').removeClass('powered-hidden');
+//                $('.hide-column-content').addClass('powered-hidden');
+                $('.h1-before-scroll').addClass('wide');
+                
+                
+              }
+              if (windowWidth > 737) {
+//                  $('h1').removeClass('truncate');
               }
           }
         }
@@ -85,14 +92,17 @@
           }
           if (s.currentTop !== newTop) {
             var newWidth;
-//              update for pizza.de
+//              update for whitelabel - opening the sticky element
             $('.sticky-wrapper').stop().animate({
                     opacity: 0}, 0, "linear", function() {$('.sticky-wrapper').stop().animate({opacity: 1},100,"linear");}
                                                    );
             $('.overlay').addClass('margin-top');
-              if (windowWidth > 668) {
-                $('.powered-overlay').removeClass('powered-hidden');
-                $('.powered-content').addClass('powered-hidden');
+              if (windowWidth > 735) {
+                $('.hide-column-overlay').removeClass('powered-hidden');
+                $('.hide-column-content').addClass('powered-hidden');
+                $('.h1-before-scroll').removeClass('wide');
+//                $('h1').addClass('truncate');
+//                $('.hide-column-content').removeClass('powered-hidden');
               }
             if (s.getWidthFrom) {
                 newWidth = $(s.getWidthFrom).width() || null;
