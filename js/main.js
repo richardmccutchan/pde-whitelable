@@ -65,8 +65,7 @@ $('.imprint').bind('inview', function(event, visible) {
 
 if (windowWidth < 735) {
     $('.hide-column-content').addClass('powered-hidden');
-   
-} else {
+   } else {
     $('.hide-column-content').removeClass('powered-hidden');
 }
 
@@ -75,8 +74,6 @@ $(function () {
     $('.overlay').sticky({
         topSpacing: 0
     });
-    
-
 });
 
 

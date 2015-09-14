@@ -1,10 +1,8 @@
-//assets path variable
+    //assets path variable
 $asset-path: "../assets/";
-
 //Variables
 $font-size: 14px;
 $line-height: 1.1;
-
 //mixin background
 @mixin backgroundopacitiy ($r, $g, $B, $opacity) {
     background: rgba($r, $g, $B, $opacity);
@@ -115,7 +113,6 @@ _:-ms-fullscreen,
             text-align: center;
         }
     }
-    
     & h2,
     h3,
     p {
@@ -153,7 +150,6 @@ _:-ms-fullscreen,
     @media (#{$bp-larger-than-mobile}) {
         padding: 3rem 2rem 0rem 2rem;
     }
-
     @media (#{$bp-larger-than-tablet}) {
         padding: 3rem 0 0 0;
     }
@@ -226,6 +222,17 @@ _:-ms-fullscreen,
             margin-left: 1rem;
         }
     }
+    & .multistore {
+        font-size: 1rem;
+        @media (#{$bp-larger-than-phablet}) {
+            font-size: 1.2rem;
+            margin-left: 1rem;
+        }
+        @media (#{$bp-larger-than-tablet}) {
+            font-size: 1.2rem;
+            margin-left: 1rem;
+        }
+    }
     & .pdv {
         @media (#{$bp-larger-than-phablet}) {
             height: 80px;
@@ -242,17 +249,37 @@ _:-ms-fullscreen,
     & .powered-overlay {
         color: white;
     }
+    }
+
+.multistore {
+    margin: 0 auto;
+    text-align: center;
+    width:100%;
+        @media (#{$bp-larger-than-tablet}) {
+            float: left;
+            margin: 1rem 0 1rem 1rem;
+            width:auto;
+        }
+    & .button {
+        font-size: 1.2rem;
+        
+    }
+}
+.hide-column-multistore {
+    display: none;
+    visibility: hidden;
+    @media (#{$bp-larger-than-tablet}) {
+        display: block;
+    }
 }
 
 //sticky elements
 .sticky-wrapper {
     height: 0 !important;
 }
-
 .margin-top {
     margin-top: 0;
 }
-
 //slider
 .rslides {
     list-style: none;
@@ -260,24 +287,21 @@ _:-ms-fullscreen,
     overflow: hidden;
     padding: 0;
     position: relative;
-    width: 100%;    
+    width: 100%;
 }
-
 .rslides li {
     display: none;
     left: 0;
     position: absolute;
     top: 0;
     -webkit-backface-visibility: hidden;
-    width: 100%; 
+    width: 100%;
 }
-
 .rslides li:first-child {
     display: block;
     float: left;
     position: relative;
 }
-
 .rslides img {
     display: block;
     float: left;
@@ -285,7 +309,6 @@ _:-ms-fullscreen,
     width: 100%;
     border: 0;
 }
-
 //typography
 h2,
 h3 {
@@ -294,15 +317,12 @@ h3 {
         text-align: left
     }
 }
-
 h4 {
     text-align: left
 }
-
 .margin {
     margin: 0;
 }
-
 //footer
 .logo-footer {
     float: left;
@@ -311,7 +331,6 @@ h4 {
         margin-right: 2rem;
     }
 }
-
 footer {
     p,
     a {
@@ -342,9 +361,7 @@ footer {
         }
     }
 }
-
 //truncate text
-
 $lines-to-show: 2;
 .truncate {
     display: block;
@@ -361,7 +378,6 @@ $lines-to-show: 2;
     -ms-text-overflow: ellipsis;
     -moz-binding: url('ellipsis.xml#ellipsis');
 }
-
 //images & icons
 .pdv {
     border: 1px solid $border-color;
@@ -370,7 +386,6 @@ $lines-to-show: 2;
     padding: .1rem;
     width: 100px;
 }
-
 .pdv-mob {
     border: .4rem solid white;
     margin-top: -6rem; // portrait
@@ -387,7 +402,6 @@ $lines-to-show: 2;
         display: none;
     }
 }
-
 .mobile {
     display: none;
     text-align: center;
@@ -395,7 +409,6 @@ $lines-to-show: 2;
         text-align: left;
     }
 }
-
 //map
 .map-container {
     //    @extend .fade-in-top;
@@ -404,7 +417,6 @@ $lines-to-show: 2;
     margin: 0 0 2rem 0;
     padding: 2px;
 }
-
 .map {
     height: 274px;
     width: auto;
@@ -417,7 +429,6 @@ $lines-to-show: 2;
         width: auto;
     }
 }
-
 //hide elements on demand or make them larger
 .hide {
     display: none;
@@ -425,30 +436,24 @@ $lines-to-show: 2;
         display: block;
     }
 }
-
 .wide {
     width: 80% !important;
 }
-
 .wide-column-content {
     width: 100% !important;
 }
-
 .powered-hidden {
     display: none;
 }
-
 //table adjust
 th,
 td {
     padding: 0px 10px;
 }
-
 //food icons
 .food {
     padding: 0 0 2rem 0;
 }
-
 .food-icon {
     @extend .fade-in-top;
     @include transition();
@@ -466,92 +471,74 @@ td {
         }
     }
 }
-
 .amerikanisch {
     background: url(#{$asset-path}food-icons/amerikanisch.png) center top;
     background-repeat: no-repeat;
 }
-
 .asiatisch {
     background: url(#{$asset-path}food-icons/asiatisch.png) center top;
     background-repeat: no-repeat;
 }
-
 .baguette {
     background: url(#{$asset-path}food-icons/baguette.png) center top;
     background-repeat: no-repeat;
 }
-
 .burger {
     background: url(#{$asset-path}food-icons/burger.png) center top;
     background-repeat: no-repeat;
 }
-
 .dessert {
     background: url(#{$asset-path}food-icons/dessert.png) center top;
     background-repeat: no-repeat;
 }
-
 .doener {
     background: url(#{$asset-path}food-icons/doener.png) center top;
     background-repeat: no-repeat;
 }
-
 .getraenkelieferservice {
     background: url(#{$asset-path}food-icons/getraenkelieferservice.png) center top;
     background-repeat: no-repeat;
 }
-
 .griechisch {
     background: url(#{$asset-path}food-icons/griechisch.png) center top;
     background-repeat: no-repeat;
 }
-
 .fisch {
     background: url(#{$asset-path}food-icons/fisch.png) center top;
     background-repeat: no-repeat;
 }
-
 .haehnchen {
     background: url(#{$asset-path}food-icons/haehnchen.png) center top;
     background-repeat: no-repeat;
 }
-
 .indisch {
     background: url(#{$asset-path}food-icons/indisch.png) center top;
     background-repeat: no-repeat;
 }
-
 .mexikanisch {
     background: url(#{$asset-path}food-icons/mexikanisch.png) center top;
     background-repeat: no-repeat;
 }
-
 .orientalisch {
     background: url(#{$asset-path}food-icons/orientalisch.png) center top;
     background-repeat: no-repeat;
 }
-
 .pizza-pasta {
     background: url(#{$asset-path}food-icons/pizza-pasta.png) center top;
     background-repeat: no-repeat;
 }
-
 .steak-schnitzel {
     background: url(#{$asset-path}food-icons/steak-schnitzel.png) center top;
     background-repeat: no-repeat;
 }
-
 .sushi {
     background: url(#{$asset-path}food-icons/sushi.png) center top;
     background-repeat: no-repeat;
 }
-
 .vegetarisch {
     background: url(#{$asset-path}food-icons/vegetarisch.png) center top;
     background-repeat: no-repeat;
 }
-
 .food-description {
     font-family: $open-sans;
     font-style: italic;
