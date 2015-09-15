@@ -409,7 +409,7 @@ $lines-to-show: 2;
 
 .map {
     height: 274px;
-    width: 274px;
+    width: auto;
     @media (#{$bp-larger-than-mobile}) {
         height: 320px;
         width: auto;
