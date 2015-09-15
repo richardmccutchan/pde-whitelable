@@ -22,9 +22,11 @@ if (windowWidth < 691) {
     $('.powered-content').css('display', 'none');
     $('.poweredby').css('margin-top', '0');
     $('.ie10up').addClass('wide-column-content');
+    $('.hide-column-content').css('display', 'none');
     } else {
         $('.pdv-mob').css('display', 'none');
-        $('.ie10up').removeClass('wide-column-content')
+        $('.ie10up').removeClass('wide-column-content');
+        
     }
 //viewport animation
 $('.icons-row').bind('inview', function(event, visible) {

@@ -73,7 +73,6 @@
             if (windowWidth > 666) {
                 $('.hide-column-overlay').addClass('powered-hidden');
                 $('.hide-column-content').removeClass('powered-hidden');
-//                $('.hide-column-content').addClass('powered-hidden');
                 $('.h1-before-scroll').addClass('wide');
                 
                 
@@ -103,8 +102,6 @@
                 $('.hide-column-overlay').removeClass('powered-hidden');
                 $('.hide-column-content').addClass('powered-hidden');
                 $('.h1-before-scroll').removeClass('wide');
-//                $('h1').addClass('truncate');
-//                $('.hide-column-content').removeClass('powered-hidden');
               }
             if (s.getWidthFrom) {
                 newWidth = $(s.getWidthFrom).width() || null;
