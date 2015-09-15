@@ -1,6 +1,19 @@
+    //assets path variable
+$asset-path: "../assets/";
+//Variables
+$font-size: 14px;
+$line-height: 1.1;
 //mixin background
 @mixin backgroundopacitiy ($r, $g, $B, $opacity) {
     background: rgba($r, $g, $B, $opacity);
+}
+
+@mixin bgimage-shadow {
+    background: url(#{$asset-path}shadow.png) center top;
+    background-repeat: no-repeat;
+    background-size: contain;
+    margin-top: -1rem;
+    padding: 2rem 2rem 0 2rem;
 }
 
 //mixin animation icons
@@ -60,10 +73,16 @@
     @include prefixer(transform, translate(0px, 0px));
 }
 
-//Win10 Edge 20 adjustments
+//IE10
 _:-ms-lang(x),
 .ie10up {
     margin-top: -12rem;
+}
+
+//IE11
+_:-ms-fullscreen,
+:root .ie11up {
+    margin-top: 0;
 }
 
 //Wrapper Backgrounds
@@ -80,12 +99,27 @@ _:-ms-lang(x),
 }
 
 .shadow {
-    background: url(../assets/shadow.png) center top;
-    background-repeat: no-repeat;
-    background-size: contain;
-    padding: 2rem 2rem 0 2rem;
-    margin-top: -1rem;
-    text-align: center;
+    @include bgimage-shadow;
+    & h3 {
+        padding-top: 1rem;
+        @media (#{$bp-larger-than-phablet}) {
+            padding-top: 0;
+        }
+    }
+    & h2,
+    h3,
+    p {
+        @media (#{$bp-larger-than-mobile}) {
+            text-align: center;
+        }
+    }
+    & h2,
+    h3,
+    p {
+        @media (#{$bp-larger-than-tablet}) {
+            text-align: left;
+        }
+    }
     @media (#{$bp-larger-than-mobile}) {
         margin-top: -1rem;
         padding: 3rem 2rem 0rem 2rem;
@@ -103,12 +137,17 @@ _:-ms-lang(x),
 }
 
 .shadow-last {
-    @extend .shadow;
-    padding: 2rem 2rem 0 2rem;
-    @media (#{$bp-larger-than-mobile}) {
-        padding: 3rem 2rem 0rem 2rem;
+    @include bgimage-shadow;
+    text-align: left !important;
+    & h2,
+    h3,
+    h4,
+    p {
+        @media (#{$bp-larger-than-tablet}) {
+            text-align: left;
+        }
     }
-    @media (#{$bp-larger-than-phablet}) {
+    @media (#{$bp-larger-than-mobile}) {
         padding: 3rem 2rem 0rem 2rem;
     }
     @media (#{$bp-larger-than-tablet}) {
@@ -117,7 +156,7 @@ _:-ms-lang(x),
 }
 
 .shadow-mirrored {
-    background: url(../assets/shadow-mirrored.png) center bottom;
+    background: url(#{$asset-path}shadow-mirrored.png) center bottom;
     background-repeat: no-repeat;
     background-size: contain;
     padding: 2rem;
@@ -136,8 +175,8 @@ _:-ms-lang(x),
     z-index: 10000;
     @media (#{$bp-larger-than-mobile}) {
         height: 80px;
-        padding: 2rem 0 0 0;
         margin-top: -13rem;
+        padding: 2rem 0 0 0;
     }
     @media (#{$bp-larger-than-phablet}) {
         height: 90px;
@@ -149,19 +188,21 @@ _:-ms-lang(x),
         margin-top: -15rem;
         padding: 2rem 0 2rem 0;
     }
-    & h3 {
+    & h1 {
         color: white;
-        font-size: 1.4rem;
-        line-height: 1.1;
+        $font-size: 14px;
+        $line-height: 1.1;
         margin-bottom: 1.6rem;
         text-align: center;
         @media (#{$bp-larger-than-phablet}) {
-            font-size: 1.8rem;
+            $font-size: 20px;
+            margin-bottom: .5rem;
             margin-left: 1rem;
             text-align: left;
         }
         @media (#{$bp-larger-than-tablet}) {
-            font-size: 2rem;
+            $font-size: 20px;
+            margin-bottom: 1.6rem;
             margin-left: 1rem;
             text-align: left;
         }
@@ -181,21 +222,54 @@ _:-ms-lang(x),
             margin-left: 1rem;
         }
     }
+    & .multistore {
+        font-size: 1rem;
+        @media (#{$bp-larger-than-phablet}) {
+            font-size: 1.2rem;
+            margin-left: 1rem;
+        }
+        @media (#{$bp-larger-than-tablet}) {
+            font-size: 1.2rem;
+            margin-left: 1rem;
+        }
+    }
     & .pdv {
         @media (#{$bp-larger-than-phablet}) {
             height: 80px;
-            width: 80px;
             margin-right: 1.5rem;
+            width: 80px;
         }
         @media (#{$bp-larger-than-tablet}) {
             display: block;
             height: 100px;
-            width: 100px;
             margin-right: 1.5rem;
+            width: 100px;
         }
     }
     & .powered-overlay {
         color: white;
+    }
+    }
+
+.multistore {
+    margin: 0 auto;
+    text-align: center;
+    width:100%;
+        @media (#{$bp-larger-than-tablet}) {
+            float: left;
+            margin: 1rem 0 1rem 1rem;
+            width:auto;
+        }
+    & .button {
+        font-size: 1.2rem;
+        
+    }
+}
+.hide-column-multistore {
+    display: none;
+    visibility: hidden;
+    @media (#{$bp-larger-than-tablet}) {
+        display: block;
     }
 }
 
@@ -203,49 +277,52 @@ _:-ms-lang(x),
 .sticky-wrapper {
     height: 0 !important;
 }
-
 .margin-top {
     margin-top: 0;
 }
-
 //slider
 .rslides {
-    position: relative;
     list-style: none;
-    overflow: hidden;
-    width: 100%;
-    padding: 0;
     margin: 0;
-}
-
-.rslides li {
-    -webkit-backface-visibility: hidden;
-    position: absolute;
-    display: none;
-    width: 100%;
-    left: 0;
-    top: 0;
-}
-
-.rslides li:first-child {
+    overflow: hidden;
+    padding: 0;
     position: relative;
+    width: 100%;
+}
+.rslides li {
+    display: none;
+    left: 0;
+    position: absolute;
+    top: 0;
+    -webkit-backface-visibility: hidden;
+    width: 100%;
+}
+.rslides li:first-child {
     display: block;
     float: left;
+    position: relative;
 }
-
 .rslides img {
     display: block;
-    height: auto;
     float: left;
+    height: auto;
     width: 100%;
     border: 0;
 }
-
 //typography
+h2,
+h3 {
+    text-align: center;
+    @media (#{$bp-larger-than-tablet}) {
+        text-align: left
+    }
+}
+h4 {
+    text-align: left
+}
 .margin {
     margin: 0;
 }
-
 //footer
 .logo-footer {
     float: left;
@@ -254,14 +331,13 @@ _:-ms-lang(x),
         margin-right: 2rem;
     }
 }
-
 footer {
     p,
     a {
         font-size: 1.2rem;
         text-align: left;
     }
-    & h3,
+    & h4,
     li {
         text-align: left;
     }
@@ -271,17 +347,36 @@ footer {
             font-size: 1.3rem;
         }
     }
-    .imprint {
+    & .imprint {
+        padding: 2rem 2rem 0 2rem;
+        @media (#{$bp-larger-than-mobile}) {
+            padding: 3rem 2rem 0rem 2rem;
+        }
+        @media (#{$bp-larger-than-phablet}) {
+            padding: 3rem 2rem 0rem 2rem;
+        }
         @media (#{$bp-larger-than-tablet}) {
+            padding: 0;
             text-align: left;
         }
     }
 }
 //truncate text
+$lines-to-show: 2;
 .truncate {
-    white-space: nowrap;
+    display: block;
+    display: -webkit-box;
+    font-size: $font-size;
+    height: $font-size*$line-height*$lines-to-show;
+    line-height: $line-height;
+    margin: 0 auto;
+    -webkit-line-clamp: $lines-to-show;
+    -webkit-box-orient: vertical;
     overflow: hidden;
     text-overflow: ellipsis;
+    -o-text-overflow: ellipsis;
+    -ms-text-overflow: ellipsis;
+    -moz-binding: url('ellipsis.xml#ellipsis');
 }
 //images & icons
 .pdv {
@@ -291,9 +386,71 @@ footer {
     padding: .1rem;
     width: 100px;
 }
+.pdv-mob {
+    border: .4rem solid white;
+    margin-top: -6rem; // portrait
+    padding: 0;
+    position: relative;
+    z-index: 100;
+    @media (#{$bp-larger-than-mobile}) {
+        margin-top: -8rem;
+    }
+    @media (#{$bp-larger-than-phablet}) {
+        margin-top: -10rem;
+    }
+    @media (#{$bp-larger-than-phablet}) {
+        display: none;
+    }
+}
 .mobile {
     display: none;
+    text-align: center;
+    @media (#{$bp-larger-than-tablet}) {
+        text-align: left;
+    }
 }
+//map
+.map-container {
+    //    @extend .fade-in-top;
+    @include transition();
+    border: 1px solid $border-color;
+    margin: 0 0 2rem 0;
+    padding: 2px;
+}
+.map {
+    height: 274px;
+    width: auto;
+    @media (#{$bp-larger-than-mobile}) {
+        height: 320px;
+        width: auto;
+    }
+    @media (#{$bp-larger-than-phablet}) {
+        height: 450px;
+        width: auto;
+    }
+}
+//hide elements on demand or make them larger
+.hide {
+    display: none;
+    @media (#{$bp-larger-than-mobile}) {
+        display: block;
+    }
+}
+.wide {
+    width: 80% !important;
+}
+.wide-column-content {
+    width: 100% !important;
+}
+.powered-hidden {
+    display: none;
+}
+//table adjust
+th,
+td {
+    padding: 0px 10px;
+}
+//food icons
 .food {
     padding: 0 0 2rem 0;
 }
@@ -315,114 +472,81 @@ footer {
     }
 }
 .amerikanisch {
-    background: url(../assets/food-icons/amerikanisch.png) center center;
+    background: url(#{$asset-path}food-icons/amerikanisch.png) center top;
     background-repeat: no-repeat;
 }
 .asiatisch {
-    background: url(../assets/food-icons/asiatisch.png) center center;
+    background: url(#{$asset-path}food-icons/asiatisch.png) center top;
     background-repeat: no-repeat;
 }
 .baguette {
-    background: url(../assets/food-icons/baguette.png) center center;
+    background: url(#{$asset-path}food-icons/baguette.png) center top;
     background-repeat: no-repeat;
 }
 .burger {
-    background: url(../assets/food-icons/burger.png) center center;
+    background: url(#{$asset-path}food-icons/burger.png) center top;
     background-repeat: no-repeat;
 }
 .dessert {
-    background: url(../assets/food-icons/dessert.png) center center;
+    background: url(#{$asset-path}food-icons/dessert.png) center top;
     background-repeat: no-repeat;
 }
 .doener {
-    background: url(../assets/food-icons/doener.png) center center;
+    background: url(#{$asset-path}food-icons/doener.png) center top;
     background-repeat: no-repeat;
 }
 .getraenkelieferservice {
-    background: url(../assets/food-icons/getraenkelieferservice.png) center center;
+    background: url(#{$asset-path}food-icons/getraenkelieferservice.png) center top;
     background-repeat: no-repeat;
 }
 .griechisch {
-    background: url(../assets/food-icons/griechisch.png) center center;
+    background: url(#{$asset-path}food-icons/griechisch.png) center top;
     background-repeat: no-repeat;
 }
 .fisch {
-    background: url(../assets/food-icons/fisch.png) center center;
+    background: url(#{$asset-path}food-icons/fisch.png) center top;
     background-repeat: no-repeat;
 }
 .haehnchen {
-    background: url(../assets/food-icons/haehnchen.png) center center;
+    background: url(#{$asset-path}food-icons/haehnchen.png) center top;
     background-repeat: no-repeat;
 }
 .indisch {
-    background: url(../assets/food-icons/indisch.png) center center;
+    background: url(#{$asset-path}food-icons/indisch.png) center top;
     background-repeat: no-repeat;
 }
 .mexikanisch {
-    background: url(../assets/food-icons/mexikanisch.png) center center;
+    background: url(#{$asset-path}food-icons/mexikanisch.png) center top;
     background-repeat: no-repeat;
 }
 .orientalisch {
-    background: url(../assets/food-icons/orientalisch.png) center center;
+    background: url(#{$asset-path}food-icons/orientalisch.png) center top;
     background-repeat: no-repeat;
 }
 .pizza-pasta {
-    background: url(../assets/food-icons/pizza-pasta.png) center center;
+    background: url(#{$asset-path}food-icons/pizza-pasta.png) center top;
     background-repeat: no-repeat;
 }
 .steak-schnitzel {
-    background: url(../assets/food-icons/steak-schnitzel.png) center center;
+    background: url(#{$asset-path}food-icons/steak-schnitzel.png) center top;
     background-repeat: no-repeat;
 }
 .sushi {
-    background: url(../assets/food-icons/sushi.png) center center;
+    background: url(#{$asset-path}food-icons/sushi.png) center top;
     background-repeat: no-repeat;
 }
 .vegetarisch {
-    background: url(../assets/food-icons/vegetarisch.png) center center;
+    background: url(#{$asset-path}food-icons/vegetarisch.png) center top;
     background-repeat: no-repeat;
 }
 .food-description {
     font-family: $open-sans;
     font-style: italic;
     font-weight: 400;
-    margin-top: 6rem;
+    line-height: 1;
+    margin-top: 5rem;
     text-align: center;
     @media (#{$bp-larger-than-phablet}) {
         margin-top: 4.5rem;
     }
-}
-//map
-.map-container {
-    @extend .fade-in-top;
-    @include transition();
-    border: 1px solid $border-color;
-    margin: 0 0 2rem 0;
-    padding: 2px;
-}
-#map {
-    height: 360px;
-    width: 360px;
-    @media (#{$bp-larger-than-mobile}) {
-        height: 320px;
-        width: auto;
-    }
-    @media (#{$bp-larger-than-phablet}) {
-        height: 450px;
-        width: auto;
-    }
-}
-.hide {
-    display: none;
-    @media (#{$bp-larger-than-mobile}) {
-        display: block;
-    }
-}
-.powered-hidden {
-    display: none;
-}
-//table adjust
-th,
-td {
-    padding: 0px 10px;
 }

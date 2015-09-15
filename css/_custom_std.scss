@@ -1,6 +1,21 @@
+//assets path variable
+$asset-path: "../0_image/std-images/";
+
+//Variables
+$font-size: 14px;
+$line-height: 1.1;
+
 //mixin background
 @mixin backgroundopacitiy ($r, $g, $B, $opacity) {
     background: rgba($r, $g, $B, $opacity);
+}
+
+@mixin bgimage-shadow {
+    background: url(#{$asset-path}shadow.png) center top;
+    background-repeat: no-repeat;
+    background-size: contain;
+    padding: 2rem 2rem 0 2rem;
+    margin-top: -1rem;
 }
 
 //mixin animation icons
@@ -60,24 +75,17 @@
     @include prefixer(transform, translate(0px, 0px));
 }
 
-//FF adjustments
-//@-moz-document url-prefix() {
-//    .ff-adjust {
-//        margin-top: -12rem;
-//    }
-//}
-
-//Win10 Edge 20 adjustments
+//IE10
 _:-ms-lang(x),
 .ie10up {
     margin-top: -12rem;
 }
 
-//@supports (-webkit-appearance:none) {
-//    .overlay {
-//        float: none
-//    }
-//}
+//IE11
+_:-ms-fullscreen,
+:root .ie11up {
+    margin-top: 0;
+}
 
 //Wrapper Backgrounds
 .wrapper {
@@ -93,33 +101,66 @@ _:-ms-lang(x),
 }
 
 .shadow {
-    background: url(../0_image/std-images/shadow.png) center top;
-    background-repeat: no-repeat;
-    background-size: contain;
-    padding: 2rem 2rem 0;
-    margin-top: -1rem;
+    @include bgimage-shadow;
+    & h3 {
+        padding-top: 1rem;
+        @media (#{$bp-larger-than-phablet}) {
+            padding-top: 0;
+        }
+    }
+    & h2,
+    h3,
+    p {
+        @media (#{$bp-larger-than-mobile}) {
+            text-align: center;
+        }
+    }
+    
+    & h2,
+    h3,
+    p {
+        @media (#{$bp-larger-than-tablet}) {
+            text-align: left;
+        }
+    }
     @media (#{$bp-larger-than-mobile}) {
         margin-top: -1rem;
-        padding: 3rem 0 2rem;
+        padding: 3rem 2rem 0rem 2rem;
+        text-align: left;
     }
     @media (#{$bp-larger-than-phablet}) {
-        padding: 2rem 2rem 0;
+        padding: 3rem 2rem 0rem 2rem;
+        text-align: left
     }
     @media (#{$bp-larger-than-tablet}) {
         margin-top: -1rem;
+        padding: 3rem 0 0 0;
+        text-align: left
     }
 }
 
 .shadow-last {
-    @extend .shadow;
-    padding: 2rem 2rem 0;
+    @include bgimage-shadow;
+    text-align: left !important;
+    & h2,
+    h3,
+    h4,
+    p {
+        @media (#{$bp-larger-than-tablet}) {
+            text-align: left;
+        }
+    }
     @media (#{$bp-larger-than-mobile}) {
+        padding: 3rem 2rem 0rem 2rem;
+    }
+    
+    @media (#{$bp-larger-than-tablet}) {
         padding: 3rem 0 0 0;
     }
 }
 
 .shadow-mirrored {
-    background: url(../0_image/std-images/shadow-mirrored.png) center bottom;
+    background: url(#{$asset-path}shadow-mirrored.png) center bottom;
     background-repeat: no-repeat;
     background-size: contain;
     padding: 2rem;
@@ -151,19 +192,21 @@ _:-ms-lang(x),
         margin-top: -15rem;
         padding: 2rem 0 2rem 0;
     }
-    & h3 {
+    & h1 {
         color: white;
-        font-size: 1.4rem;
-        line-height: 1.1;
-        margin-bottom: .8rem;
+        $font-size: 14px;
+        $line-height: 1.1;
+        margin-bottom: 1.6rem;
         text-align: center;
         @media (#{$bp-larger-than-phablet}) {
-            font-size: 1.8rem;
+            $font-size: 20px;
+            margin-bottom: .5rem;
             margin-left: 1rem;
             text-align: left;
         }
         @media (#{$bp-larger-than-tablet}) {
-            font-size: 2.3rem;
+            $font-size: 20px;
+            margin-bottom: 1.6rem;
             margin-left: 1rem;
             text-align: left;
         }
@@ -196,100 +239,18 @@ _:-ms-lang(x),
             margin-right: 1.5rem;
         }
     }
+    & .powered-overlay {
+        color: white;
+    }
 }
-
-//.overlay-scroll {
-//    @include backgroundopacitiy (0, 0, 0, .6);
-//    background-repeat: no-repeat;
-//    height: 60px;
-//    padding: 1rem 0 1rem 0;
-//    text-align: left;
-//    top: -260px;
-//    z-index: 10000;
-//    @media (#{$bp-larger-than-mobile}) {
-//        height: 80px;
-//        padding: 2rem 0 0 0;
-//    }
-//    @media (#{$bp-larger-than-phablet}) {
-//        height: 80px;
-//        padding: 1rem 0 1rem 0;
-//    }
-//    @media (#{$bp-larger-than-tablet}) {
-//        height: 100px;
-//        padding: 2rem 0 2rem 0;
-//        text-align: left;
-//    }
-//    & h3 {
-//        color: white;
-//        font-size: 1.4rem;
-//        line-height: 1.1;
-//        margin-bottom: .8rem;
-//        text-align: center;
-//        @media (#{$bp-larger-than-phablet}) {
-//            font-size: 1.8rem;
-//            margin-left: 1rem;
-//            text-align: left;
-//        }
-//        @media (#{$bp-larger-than-tablet}) {
-//            font-size: 2.3rem;
-//            margin-left: 1rem;
-//            text-align: left;
-//        }
-//    }
-//    & a {
-//        font-style: normal;
-//    }
-//    & .button {
-//        font-size: 1.2rem;
-//        margin: 0 auto;
-//        @media (#{$bp-larger-than-phablet}) {
-//            font-size: 1.4rem;
-//            margin-left: 1rem;
-//        }
-//        @media (#{$bp-larger-than-tablet}) {
-//            font-size: 1.7rem;
-//            margin-left: 1rem;
-//        }
-//    }
-//    & .pdv {
-//        @media (#{$bp-larger-than-phablet}) {
-//            height: 80px;
-//            width: 80px;
-//            margin-right: 1.5rem;
-//        }
-//        @media (#{$bp-larger-than-tablet}) {
-//            display: block;
-//            height: 100px;
-//            width: 100px;
-//            margin-right: 1.5rem;
-//        }
-//    }
-//}
 
 //sticky elements
 .sticky-wrapper {
-    height:0 !important;
+    height: 0 !important;
 }
+
 .margin-top {
     margin-top: 0;
-}
-//.overlay.stick {
-//    @include backgroundopacitiy (0, 0, 0, .5);
-//    position: fixed;
-//    top: 0;
-//    z-index: 10000;
-//}
-//
-//.rslides.stick {
-//    position: fixed;
-//    top: -220px;
-//    z-index: 9999;
-//}
-
-.rslides.stick {
-    position: fixed;
-    top: -220px;
-    z-index: 9999;
 }
 
 //slider
@@ -326,13 +287,28 @@ _:-ms-lang(x),
 }
 
 //typography
+h2,
+h3 {
+    text-align: center;
+    @media (#{$bp-larger-than-tablet}) {
+        text-align: left
+    }
+}
+
+h4 {
+    text-align: left
+}
+
 .margin {
     margin: 0;
 }
 
-.imprint {
-    @media (#{$bp-larger-than-tablet}) {
-        text-align: left;
+//footer
+.logo-footer {
+    float: left;
+    margin-right: 1rem;
+    @media (#{$bp-larger-than-mobile}) {
+        margin-right: 2rem;
     }
 }
 
@@ -340,18 +316,52 @@ footer {
     p,
     a {
         font-size: 1.2rem;
+        text-align: left;
+    }
+    & h4,
+    li {
+        text-align: left;
+    }
+    & li {
+        font-size: 1.2rem;
+        @media (#{$bp-larger-than-mobile}) {
+            font-size: 1.3rem;
+        }
+    }
+    & .imprint {
+        padding: 2rem 2rem 0 2rem;
+        @media (#{$bp-larger-than-mobile}) {
+            padding: 3rem 2rem 0rem 2rem;
+        }
+        @media (#{$bp-larger-than-phablet}) {
+            padding: 3rem 2rem 0rem 2rem;
+        }
+        @media (#{$bp-larger-than-tablet}) {
+            padding: 0;
+            text-align: left;
+        }
     }
 }
 
-.poweredby {
-    margin-top: -1.8rem;
-}
-
 //truncate text
+//$font-size: 18px;
+//$line-height: 1.4;
+$lines-to-show: 2;
 .truncate {
-    white-space: nowrap;
+    display: block;
+    display: -webkit-box;
+//    max-width: 400px;
+    height: $font-size*$line-height*$lines-to-show;
+    margin: 0 auto;
+    font-size: $font-size;
+    line-height: $line-height;
+    -webkit-line-clamp: $lines-to-show;
+    -webkit-box-orient: vertical;
     overflow: hidden;
     text-overflow: ellipsis;
+    -o-text-overflow: ellipsis;
+    -ms-text-overflow: ellipsis;
+    -moz-binding: url('ellipsis.xml#ellipsis');
 }
 
 //images & icons
@@ -363,10 +373,80 @@ footer {
     width: 100px;
 }
 
+.pdv-mob {
+    border: .4rem solid white;
+    margin-top: -6rem; // portrait
+    padding: 0;
+    position: relative;
+    z-index: 100;
+    @media (#{$bp-larger-than-mobile}) {
+        margin-top: -8rem;
+    }
+    @media (#{$bp-larger-than-phablet}) {
+        margin-top: -10rem;
+    }
+    @media (#{$bp-larger-than-phablet}) {
+        display: none;
+    }
+}
+
 .mobile {
+    display: none;
+    text-align: center;
+    @media (#{$bp-larger-than-tablet}) {
+        text-align: left;
+    }
+}
+
+//map
+.map-container {
+    //    @extend .fade-in-top;
+    @include transition();
+    border: 1px solid $border-color;
+    margin: 0 0 2rem 0;
+    padding: 2px;
+}
+
+.map {
+    height: 274px;
+    width: 274px;
+    @media (#{$bp-larger-than-mobile}) {
+        height: 320px;
+        width: auto;
+    }
+    @media (#{$bp-larger-than-phablet}) {
+        height: 450px;
+        width: auto;
+    }
+}
+
+//hide elements on demand or make them larger
+.hide {
+    display: none;
+    @media (#{$bp-larger-than-mobile}) {
+        display: block;
+    }
+}
+
+.wide {
+    width: 80% !important;
+}
+
+.wide-column-content {
+    width: 100% !important;
+}
+
+.powered-hidden {
     display: none;
 }
 
+//table adjust
+th,
+td {
+    padding: 0px 10px;
+}
+
+//food icons
 .food {
     padding: 0 0 2rem 0;
 }
@@ -390,87 +470,87 @@ footer {
 }
 
 .amerikanisch {
-    background: url(../0_image/std-images/83/amerikanisch.png) center center;
+    background: url(#{$asset-path}83/amerikanisch.png) center top;
     background-repeat: no-repeat;
 }
 
 .asiatisch {
-    background: url(../0_image/std-images/58/asiatisch.png) center center;
+    background: url(#{$asset-path}58/asiatisch.png) center top;
     background-repeat: no-repeat;
 }
 
 .baguette {
-    background: url(../0_image/std-images/78/baguette.png) center center;
+    background: url(#{$asset-path}78/baguette.png) center top;
     background-repeat: no-repeat;
 }
 
 .burger {
-    background: url(../0_image/std-images/6/burger.png) center center;
+    background: url(#{$asset-path}6/burger.png) center top;
     background-repeat: no-repeat;
 }
 
 .dessert {
-    background: url(../0_image/std-images/84/dessert.png) center center;
+    background: url(#{$asset-path}84/dessert.png) center top;
     background-repeat: no-repeat;
 }
 
 .doener {
-    background: url(../0_image/std-images/81/doener.png) center center;
+    background: url(#{$asset-path}81/doener.png) center top;
     background-repeat: no-repeat;
 }
 
 .getraenkelieferservice {
-    background: url(../0_image/std-images/51/getraenkelieferservice.png) center center;
+    background: url(#{$asset-path}51/getraenkelieferservice.png) center top;
     background-repeat: no-repeat;
 }
 
 .griechisch {
-    background: url(../0_image/std-images/19/griechisch.png) center center;
+    background: url(#{$asset-path}19/griechisch.png) center top;
     background-repeat: no-repeat;
 }
 
 .fisch {
-    background: url(../0_image/std-images/18/fisch.png) center center;
+    background: url(#{$asset-path}18/fisch.png) center top;
     background-repeat: no-repeat;
 }
 
 .haehnchen {
-    background: url(../0_image/std-images/82/haehnchen.png) center center;
+    background: url(#{$asset-path}82/haehnchen.png) center top;
     background-repeat: no-repeat;
 }
 
 .indisch {
-    background: url(../0_image/std-images/17/indisch.png) center center;
+    background: url(#{$asset-path}17/indisch.png) center top;
     background-repeat: no-repeat;
 }
 
 .mexikanisch {
-    background: url(../0_image/std-images/40/mexikanisch.png) center center;
+    background: url(#{$asset-path}40/mexikanisch.png) center top;
     background-repeat: no-repeat;
 }
 
 .orientalisch {
-    background: url(../0_image/std-images/67/orientalisch.png) center center;
+    background: url(#{$asset-path}67/orientalisch.png) center top;
     background-repeat: no-repeat;
 }
 
 .pizza-pasta {
-    background: url(../0_image/std-images/80/pizza-pasta.png) center center;
+    background: url(#{$asset-path}80/pizza-pasta.png) center top;
     background-repeat: no-repeat;
 }
 
 .steak-schnitzel {
-    background: url(../0_image/std-images/76/steak-schnitzel.png) center center;
+    background: url(#{$asset-path}76/steak-schnitzel.png) center top;
     background-repeat: no-repeat;
 }
 
 .sushi {
-    background: url(../0_image/std-images/3/sushi.png) center center;
+    background: url(#{$asset-path}3/sushi.png) center top;
     background-repeat: no-repeat;
 }
 
 .vegetarisch {
-    background: url(../0_image/std-images/4/vegetarisch.png) center center;
+    background: url(#{$asset-path}4/vegetarisch.png) center top;
     background-repeat: no-repeat;
 }
 
@@ -478,42 +558,10 @@ footer {
     font-family: $open-sans;
     font-style: italic;
     font-weight: 400;
-    margin-top: 6rem;
+    line-height: 1;
+    margin-top: 5rem;
     text-align: center;
     @media (#{$bp-larger-than-phablet}) {
         margin-top: 4.5rem;
     }
-}
-
-//map
-.map-container {
-    border: 1px solid $border-color;
-    margin: 0 0 3rem 0;
-    padding: 2px;
-}
-
-#map {
-    height: 360px;
-    width: 360px;
-    @media (#{$bp-larger-than-mobile}) {
-        height: 320px;
-        width: auto;
-    }
-    @media (#{$bp-larger-than-phablet}) {
-        height: 450px;
-        width: auto;
-    }
-}
-
-.hide {
-    display: none;
-    @media (#{$bp-larger-than-mobile}) {
-        display: block;
-    }
-}
-
-//table adjust
-th,
-td {
-    padding: 0px 10px;
 }

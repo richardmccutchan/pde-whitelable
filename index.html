@@ -8,6 +8,29 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <?xml version="1.0"?>
+<bindings
+  xmlns="http://www.mozilla.org/xbl"
+  xmlns:xbl="http://www.mozilla.org/xbl"
+  xmlns:xul="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"
+>
+    <binding id="ellipsis">
+        <content>
+            <xul:window>
+                <xul:description crop="end" xbl:inherits="value=xbl:text"><children/></xul:description>
+            </xul:window>
+        </content>
+    </binding>
+</bindings>
+    <!--[if IE]>
+<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+<style type="text/css">
+.overlay {
+    filter:progid:DXImageTransform.Microsoft.gradient( startColorstr=#00000050,endColorstr=#00000050);
+    zoom: 1;
+}
+</style>
+<![endif]-->
     <link rel="stylesheet" href="css/app.css">
     <link rel="icon" type="image/png" href="http://pizza.de/favicon.ico">
 </head>
@@ -26,20 +49,18 @@
                 </li>
             </ul>
         </div>
-
-        <!--        <div id="sticky-anchor"></div>-->
         <div class="wrapper overlay">
             <div class="container">
                 <div class="row">
                     <div class="two columns">
                         <img class="pdv" src="http://pizza.de/0_image/knd/order/goettingen_100pizza/pdv.png" height="100" width="100" style="float:left;margin-right:2rem;">
                     </div>
-                    <div class="seven columns">
-                        <h3>100% Pizza liefert Ihnen frisch zubereitete Pizza, Pasta und Salate, Schnitzel und Steaks und Baguettes direkt nach Hause</h3>
+                    <div class="seven columns h1-before-scroll wide">
+                        <h1 class="truncate">100% Pizza liefert Ihnen frisch zubereitete Pizza, Pasta und Salate, Schnitzel und Steaks und Baguettes direkt nach Hause</h1>
                         <a class="button" href="/online-bestellen" title="">jetzt online bestellen</a>
                     </div>
-                    <div class="three columns">
-                        <p class="powered-overlay powered-hidden"><i>powered by</i>
+                    <div class="three columns hide-column-overlay powered-hidden">
+                        <p class="powered-overlay"><i>powered by</i>
                             <br><img src="assets/pizza_de-flat-logo.png"></p>
                     </div>
                 </div>
@@ -49,9 +70,14 @@
 
     <main>
         <div class="container shadow">
-            <div class="row" style="text-align: left;">
-                <div class="nine columns ff-adjust ie10up">
-                    <h1 class="margin">100% Pizza</h1>
+            <div class="row">
+                <div class="nine columns ie10up">
+                    <div class="mobile">
+                        <div class="vh-center-container">
+                            <img class="pdv-mob mobile" src="http://pizza.de/0_image/knd/order/goettingen_100pizza/pdv.png" height="100" width="100">
+                        </div>
+                    </div>
+                    <h3 class="margin">100% Pizza</h3>
                     <h2>Ihr Lieferservice in Göttingen</h2>
                     <div class="mobile"><a class="button" href="#">jetzt online bestellen</a>
                         <p class="poweredby"><i>powered by</i>
@@ -61,11 +87,9 @@
                         <br> Wir sind Ihr Lieferservice in Göttingen. Hier können Sie sich frisch zubereitete Pizza, Pasta und Salate, Schnitzel und Steaks und Baguettes direkt nach Hause liefern lassen!</p>
                 </div>
 
-                <div class="three columns ff-adjust ie10up">
+                <div class="three columns ie10up hide-column-content">
                     <p class="poweredby powered-content"><i>powered by</i>
                         <br><img src="assets/pizza_de-flat-logo.png"></p>
-
-
                 </div>
             </div>
         </div>
@@ -126,10 +150,10 @@
         <div class="container shadow-last">
             <div class="row">
                 <div class="six columns u-max-full-width">
-                    <div class="map-container hide view">
+                    <div class="map-container">
                         <div id="map" class="map"></div>
                     </div>
-                    <h3 align="left">Öffnungszeiten</h3>
+                    <h4>Öffnungszeiten</h4>
                     <table>
 
                         <tbody>
@@ -151,8 +175,8 @@
                         </tbody>
                     </table>
                 </div>
-                <div class="six columns u-max-full-width view">
-                    <h3 align="left">Unser Lieferservice beliefert in Ulm die Stadtteile</h3>
+                <div class="six columns u-max-full-width">
+                    <h4>Unser Lieferservice beliefert in Ulm die Stadtteile</h4>
                     <p align="left"><strong>ab 8,00 € - Anfahrtskosten 0,00 €</strong>
                         <br> 89073 Ulm-Mitte, 89073 Ulm-Oststadt, 89231 Neu-Ulm-Illerbrücke, 89231 Neu-Ulm-Neu-Ulm, 89231 Neu-Ulm-Offenhausen, 89231 Neu-Ulm-Schwaighofen</p>
                     <p align="left"><strong>ab 8,00 € - Anfahrtskosten 0,00 €</strong>
@@ -184,7 +208,7 @@
         <div class="container imprint">
             <div class="row">
                 <div class="six columns">
-                    <h3>Impressum</h3>
+                    <h4>Impressum</h4>
                     <p><strong>Neu Ulmer Schnitzel Express</strong>
                         <br> Karlstr. 116
                         <br> 89073 Ulm</p>
@@ -198,7 +222,7 @@
                         <br> Internet: www.neuulmer-schnitzel.de</p>
                 </div>
                 <div class="six columns">
-                    <h3>Design & Shop-Technik</h3>
+                    <h4>Design & Shop-Technik</h4>
                     <a href="htp://pizza.de" title="pizza.de - Lieferservice finden & Essen bestellen" target="_blank"><img class="logo-footer" src="http://pizza.de/0_image/pizza.de.png" alt="pizza.de - Lieferservice finden & Essen bestellen" width="101" height="134"></a>
                     <ul>
                         <li>Lieferservice Kunden</li>
