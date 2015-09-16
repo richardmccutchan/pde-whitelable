@@ -16,7 +16,6 @@ if (windowWidth < 767) {
 
 if (windowWidth < 691) {
     $('.overlay').css('visibility', 'hidden');
-    $('.overlay-scroll').css('display', 'none');
     $('.pdv-mob').css('display', 'block');
     $('.mobile').css('display', 'block');
     $('.powered-content').css('display', 'none');
@@ -58,12 +57,10 @@ $('.imprint').bind('inview', function(event, visible) {
 });
 
 
-//if (windowWidth < 737) {
-//    $('.overlay h1').addClass('truncate');
-//    
-//} else {
-//    $('.overlay h1').removeClass('truncate');
-//}
+if (windowWidth < 737) {
+    $('.overlay h1').addClass('truncate');
+    
+}
 
 if (windowWidth < 735) {
     $('.hide-column-content').addClass('powered-hidden');

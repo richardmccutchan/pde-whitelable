@@ -1814,61 +1814,66 @@ h4 {
 /* line 333, _custom.scss */
 .logo-footer {
   float: left;
+  height: auto;
   margin-right: 1rem;
+  width: 70px;
 }
 @media (min-width: 400px) {
   /* line 333, _custom.scss */
   .logo-footer {
+    height: auto;
     margin-right: 2rem;
+    width: 101px;
   }
 }
 
-/* line 343, _custom.scss */
+/* line 347, _custom.scss */
 footer p,
 footer a {
   font-size: 1.2rem;
   text-align: left;
 }
-/* line 348, _custom.scss */
+/* line 352, _custom.scss */
 footer h4,
 footer li {
   text-align: left;
 }
-/* line 351, _custom.scss */
+/* line 355, _custom.scss */
 footer li {
   font-size: 1.2rem;
+  margin-bottom: .8rem;
 }
 @media (min-width: 400px) {
-  /* line 351, _custom.scss */
+  /* line 355, _custom.scss */
   footer li {
     font-size: 1.3rem;
   }
 }
-/* line 357, _custom.scss */
+/* line 363, _custom.scss */
 footer .imprint {
   padding: 2rem 2rem 0 2rem;
 }
 @media (min-width: 400px) {
-  /* line 357, _custom.scss */
+  /* line 363, _custom.scss */
   footer .imprint {
     padding: 3rem 2rem 0rem 2rem;
   }
 }
 @media (min-width: 550px) {
-  /* line 357, _custom.scss */
+  /* line 363, _custom.scss */
   footer .imprint {
     padding: 3rem 2rem 0rem 2rem;
   }
 }
 @media (min-width: 750px) {
-  /* line 357, _custom.scss */
+  /* line 363, _custom.scss */
   footer .imprint {
     padding: 0;
     text-align: left;
   }
 }
 
-/* line 376, _custom.scss */
+/* line 382, _custom.scss */
 .truncate {
   display: block;
   display: -webkit-box;
@@ -1885,7 +1890,7 @@ footer .imprint {
   -moz-binding: url("ellipsis.xml#ellipsis");
 }
 
-/* line 394, _custom.scss */
+/* line 400, _custom.scss */
 .pdv {
   border: 1px solid #bbbbbb;
   height: auto;
@@ -1894,7 +1899,7 @@ footer .imprint {
   width: 100px;
 }
 
-/* line 402, _custom.scss */
+/* line 408, _custom.scss */
 .pdv-mob {
   border: .4rem solid white;
   margin-top: -6rem;
@@ -1903,37 +1908,37 @@ footer .imprint {
   z-index: 100;
 }
 @media (min-width: 400px) {
-  /* line 402, _custom.scss */
+  /* line 408, _custom.scss */
   .pdv-mob {
     margin-top: -8rem;
   }
 }
 @media (min-width: 550px) {
-  /* line 402, _custom.scss */
+  /* line 408, _custom.scss */
   .pdv-mob {
     margin-top: -10rem;
   }
 }
 @media (min-width: 550px) {
-  /* line 402, _custom.scss */
+  /* line 408, _custom.scss */
   .pdv-mob {
     display: none;
   }
 }
 
-/* line 419, _custom.scss */
+/* line 425, _custom.scss */
 .mobile {
   display: none;
   text-align: center;
 }
 @media (min-width: 750px) {
-  /* line 419, _custom.scss */
+  /* line 425, _custom.scss */
   .mobile {
     text-align: left;
   }
 }
 
-/* line 428, _custom.scss */
+/* line 434, _custom.scss */
 .map-container {
   -webkit-transition: all 0.15s ease-in 0.05s;
   -moz-transition: all 0.15s ease-in 0.05s;
@@ -1944,64 +1949,82 @@ footer .imprint {
   padding: 2px;
 }
 
-/* line 436, _custom.scss */
+/* line 442, _custom.scss */
 .map {
   height: 274px;
   width: auto;
 }
 @media (min-width: 400px) {
-  /* line 436, _custom.scss */
+  /* line 442, _custom.scss */
   .map {
     height: 320px;
     width: auto;
   }
 }
 @media (min-width: 550px) {
-  /* line 436, _custom.scss */
+  /* line 442, _custom.scss */
   .map {
     height: 450px;
     width: auto;
   }
 }
 
-/* line 450, _custom.scss */
+/* line 456, _custom.scss */
 .hide {
   display: none;
 }
 @media (min-width: 400px) {
-  /* line 450, _custom.scss */
+  /* line 456, _custom.scss */
   .hide {
     display: block;
   }
 }
 
-/* line 457, _custom.scss */
+/* line 463, _custom.scss */
 .wide {
   width: 80% !important;
 }
 
-/* line 461, _custom.scss */
+/* line 467, _custom.scss */
 .wide-column-content {
   width: 100% !important;
 }
 
-/* line 465, _custom.scss */
+/* line 471, _custom.scss */
 .powered-hidden {
-  display: none;
+  visibility: hidden;
 }
 
-/* line 471, _custom.scss */
+/* line 477, _custom.scss */
 th,
 td {
   padding: 0px 10px;
 }
 
-/* line 476, _custom.scss */
+/* line 481, _custom.scss */
+.scroll-top {
+  background: rgba(0, 0, 0, 0.5);
+  bottom: 1rem;
+  height: 4rem;
+  position: fixed;
+  right: 1rem;
+  visibility: hidden;
+  width: 4rem;
+  z-index: 99999;
+}
+/* line 490, _custom.scss */
+.scroll-top a {
+  color: white;
+  font-size: 2rem;
+  padding: 1rem;
+}
+
+/* line 498, _custom.scss */
 .food {
   padding: 0 0 2rem 0;
 }
 
-/* line 480, _custom.scss */
+/* line 502, _custom.scss */
 .food-icon {
   -webkit-transition: all 0.15s ease-in 0.05s;
   -moz-transition: all 0.15s ease-in 0.05s;
@@ -2014,121 +2037,121 @@ td {
   width: 30%;
 }
 @media (min-width: 550px) {
-  /* line 480, _custom.scss */
+  /* line 502, _custom.scss */
   .food-icon {
     height: 60px;
     margin: 0 .5rem 3.5rem 0;
     width: 100px;
   }
-  /* line 492, _custom.scss */
+  /* line 514, _custom.scss */
   .food-icon:last-of-type {
     margin: 0 0 3.5rem 0;
   }
 }
 
-/* line 498, _custom.scss */
+/* line 520, _custom.scss */
 .amerikanisch {
   background: url(../assets/83/amerikanisch.png) center top;
   background-repeat: no-repeat;
 }
 
-/* line 503, _custom.scss */
+/* line 525, _custom.scss */
 .asiatisch {
   background: url(../assets/58/asiatisch.png) center top;
   background-repeat: no-repeat;
 }
 
-/* line 508, _custom.scss */
+/* line 530, _custom.scss */
 .baguette {
   background: url(../assets/78/baguette.png) center top;
   background-repeat: no-repeat;
 }
 
-/* line 513, _custom.scss */
+/* line 535, _custom.scss */
 .burger {
   background: url(../assets/6/burger.png) center top;
   background-repeat: no-repeat;
 }
 
-/* line 518, _custom.scss */
+/* line 540, _custom.scss */
 .dessert {
   background: url(../assets/84/dessert.png) center top;
   background-repeat: no-repeat;
 }
 
-/* line 523, _custom.scss */
+/* line 545, _custom.scss */
 .doener {
   background: url(../assets/81/doener.png) center top;
   background-repeat: no-repeat;
 }
 
-/* line 528, _custom.scss */
+/* line 550, _custom.scss */
 .getraenkelieferservice {
   background: url(../assets/51/getraenkelieferservice.png) center top;
   background-repeat: no-repeat;
 }
 
-/* line 533, _custom.scss */
+/* line 555, _custom.scss */
 .griechisch {
   background: url(../assets/19/griechisch.png) center top;
   background-repeat: no-repeat;
 }
 
-/* line 538, _custom.scss */
+/* line 560, _custom.scss */
 .fisch {
   background: url(../assets/18/fisch.png) center top;
   background-repeat: no-repeat;
 }
 
-/* line 543, _custom.scss */
+/* line 565, _custom.scss */
 .haehnchen {
   background: url(../assets/82/haehnchen.png) center top;
   background-repeat: no-repeat;
 }
 
-/* line 548, _custom.scss */
+/* line 570, _custom.scss */
 .indisch {
   background: url(../assets/17/indisch.png) center top;
   background-repeat: no-repeat;
 }
 
-/* line 553, _custom.scss */
+/* line 575, _custom.scss */
 .mexikanisch {
   background: url(../assets/40/mexikanisch.png) center top;
   background-repeat: no-repeat;
 }
 
-/* line 558, _custom.scss */
+/* line 580, _custom.scss */
 .orientalisch {
   background: url(../assets/67/orientalisch.png) center top;
   background-repeat: no-repeat;
 }
 
-/* line 563, _custom.scss */
+/* line 585, _custom.scss */
 .pizza-pasta {
   background: url(../assets/80/pizza-pasta.png) center top;
   background-repeat: no-repeat;
 }
 
-/* line 568, _custom.scss */
+/* line 590, _custom.scss */
 .steak-schnitzel {
   background: url(../assets/76/steak-schnitzel.png) center top;
   background-repeat: no-repeat;
 }
 
-/* line 573, _custom.scss */
+/* line 595, _custom.scss */
 .sushi {
   background: url(../assets/3/sushi.png) center top;
   background-repeat: no-repeat;
 }
 
-/* line 578, _custom.scss */
+/* line 600, _custom.scss */
 .vegetarisch {
   background: url(../assets/4/vegetarisch.png) center top;
   background-repeat: no-repeat;
 }
 
-/* line 583, _custom.scss */
+/* line 605, _custom.scss */
 .food-description {
   font-family: "Open Sans", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-style: italic;
@@ -2138,7 +2161,7 @@ td {
   text-align: center;
 }
 @media (min-width: 550px) {
-  /* line 583, _custom.scss */
+  /* line 605, _custom.scss */
   .food-description {
     margin-top: 4.5rem;
   }
